@@ -23,6 +23,11 @@ a {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.line {
+	width: 300px;
+	height: auto;
+	opacity: 0.9;
+}
 .line-clamp {
 	display: -webkit-box;
 	-webkit-line-clamp: 5;
