@@ -2,9 +2,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import { Col, Container, Row } from "react-bootstrap";
-import Banner from "../components/Banner";
-import Wisdom from "../components/Wisdom";
 import { StaticImage } from "gatsby-plugin-image";
+import Banner from "../components/Banner";
 
 const wisdom = ({ data }) => {
 	const jsonData = data;
@@ -17,7 +16,6 @@ const wisdom = ({ data }) => {
 				<h2 className="display-3 fw-bold font-philosopher text-primary  text-center">Wisdom</h2>
 				<p className="fw-bold opacity-80 text-center">Guiding Light: Navigating Life's Journey with Wisdom</p>
 				<div className="text-center  mb-5">
-					{/* <StaticImage src="../images/others/line-1.png" alt="line" /> */}
 					<StaticImage src="../images/others/line-2.png" alt="line" className="line" />
 				</div>
 				<Row>

@@ -22,17 +22,17 @@ const NavHeader = () => {
 								<span>Home</span>
 							</Link>
 							<NavDropdown title="Solutions For" id="navbarScrollingDropdown" className="dropmenu">
-								<Link className="nav-link d-flex align-items-center text-uppercase" to="/">
+								<Link className="nav-link d-flex align-items-center text-uppercase" to="/stress/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Stress" />
 									<span>Stress</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/depression/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Depression" />
 									<span>Depression</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/sleep/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Sleep" />
 									<span>Sleep</span>
 								</Link>
@@ -42,12 +42,12 @@ const NavHeader = () => {
 									<span>Immunity</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/weightloss/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Weight loss" />
 									<span>Weight loss</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/backpain/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Back pain" />
 									<span>Back pain</span>
 								</Link>
@@ -105,7 +105,7 @@ const NavHeader = () => {
 								</Link>
 							</NavDropdown>
 						</Nav>
-						<Navbar.Brand href="#" className="d-flex align-items-center">
+						<Navbar.Brand href="/" className="d-flex align-items-center">
 							<StaticImage src="../images/I & You logo.png" alt="I and You" className="logo" />
 						</Navbar.Brand>
 						<Nav className="m-auto w-50 justify-content-start  my-2 my-lg-0 ms-4" style={{ maxHeight: "700px" }} navbarScroll>
@@ -178,7 +178,7 @@ const NavHeader = () => {
 							</NavDropdown>
 						</Nav>
 						<Form className="position-absolute right-10 d-none d-xxl-block">
-							<SideBar btnTitle="Register" classes="px-xxl-4 d-flex align-items-center" variant="primary" placement="end" btnSize="md" />
+							<SideBar btnTitle="Register" classes="px-xxl-4 d-flex align-items-center" iconColor="white" variant="primary" placement="end" btnSize="md" />
 						</Form>
 					</Navbar.Collapse>
 				</Container>
@@ -198,17 +198,17 @@ const NavHeader = () => {
 								<span>Home</span>
 							</Link>
 							<NavDropdown title="Solutions For" id="navbarScrollingDropdown" className="dropmenu">
-								<Link className="nav-link d-flex align-items-center text-uppercase" to="/">
+								<Link className="nav-link d-flex align-items-center text-uppercase" to="/stress/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Stree" />
 									<span>Stress</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/depression/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Depression" />
 									<span>Depression</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/sleep/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Sleep" />
 									<span>Sleep</span>
 								</Link>
@@ -218,12 +218,12 @@ const NavHeader = () => {
 									<span>Immunity</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/weightloss/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Weight loss" />
 									<span>Weight loss</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/backpain/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Back pain" />
 									<span>Back pain</span>
 								</Link>

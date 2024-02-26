@@ -12,6 +12,7 @@ import Workshops from "../components/Workshops";
 import EshwariKriya from "../components/EshwariKriya";
 import Meditation from "../components/Meditation";
 import PopupModal from "../components/PopupModal";
+import { Seo } from "../components/Seo";
 
 const IndexPage = () => {
 	return (
@@ -35,4 +36,11 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => (
+	<Seo
+		title="I And You Being Together Foundation"
+		description="Sri Prasad, one of the eminent new age masters of Spiritual Srividhya Yogic Science, has been imparting the knowledge of Yogic Science in the name of Eshwari Sadhana.
+
+Sri Prasad having established an organization in 2012 had named it “I and You Being Together Foundation”, a non -profit making, non-religious and volunteer organization that aims in bringing stress-free, disease-free, violence-free and self-realization in individuals to form a holistic society, has brought millions together in India and overseas."
+	/>
+);
