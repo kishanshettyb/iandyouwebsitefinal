@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Link } from "gatsby";
 import Slider from "react-slick";
+import Banner from "./Banner";
 
 const Wisdom = () => {
 	var settings = {
