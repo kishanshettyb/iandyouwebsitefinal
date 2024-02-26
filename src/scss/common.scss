@@ -1,0 +1,212 @@
+a {
+	text-decoration: none;
+}
+.mb--1 {
+	margin-bottom: -1px;
+}
+.br-20 {
+	border-radius: 20px !important;
+}
+.opacity-80 {
+	opacity: 0.8;
+}
+.z-index-low {
+	z-index: 1;
+}
+.z-index-hight {
+	z-index: 111;
+}
+.offcanvas {
+	z-index: 11111;
+}
+.text-shadow {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.btn {
+	&:hover {
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+		transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+	}
+}
+video {
+	width: 100%;
+	height: 58vh;
+	@media (min-width: 992px) {
+		height: 88vh;
+	}
+	z-index: 1;
+	object-fit: cover;
+}
+.overlay {
+	width: 100%;
+	height: 58vh;
+	@media (min-width: 992px) {
+		height: 88vh;
+	}
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	// background: rgba(0, 0, 0, 0.3);
+	z-index: 1;
+	background-repeat: no-repeat;
+}
+
+.hero {
+	position: relative;
+	overflow: hidden;
+	.content {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		z-index: 111;
+		.hero-img {
+			width: 200px;
+			@media (min-width: 992px) {
+				width: 240px;
+			}
+			height: auto;
+		}
+		.logo-outer {
+			display: flex;
+			align-items: center;
+			border-radius: 50%;
+			width: 250px;
+			height: 250px;
+			@media (min-width: 992px) {
+				width: 350px;
+				height: 350px;
+			}
+			justify-content: center;
+			background: #00000057;
+			border: 2px solid #fff;
+			margin: auto;
+		}
+	}
+}
+
+// Cursor
+.cursor {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%);
+	border-radius: 50%;
+	background: transparent;
+	pointer-events: none;
+	z-index: 11111111;
+	border: 1px solid $primary;
+	transition: all 0.2s ease-out;
+	animation: moveCursor1 0.5s infinite alternate;
+	text-align: center;
+	.point {
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background-color: $primary;
+	}
+}
+
+.expand {
+	background: transparent;
+	animation: moveCursor2 0.5s forwards;
+	border: 1px solid $primary;
+}
+
+@keyframes moveCursor1 {
+	from {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(0.8);
+	}
+}
+
+@keyframes moveCursor2 {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(2);
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+// Snow
+.snow {
+	width: 100%;
+	overflow: hidden;
+}
+
+.snowflake {
+	--size: 0.1vw;
+	width: var(--size);
+	height: var(--size);
+	background: white;
+	border-radius: 50%;
+	position: absolute;
+	top: -5vh;
+	z-index: 12;
+	opacity: 1;
+}
+
+.footer-snow {
+	.snowflake {
+		opacity: 0.5 !important;
+	}
+}
+@keyframes snowfall {
+	0% {
+		transform: translate3d(var(--left-ini), 0, 0);
+	}
+	100% {
+		transform: translate3d(var(--left-end), 110vh, 0);
+	}
+}
+
+@for $i from 1 through 50 {
+	.snowflake:nth-child(#{$i}) {
+		--size: #{random(5) * 0.1}vw;
+		--left-ini: #{random(20) - 10}vw;
+		--left-end: #{random(20) - 10}vw;
+		left: #{random(100)}vw;
+		animation: snowfall #{5 + random(10)}s linear infinite;
+		animation-delay: -#{random(10)}s;
+	}
+}
+
+/* added small blur every 6 snowflakes*/
+.snowflake:nth-child(6n) {
+	filter: blur(1px);
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+	&.home {
+		padding-right: 20px !important;
+		padding-left: 0px !important;
+		.icon {
+			width: max-content;
+		}
+	}
+}

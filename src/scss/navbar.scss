@@ -1,0 +1,153 @@
+nav {
+	z-index: 1111;
+	position: relative;
+	.dropdown-menu {
+		min-width: 200px;
+	}
+	.dropdown-menu[aria-labelledby="navbarScrollingDropdown55"] {
+		min-width: 325px;
+	}
+	.navbarScroll {
+		max-height: 600px;
+	}
+	.logo {
+		width: 60px;
+		@media (min-width: 1200px) {
+			width: 100px;
+		}
+		height: auto;
+	}
+	.logo-small {
+		width: 80px;
+		height: auto;
+	}
+	background-color: $light !important;
+	.dropmenu {
+		position: relative;
+		&:hover {
+			&::before {
+				transform: rotate(90deg);
+			}
+		}
+		&::before {
+			content: url("../images/icons/star.svg");
+			position: absolute;
+			left: 0;
+			bottom: 0px;
+			display: none;
+			@media (min-width: 1200px) {
+				display: block;
+			}
+			transition: 0.5s ease-in-out;
+		}
+	}
+
+	.nav-link {
+		text-transform: uppercase !important;
+		font-size: 10px !important;
+		font-weight: 700 !important;
+		color: #000 !important;
+		letter-spacing: 1.3px !important;
+		@media (min-width: 992px) {
+			padding: 0 10px !important;
+		}
+		@media (min-width: 1200px) {
+			padding: 0 20px !important;
+			font-size: 13px !important;
+		}
+		.icon {
+			transform: rotate(0deg);
+			transition: 0.5s ease-in-out;
+		}
+		&:hover {
+			span:after {
+				width: 100%;
+				left: 0;
+			}
+			.icon {
+				transform: rotate(90deg);
+			}
+		}
+
+		span {
+			display: block;
+			position: relative;
+			margin-top: 1px;
+
+			&:after {
+				background: none repeat scroll 0 0 transparent;
+				bottom: -3px;
+				content: "";
+				display: block;
+				height: 1px;
+				left: 50%;
+				position: absolute;
+				background: $primary;
+				transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				width: 0;
+			}
+		}
+	}
+	&.mobile {
+		.dropmenu {
+			padding-left: 20px !important;
+			&::before {
+				bottom: 2px !important;
+				display: block;
+			}
+			&.show {
+				&::before {
+					bottom: unset !important;
+					display: block;
+					top: 4px;
+				}
+			}
+		}
+	}
+	.dropdown-menu {
+		.nav-link {
+			display: flex;
+			align-items: center;
+			padding: 10px 15px !important;
+		}
+	}
+}
+
+// Topbar
+.topbar {
+	background-color: $black;
+	color: $white;
+	padding: 15px 0;
+	z-index: 1111;
+	position: relative;
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			padding: 0 15px 0 0;
+			display: inline-flex;
+			align-items: center;
+			a,
+			span {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				color: $white;
+				font-size: 0.8rem;
+				&:hover {
+					color: $primary;
+				}
+			}
+			.icon {
+				width: 18px;
+				height: 18px;
+				margin-right: 5px;
+			}
+		}
+	}
+}
+
+.right-10 {
+	right: 5%;
+}

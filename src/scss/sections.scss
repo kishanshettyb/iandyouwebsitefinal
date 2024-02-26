@@ -1,0 +1,892 @@
+// Solutions Section
+.solutions-section {
+	background: linear-gradient(180deg, rgba(255, 193, 180, 0) 0%, rgba(255, 193, 180, 0.5) 100%), url("../images/bg/bg-pattern1.png");
+	background-position: right;
+	background-repeat: no-repeat;
+	h5 {
+		letter-spacing: 1px;
+	}
+	.icon-div {
+		margin: 50px 0 0 0;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		border: 1px solid $primary;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.2s;
+		&:hover {
+			transform: scale(1.2);
+			box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+		}
+	}
+	.icons {
+		width: 60px;
+		height: 60px;
+	}
+	.slick-next,
+	.slick-prev {
+		display: none;
+	}
+	@media (min-width: 1200px) {
+		.slick-next {
+			position: absolute;
+			display: block;
+			right: -10%;
+			&::before {
+				content: url("../images/icons/arrow-right.svg");
+			}
+		}
+		.slick-prev {
+			position: absolute;
+			display: block;
+			left: -10%;
+			&::before {
+				content: url("../images/icons/arrow-left.svg");
+			}
+		}
+	}
+}
+
+// Workshop Section
+.workshop-section {
+	background: linear-gradient(180deg, rgba(255, 193, 180, 0) 0%, rgba(255, 193, 180, 0.262) 100%);
+	position: relative;
+	padding: 60px 0 100px 0;
+}
+.workshop-section-bottom {
+	padding: 0 !important;
+	@media (min-width: 1200px) {
+		padding: 60px !important;
+	}
+	.bg-image {
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+	}
+}
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.basic-card {
+	border-radius: 20px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	padding: 20px;
+	margin: 30px 20px;
+	width: 90%;
+	&:hover {
+		box-shadow: 0 10px 25px 10px #936d4252;
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+		transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+		border: 1px solid $primary;
+	}
+	.content {
+		height: 150px;
+	}
+	.card-image {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		border-radius: 20px;
+		margin-bottom: 20px;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		color: $black;
+		font-weight: 600;
+	}
+	p {
+		opacity: 1;
+		@extend .line-clamp;
+	}
+}
+
+// Meditation New section
+.meditaion-new-section {
+	position: relative;
+	background: linear-gradient(180deg, rgb(147 109 65) 0%, #936d42e8 100%);
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			padding: 12px 20px;
+			background-color: #ffffffc4;
+			margin-bottom: 15px;
+			border-radius: 10px;
+			font-size: 0.8rem;
+		}
+	}
+	.bg-image {
+		width: 100%;
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		z-index: 1111;
+	}
+	.eshwari-girl-image {
+		z-index: 111;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+		@media (min-width: 768px) {
+			width: 500px;
+			height: 500px;
+		}
+	}
+	.bg-circle {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		.rotate-360 {
+			width: 300px;
+			height: auto;
+			@media (min-width: 1200px) {
+				width: 700px;
+				height: 700px;
+			}
+
+			animation: rotate-360 30s infinite linear;
+		}
+		@keyframes rotate-360 {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(359deg);
+			}
+		}
+	}
+	.meditation-card {
+		border-radius: 10px;
+		width: 100%;
+		border: 1px solid $primary;
+		background-color: $white;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		margin-bottom: 30px;
+		flex-direction: column;
+		@media (max-width: 575.98px) {
+			h4 {
+				font-size: 1rem;
+			}
+			p {
+				font-size: 0.8rem;
+			}
+			text-align: center;
+		}
+		@media (min-width: 768px) {
+			flex-direction: row;
+		}
+		text-align: start;
+		font-weight: 600;
+		.content {
+			padding: 10px;
+			height: auto;
+		}
+		&:hover {
+			box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+			-webkit-transform: translateY(-5px);
+			transform: translateY(-5px);
+			transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+			border: 1px solid $primary;
+		}
+
+		.icon {
+			width: 100%;
+			height: 100px;
+			margin: 5px 0;
+
+			@media (min-width: 768px) {
+				height: 150px;
+				width: 150px;
+			}
+			border-radius: 10px;
+		}
+	}
+}
+
+// Eshwarikriya Section
+.eshwari-section {
+	position: relative;
+	overflow: hidden;
+	// background: radial-gradient(circle farthest-corner at center center, #f3f3f3 29%, #fcdeb3 100%);
+	background: radial-gradient(circle farthest-corner at center center, #ffa238a1 29%, #fcdeb300 100%);
+	.slideskew {
+		animation: 5s ease 0s normal none infinite running slideskew;
+		z-index: 111;
+	}
+
+	.playBtn {
+		border: 0;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@keyframes slideskew {
+		0% {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+		50% {
+			transform: translateY(20px);
+			-moz-transform: translateY(20px);
+			-webkit-transform: translateY(20px);
+			-ms-transform: translateY(20px);
+			-o-transform: translateY(20px);
+		}
+		100% {
+			transform: translateY(0);
+			-moz-transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+		}
+	}
+	.banner-media-bg {
+		[class*="bnr"] {
+			position: absolute;
+			background-size: 100%;
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+			border-radius: 50%;
+			top: 60%;
+		}
+		.bnr-circle1 {
+			border: 5px solid #936d425e;
+			height: 75%;
+			width: 75%;
+			animation: bnr-circle1 25s linear infinite;
+
+			&:after,
+			&:before {
+				content: "";
+				width: 20px;
+				height: 20px;
+				background: #ffff;
+				position: absolute;
+				border-radius: 12px;
+				border: 3px solid $secondary;
+				filter: drop-shadow(0px 9px 10px rgba(20, 20, 20, 0.3));
+			}
+			&:before {
+				right: -2%;
+				top: 50%;
+			}
+			&:after {
+				left: 4.1%;
+				top: 22.5%;
+			}
+		}
+		.bnr-circle2 {
+			background-image: url("../images/bg/meditation/circle.png");
+			height: 98%;
+			width: 98%;
+			animation: bnr-circle1 25s linear infinite;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 95%;
+
+			&:after {
+				content: "";
+				width: 20px;
+				height: 20px;
+				background: #ffff;
+				position: absolute;
+				border-radius: 12px;
+				border: 3px solid $warning;
+				filter: drop-shadow(0px 9px 10px rgba(24, 25, 25, 0.3));
+				right: 10%;
+				top: 20%;
+			}
+		}
+		.icon1 {
+			left: 15%;
+			top: 18%;
+			animation: bnr-circle1-icon1 25s linear infinite;
+		}
+		.icon2 {
+			right: -5%;
+			top: 45%;
+			animation: bnr-circle1-icon1 25s linear infinite;
+		}
+	}
+
+	@keyframes bnr-circle1 {
+		0% {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		100% {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
+	}
+	@keyframes bnr-circle2 {
+		0% {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		100% {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
+	}
+	@keyframes bnr-circle1-icon1 {
+		0% {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		100% {
+			transform: translate(-50%, -50%) rotate(-360deg);
+		}
+	}
+
+	@keyframes moveLeftRight {
+		0% {
+			transform: translateX(0px);
+		}
+		50% {
+			transform: translateX(20px);
+			-moz-transform: translateX(20px);
+			-webkit-transform: translateX(20px);
+			-ms-transform: translateX(20px);
+			-o-transform: translateX(20px);
+		}
+		100% {
+			transform: translateX(0);
+			-moz-transform: translateX(0);
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			-o-transform: translateX(0);
+		}
+	}
+	.icon-bx {
+		height: 55px;
+		width: 55px;
+		background-color: #fff;
+		box-shadow: 0px 13px 40px 0px rgba(19, 121, 183, 0.2);
+		border-radius: 10px;
+		position: absolute;
+		padding: 10px;
+
+		// @include respond("phone") {
+		// 	height: 40px;
+		// 	width: 40px;
+		// 	border-radius: 5px;
+		// 	padding: 5px;
+		// }
+	}
+
+	.yoga {
+		position: absolute;
+		right: 5%;
+		width: 18vw;
+		animation: 5s ease 0s normal none infinite running moveLeftRight;
+
+		.yoga-img {
+			z-index: 111;
+		}
+		.yoga-inner {
+			position: absolute;
+			right: 10%;
+			bottom: 10%;
+			margin-left: 20px;
+		}
+		&::after {
+			content: "";
+			height: 65px;
+			width: 100%;
+			background-color: #fff;
+			border-radius: 10px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	.yoga-1 {
+		position: absolute;
+		left: 5%;
+		width: 15vw;
+		top: 10%;
+		animation: 5s ease 0s normal none infinite running moveLeftRight;
+
+		.yoga-img {
+			z-index: 111;
+		}
+
+		&::after {
+			content: "";
+			height: 65px;
+			width: 100%;
+			background-color: #fff;
+			border-radius: 10px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+		}
+	}
+	.yoga-card {
+		border-radius: 20px;
+		padding: 20px;
+		width: 290px;
+		height: 300px;
+		background-color: $white;
+		position: absolute;
+		top: 10%;
+		right: 5%;
+		p {
+			font-size: 0.8rem;
+		}
+		.yoga-img {
+			width: 100%;
+			height: 150px;
+			object-fit: cover;
+			border-radius: 20px;
+		}
+	}
+	.yoga-card-round {
+		animation: 5s ease 0s normal none infinite running moveLeftRight;
+		padding: 20px;
+		border-radius: 60px;
+		width: 300px;
+		height: auto;
+		background-color: #fff;
+		position: absolute;
+		left: 5%;
+		bottom: 10%;
+		.yoga-img {
+			width: 100%;
+			border-radius: 60px;
+			height: 80px;
+			object-fit: cover;
+		}
+	}
+
+	.meditation-card {
+		border-radius: 10px;
+		border: 1px solid $primary;
+		background-color: $white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
+		flex-direction: column;
+		text-align: center;
+		font-weight: 600;
+		.content {
+			padding: 10px;
+			height: 115px;
+			@media (min-width: 768px) {
+				height: 100px;
+			}
+		}
+		&:hover {
+			box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+			-webkit-transform: translateY(-5px);
+			transform: translateY(-5px);
+			transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+			border: 1px solid $primary;
+		}
+
+		.icon {
+			width: 100%;
+			height: 100px;
+			@media (min-width: 768px) {
+				width: 170px;
+				height: 170px;
+			}
+
+			margin-top: 10px;
+			object-fit: cover;
+		}
+	}
+}
+
+// Events Section
+.upcomingevents-section {
+	background: linear-gradient(180deg, rgba(255, 193, 180, 0) 0%, rgba(255, 193, 180, 0.5) 100%), url("../images/bg/bg-pattern1.png");
+	background-position: right;
+	background-repeat: no-repeat;
+	.events-card {
+		background-color: $white;
+		border-radius: 20px;
+		border: 1px solid #ddd;
+		margin: 0 20px;
+		.main-img {
+			width: 100%;
+			height: 350px;
+			border-radius: 20px 20px 0 0;
+			object-fit: cover;
+		}
+		.center-img {
+			position: relative;
+			width: 100%;
+			.center-img-icon {
+				position: absolute;
+				left: 50%;
+				top: -34px;
+				transform: translateX(-50%);
+				z-index: 1;
+			}
+		}
+		.second-img {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			object-fit: cover;
+			position: absolute;
+			transform: translateX(-50%);
+			left: 50%;
+			z-index: 11;
+			top: -27px;
+			border: 1px solid #ddd;
+		}
+		.content {
+			padding: 40px 20px 20px 20px;
+			height: 200px;
+		}
+	}
+}
+
+// Footer Section
+.footer-section {
+	background-color: #000;
+	padding-bottom: 0 !important;
+	overflow: hidden;
+	position: relative;
+	p.about {
+		font-size: 0.8rem;
+		opacity: 0.5 !important;
+		line-height: 2;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			margin-bottom: 20px;
+			p {
+				opacity: 0.8 !important;
+				font-weight: bold !important;
+				color: $white;
+			}
+			a {
+				color: $white;
+				opacity: 0.5;
+				&:hover {
+					color: $primary;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.logo {
+		width: 200px;
+		height: auto;
+	}
+	.copyright {
+		border-top: 1px solid rgba(221, 221, 221, 0.396);
+		padding: 30px 0;
+		text-align: center;
+		@media (min-width: 768px) {
+			text-align: left;
+		}
+		p {
+			color: $white;
+			font-size: 0.9rem;
+			margin-bottom: 0;
+			opacity: 0.8;
+			b {
+				color: $primary;
+			}
+		}
+		a {
+			color: $white;
+			font-size: 0.9rem;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}
+
+// Testimonial Section
+.testimonial-section {
+	.slick-next,
+	.slick-prev {
+		display: none;
+	}
+	@media (min-width: 1200px) {
+		.slick-next {
+			position: absolute;
+			display: block;
+			right: -10%;
+			&::before {
+				content: url("../images/icons/arrow-right.svg");
+			}
+		}
+		.slick-prev {
+			position: absolute;
+			display: block;
+			left: -10%;
+			&::before {
+				content: url("../images/icons/arrow-left.svg");
+			}
+		}
+	}
+	.testimonial-card {
+		border-radius: 20px;
+		padding: 0px 40px 40px 40px;
+		text-align: center;
+		margin: 150px 20px 50px 20px;
+
+		.btn-link {
+			position: absolute;
+			right: 40px;
+			bottom: 10px;
+			z-index: 1111;
+			text-decoration: none;
+			span {
+				display: flex;
+				align-items: center;
+				justify-self: center;
+			}
+			img {
+				width: 15px;
+				height: 15px;
+				margin-top: 3px;
+			}
+		}
+		.left {
+			position: absolute;
+			left: 50px;
+			top: 10px;
+			width: 100px;
+			height: 100px;
+			opacity: 0.1;
+		}
+		.right {
+			position: absolute;
+			right: 50px;
+			bottom: -10%;
+			width: 100px;
+			height: 100px;
+			opacity: 0.1;
+			transform: rotate(180deg);
+		}
+	}
+
+	.rating {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			display: inline;
+			padding-right: 4px;
+			.icons {
+				width: 12px;
+				height: 12px;
+			}
+		}
+	}
+
+	.avatar {
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		border: 2px solid $primary;
+		margin-top: -60px;
+		background-color: $white;
+		margin-bottom: 10px;
+	}
+}
+
+// Rgister
+.register-card {
+	.register-card-image {
+		height: auto;
+		object-fit: cover;
+		border-radius: 20px;
+		margin-bottom: 20px;
+	}
+	&.sidebar {
+		iframe {
+			height: 100vh !important;
+			border-radius: 20px;
+		}
+		.frame-footer {
+			width: calc(100% - 23px) !important;
+			border-radius: 0 0 20px 20px;
+		}
+	}
+	iframe {
+		border-radius: 20px;
+		height: 800px !important;
+	}
+	@media (min-width: 768px) {
+		iframe {
+			height: 600px !important;
+		}
+	}
+	@media (min-width: 1200px) {
+		iframe {
+			border-radius: 0 20px 20px 0;
+			height: 599px !important;
+		}
+		.register-card-image {
+			height: 600px !important;
+			object-fit: cover;
+			border-radius: 20px 0 0 20px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.frame-footer {
+	width: calc(100% - 24px);
+	height: 115px;
+	position: absolute;
+	z-index: 111;
+	right: 12px;
+	bottom: 5px;
+	background-color: #f3f3fe;
+	border-radius: 0 0 20px 20px;
+
+	// Medium devices (tablets, 768px and up)
+	@media (min-width: 768px) {
+		width: calc(100% - 24px);
+	}
+
+	// Large devices (desktops, 992px and up)
+	@media (min-width: 992px) {
+		width: calc(100% - 12px);
+	}
+
+	// X-Large devices (large desktops, 1200px and up)
+	@media (min-width: 1200px) {
+		width: calc(100% - 12px);
+		border-radius: 0 0 20px 0;
+	}
+
+	// XX-Large devices (larger desktops, 1400px and up)
+	@media (min-width: 1400px) {
+	}
+}
+
+// celebrateEshwari Kriya section
+.celebrate-section {
+	background-color: $black;
+	.eshwari-kriya-bg {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		width: 70%;
+	}
+	.eshwari-kriya-img {
+		z-index: 111;
+	}
+
+	.slideskew {
+		animation: 5s ease 0s normal none infinite running slideskew;
+		z-index: 111;
+	}
+	@keyframes slideskew {
+		0% {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+		50% {
+			transform: translateY(20px);
+			-moz-transform: translateY(20px);
+			-webkit-transform: translateY(20px);
+			-ms-transform: translateY(20px);
+			-o-transform: translateY(20px);
+		}
+		100% {
+			transform: translateY(0);
+			-moz-transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+		}
+	}
+}
+
+// Guruji Section
+.guruji-section-new {
+	background: url("../images/bg/guruji-banner-mobile.png");
+	padding: 40px 0 !important;
+	background-position: right !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	.content {
+		width: 60%;
+	}
+	@media (min-width: 768px) {
+		.content {
+			width: 100%;
+		}
+	}
+	@media (min-width: 992px) {
+		background: url("../images/bg/guruji-banner.png");
+		padding: 80px 0 !important;
+		background-position: right !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		height: 1000px;
+		.content {
+			width: 35%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+//I want Section
+.join-section {
+	.questions {
+		border-radius: 20px;
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.accordion-item {
+		margin-bottom: 20px !important;
+		border-radius: 20px;
+	}
+	.accordion-item:first-of-type,
+	.accordion-item:last-of-type {
+		border-radius: 10px !important;
+	}
+	.accordion-button {
+		border-radius: 10px !important;
+		border: 1px solid $primary;
+		font-size: 1rem;
+	}
+}
+
+// popup modal
+.form-content {
+	background-color: #ff98005c;
+	border-radius: 20px;
+}
+.modal-backdrop.show {
+	opacity: 0.9 !important;
+}
