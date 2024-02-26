@@ -40,7 +40,7 @@ const EshwariKriya = () => {
 				<Snow />
 				<div className="yoga shadow-lg  d-none d-md-block">
 					<div className="yoga-inner">
-						<StaticImage src="../images/bg/meditation/img-22.png" className="yoga-img" alt="Yoga" />
+						<StaticImage src="../images/bg/meditation/yoga-1.png" className="yoga-img" alt="Yoga" />
 					</div>
 				</div>
 
