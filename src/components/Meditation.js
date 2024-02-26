@@ -16,7 +16,7 @@ const Meditation = () => {
 				<Row className="pt-5 d-flex align-items-center justify-content-md-center  justify-content-xl-between">
 					<Col md={6} xl={5} className=" d-flex justify-content-center">
 						<div className="position-relative">
-							<StaticImage src="../images/bg/meditation/dhyana-2.jpeg" alt="Eshwari Kriya" className="  img-fluid eshwari-girl-image" />
+							<StaticImage src="../images/bg/meditation/dhyana-1.jpeg" alt="Eshwari Kriya" className="  img-fluid eshwari-girl-image" />
 							<div className="bg-circle">
 								<StaticImage src="../images/bg/media.svg" className="rotate-360" alt="Eshwari Kriya" />
 							</div>

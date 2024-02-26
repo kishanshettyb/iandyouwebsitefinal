@@ -11,7 +11,7 @@ const Join = () => {
 
 				<Row className="d-flex align-items-center">
 					<Col md={12} lg={12} xl={5} className="order-2 order-xl-1">
-						<StaticImage src="../images/workshops/dhyana-1.jpeg" className="br-20 mb-5 mb-md-0 mt-xl-0 mt-5 mt-xl-0 " alt="Join Program" />
+						<StaticImage src="../images/workshops/dhyana-2.jpeg" className="br-20 mb-5 mb-md-0 mt-xl-0 mt-5 mt-xl-0 " alt="Join Program" />
 					</Col>
 					<Col md={12} lg={12} xl={7} className="order-1 order-xl-2">
 						<div className="questions">
