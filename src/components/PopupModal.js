@@ -10,7 +10,7 @@ const PopupModal = () => {
 	const handleOpen = () => {
 		const timer = setTimeout(() => {
 			setShow(true);
-		}, 10000);
+		}, 20000);
 		return () => clearTimeout(timer);
 	};
 
