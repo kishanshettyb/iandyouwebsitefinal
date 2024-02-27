@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
-import { Button, Row, Col, Modal, Form, InputGroup } from "react-bootstrap";
+import { Button, Row, Col, Modal, Form } from "react-bootstrap";
 
 function RegisterModal() {
 	const [show, setShow] = useState(false);
@@ -54,13 +54,13 @@ function RegisterModal() {
 									<li>
 										<StaticImage className="icon" src="../images/icons/mail.svg" alt="" />
 
-										<a target="_blank" href="mailto:info@iandyou.org">
+										<a rel="noreferrer" target="_blank" href="mailto:info@iandyou.org">
 											info@iandyou.org
 										</a>
 									</li>
 									<li>
 										<StaticImage className="icon" src="../images/icons/phone.svg" alt="" />
-										<a target="_blank" href="tel:+91 9900022506">
+										<a rel="noreferrer" target="_blank" href="tel:+91 9900022506">
 											+91 9900022506
 										</a>
 									</li>
@@ -70,7 +70,7 @@ function RegisterModal() {
 						<Col md={8}>
 							<div className="payment-info">
 								<Form noValidate validated={validated} onSubmit={handleSubmit}>
-									<p className="fw-bold">Personal Details</p>
+									<p className="fw-bold text-primary">Personal Details</p>
 									<Row className="mb-3">
 										<Form.Group as={Col} md="4" controlId="validationCustom011">
 											<Form.Label>
@@ -133,7 +133,7 @@ function RegisterModal() {
 										</Form.Group>
 									</Row>
 									<Row className="mb-3">
-										<p className="fw-bold">Health Condition</p>
+										<p className="fw-bold text-primary">Health Condition</p>
 										<Form.Group as={Col} md="12" controlId="validationCustom077">
 											<Form>
 												{["checkbox"].map((type) => (
@@ -153,7 +153,7 @@ function RegisterModal() {
 										</Form.Group>
 									</Row>
 									<Row className="mb-3">
-										<p className="fw-bold">Address (optional)</p>
+										<p className="fw-bold text-primary">Address (optional)</p>
 										<Form.Group as={Col} md="6" controlId="validationCustom03">
 											<Form.Label>City</Form.Label>
 											<Form.Control type="text" placeholder="City" required />
