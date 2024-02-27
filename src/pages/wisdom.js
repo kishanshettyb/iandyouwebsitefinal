@@ -11,7 +11,7 @@ const wisdom = ({ data }) => {
 
 	return (
 		<Layout>
-			<Banner title="Insight for Life" subTitle="Insights for Life: Unveiling the Essence of Wisdom" />
+			<Banner title="Insight for Life" subTitle="Insights for Life: Unveiling the Essence of Wisdom" mainLink="wisdom" link="wisdom" />
 			<Container>
 				<h2 className="display-3 fw-bold font-philosopher text-primary  text-center">Wisdom</h2>
 				<p className="fw-bold opacity-80 text-center">Guiding Light: Navigating Life's Journey with Wisdom</p>

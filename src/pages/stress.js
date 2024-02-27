@@ -1,9 +1,10 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import Banner from "../components/Banner";
 import Layout from "../components/Layout";
 import { Seo } from "../components/Seo";
 import { StaticImage } from "gatsby-plugin-image";
+import RegisterModal from "../components/RegisterModal";
 
 const stress = () => {
 	return (
@@ -29,6 +30,95 @@ const stress = () => {
 				</p>
 				<p className="fw-bold fs-3 font-niconne">- Sri Prasad</p>
 			</Container>
+			<section>
+				<Container>
+					<Row>
+						<Col md={4}>
+							<div className="course-card mb-4">
+								<StaticImage src="../images/workshops/dhyana-2.jpeg" className="image" alt="Course Card" />
+								<div className="content">
+									<h5 className="fw-bold mb-4">Online Eshwari Kriya Yoga</h5>
+									<div className="d-flex justify-content-between align-items-center timings-div">
+										<div>
+											<StaticImage src="../images/icons/calendar.svg" className="icon me-2" alt="Date" />
+											<span>1/03/2024</span>
+										</div>
+										<div>
+											<StaticImage src="../images/icons/clock.svg" className="icon me-2" alt="Time" />
+											<span>10:00 AM</span>
+										</div>
+										<div className="opacity-25">
+											<StaticImage src="../images/icons/video-off.svg" className="icon me-2 " alt="Course Mode" />
+											<span>Offline</span>
+										</div>
+									</div>
+									<div className="address-div">
+										<StaticImage src="../images/icons/map-pin.svg" className="icon me-2" alt="Address" />
+										<span>Address Line 1</span>
+									</div>
+								</div>
+
+								<div className="footer">
+									<div className="d-flex justify-content-between align-items-center">
+										<div>
+											<h5 className="mb-0 fw-bold">Rs. 3,000</h5>
+										</div>
+										<div>
+											<Button className="px-4 d-flex align-items-center" variant="primary">
+												<StaticImage src="../images/icons/star-white.svg" className="me-2" alt="Register" />
+												Register
+											</Button>
+											<RegisterModal />
+										</div>
+									</div>
+									<p className="mt-3 text-center font-sm">*Your contribution benefits a host of social projects</p>
+								</div>
+							</div>
+						</Col>
+						<Col md={4}>
+							<div className="course-card mb-4">
+								<StaticImage src="../images/workshops/dhyana.png" className="image" alt="Course Card" />
+								<div className="content">
+									<h5 className="fw-bold mb-4">Online Eshwari Kriya Yoga</h5>
+									<div className="d-flex justify-content-between align-items-center timings-div">
+										<div>
+											<StaticImage src="../images/icons/calendar.svg" className="icon me-2" alt="Date" />
+											<span>1/03/2024</span>
+										</div>
+										<div>
+											<StaticImage src="../images/icons/clock.svg" className="icon me-2" alt="Time" />
+											<span>10:00 AM</span>
+										</div>
+										<div>
+											<StaticImage src="../images/icons/video.svg" className="icon me-2" alt="Course Mode" />
+											<span>Online</span>
+										</div>
+									</div>
+									<div className="address-div">
+										<StaticImage src="../images/icons/video.svg" className="icon me-2" alt="Course Mode" />
+										<span>Online</span>
+									</div>
+								</div>
+
+								<div className="footer">
+									<div className="d-flex justify-content-between align-items-center">
+										<div>
+											<h5 className="mb-0 fw-bold">Rs. 3,000</h5>
+										</div>
+										<div>
+											<Button className="px-4 d-flex align-items-center" variant="primary">
+												<StaticImage src="../images/icons/star-white.svg" className="me-2" alt="Register" />
+												Register
+											</Button>
+										</div>
+									</div>
+									<p className="mt-3 text-center font-sm">*Your contribution benefits a host of social projects</p>
+								</div>
+							</div>
+						</Col>
+					</Row>
+				</Container>
+			</section>
 		</Layout>
 	);
 };
