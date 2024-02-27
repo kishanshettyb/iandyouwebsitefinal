@@ -11,6 +11,9 @@ const Banner = (props) => {
 	const sleep = "../images/banners/sleep.jpeg";
 	const backpain = "../images/banners/backpain.jpeg";
 	const weightloss = "../images/banners/weightloss.jpg";
+	const wellness = "../images/banners/wellness.jpeg";
+	const immunity = "../images/banners/immunity.jpg";
+	const relationship = "../images/banners/relationship.jpeg";
 	return (
 		<section className="banner-section">
 			<Container fluid>
@@ -27,24 +30,12 @@ const Banner = (props) => {
 						<StaticImage className="banner-image" src={`${backpain}`} alt="Page Banner" />
 					) : props.title === "Weight Loss" ? (
 						<StaticImage className="banner-image" src={`${weightloss}`} alt="Page Banner" />
-					) : props.title === "Eshwari Dhyana" ? (
-						// 	<StaticImage className="image" src={`${eshwaridhyana}`} alt="Page Banner" />
-						// ) : props.title === "Devi Mathangi" ? (
-						// 	<StaticImage className="image" src={`${matangi}`} alt="Page Banner" />
-						// ) : props.title === "Devi Varahi" ? (
-						// 	<StaticImage className="image" src={`${varahi}`} alt="Page Banner" />
-						// ) : props.title === "Devi Chandi" ? (
-						// 	<StaticImage className="image" src={`${chandi}`} alt="Page Banner" />
-						// ) : props.title === "Dakshina Kali" ? (
-						// 	<StaticImage className="image" src={`${kali}`} alt="Page Banner" />
-						// ) : props.title === "Aham to Shivam" ? (
-						// 	<StaticImage className="image" src={`${ahamtoshivam}`} alt="Page Banner" />
-						// ) : props.title === "Navarathri" ? (
-						// 	<StaticImage className="image" src={`${navarathri}`} alt="Page Banner" />
-						// ) : props.title === "Sri Naada" ? (
-						// 	<StaticImage className="image" src={`${srinaada}`} alt="Page Banner" />
-						// ) : props.title === "Sri Vasukinaga Eswari Temple" ? (
-						<StaticImage className="banner-image" src={`${guruji}`} alt={props.title} />
+					) : props.title === "Wellness" ? (
+						<StaticImage className="banner-image" src={`${wellness}`} alt="Page Banner" />
+					) : props.title === "Immunity" ? (
+						<StaticImage className="banner-image" src={`${immunity}`} alt="Page Banner" />
+					) : props.title === "Relationship" ? (
+						<StaticImage className="banner-image" src={`${relationship}`} alt="Page Banner" />
 					) : (
 						<StaticImage className="banner-image" src={`${guruji}`} alt={props.title} />
 					)}
