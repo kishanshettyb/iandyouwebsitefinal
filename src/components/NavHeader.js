@@ -37,7 +37,7 @@ const NavHeader = () => {
 									<span>Sleep</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/immunity/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Immunity" />
 									<span>Immunity</span>
 								</Link>
@@ -47,17 +47,17 @@ const NavHeader = () => {
 									<span>Weight loss</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/backpain/">
+								<Link className="nav-link" to="/pain/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Back pain" />
 									<span>Back pain</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/relationship/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Relationship" />
 									<span>Relationship</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/wellness/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Wellness" />
 									<span>Wellness</span>
 								</Link>
@@ -213,7 +213,7 @@ const NavHeader = () => {
 									<span>Sleep</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/immunity/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Immunity" />
 									<span>Immunity</span>
 								</Link>
@@ -223,17 +223,17 @@ const NavHeader = () => {
 									<span>Weight loss</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/backpain/">
+								<Link className="nav-link" to="/pain/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Back pain" />
 									<span>Back pain</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/relationship/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Relationship" />
 									<span>Relationship</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/wellness/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Wellness" />
 									<span>Wellness</span>
 								</Link>
