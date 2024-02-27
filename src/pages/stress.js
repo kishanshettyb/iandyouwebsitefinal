@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Banner from "../components/Banner";
 import Layout from "../components/Layout";
 import { Seo } from "../components/Seo";
@@ -64,11 +64,7 @@ const stress = () => {
 											<h5 className="mb-0 fw-bold">Rs. 3,000</h5>
 										</div>
 										<div>
-											<Button className="px-4 d-flex align-items-center" variant="primary">
-												<StaticImage src="../images/icons/star-white.svg" className="me-2" alt="Register" />
-												Register
-											</Button>
-											<RegisterModal />
+											<RegisterModal btnTitle="Register" classes="d-flex align-items-center" />
 										</div>
 									</div>
 									<p className="mt-3 text-center font-sm">*Your contribution benefits a host of social projects</p>
@@ -106,10 +102,7 @@ const stress = () => {
 											<h5 className="mb-0 fw-bold">Rs. 3,000</h5>
 										</div>
 										<div>
-											<Button className="px-4 d-flex align-items-center" variant="primary">
-												<StaticImage src="../images/icons/star-white.svg" className="me-2" alt="Register" />
-												Register
-											</Button>
+											<RegisterModal btnTitle="Register" classes="d-flex align-items-center" />
 										</div>
 									</div>
 									<p className="mt-3 text-center font-sm">*Your contribution benefits a host of social projects</p>

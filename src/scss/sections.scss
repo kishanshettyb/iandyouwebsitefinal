@@ -919,7 +919,7 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		background: linear-gradient(#00000091, #00000091);
+		background: linear-gradient(#0000005c, #0000005c);
 	}
 	.banner-content {
 		position: absolute;
@@ -928,6 +928,7 @@
 		transform: translateX(-50%);
 		top: unset;
 		text-align: center;
+
 		.p {
 			.me-auto {
 				margin: auto !important;
@@ -956,6 +957,7 @@
 			transform: translateY(-50%);
 			width: 90%;
 			text-align: left;
+			height: max-content;
 			ul {
 				margin: 50px 0 0 0;
 			}

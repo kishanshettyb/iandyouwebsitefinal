@@ -106,7 +106,7 @@ const NavHeader = () => {
 							</NavDropdown>
 						</Nav>
 						<Navbar.Brand href="/" className="d-flex align-items-center">
-							<StaticImage src="../images/I & You logo.png" alt="I and You" className="logo" />
+							<StaticImage src="../images/I And You.png" alt="I and You" className="logo" />
 						</Navbar.Brand>
 						<Nav className="m-auto w-50 justify-content-start  my-2 my-lg-0 ms-4" style={{ maxHeight: "700px" }} navbarScroll>
 							<NavDropdown title="Projects" id="navbarScrollingDropdown33" className="dropmenu">
