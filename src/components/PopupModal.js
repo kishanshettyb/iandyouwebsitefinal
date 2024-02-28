@@ -45,20 +45,26 @@ const PopupModal = () => {
 						<Form noValidate validated={validated} onSubmit={handleSubmit}>
 							<div className="px-5">
 								<Row className="mb-4">
-									<Form.Group as={Col} md="12" controlId="validationCustom01">
-										<Form.Label>Full Name</Form.Label>
+									<Form.Group as={Col} md="12" controlId="validationCustom011">
+										<Form.Label>
+											Full Name<span className="text-danger">*</span>
+										</Form.Label>
 										<Form.Control size="lg" required type="text" placeholder="Full name" />
-										<Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+										<Form.Control.Feedback type="invalid">Please enter your name!</Form.Control.Feedback>
 									</Form.Group>
 								</Row>
 								<Row className="mb-4">
-									<Form.Group as={Col} md="6" controlId="validationCustom03">
-										<Form.Label>Email</Form.Label>
+									<Form.Group as={Col} md="6" controlId="validationCustom022">
+										<Form.Label>
+											Email<span className="text-danger">*</span>
+										</Form.Label>
 										<Form.Control size="lg" type="email" placeholder="Email" required />
 										<Form.Control.Feedback type="invalid">Please provide a valid email.</Form.Control.Feedback>
 									</Form.Group>
-									<Form.Group as={Col} md="6" controlId="validationCustom04">
-										<Form.Label>Whatsapp No.</Form.Label>
+									<Form.Group as={Col} md="6" controlId="validationCustom033">
+										<Form.Label>
+											Whatsapp No.<span className="text-danger">*</span>
+										</Form.Label>
 										<Form.Control size="lg" type="text" placeholder="Whatsapp No." required />
 										<Form.Control.Feedback type="invalid">Please provide a valid phone.</Form.Control.Feedback>
 									</Form.Group>

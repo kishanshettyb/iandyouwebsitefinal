@@ -37,6 +37,13 @@ const strapiConfig = {
 				publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
 				populate: "*"
 			}
+		},
+		{
+			singularName: "eshwarikriya-interests-popup",
+			queryParams: {
+				publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
+				populate: "*"
+			}
 		}
 	]
 };
