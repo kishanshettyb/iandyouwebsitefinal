@@ -39,7 +39,7 @@ const strapiConfig = {
 			}
 		},
 		{
-			singularName: "eshwarikriya-interests-popup",
+			singularName: "eshwarikriyapopup",
 			queryParams: {
 				publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
 				populate: "*"
