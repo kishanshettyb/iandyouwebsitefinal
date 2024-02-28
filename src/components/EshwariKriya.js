@@ -21,7 +21,7 @@ const EshwariKriya = () => {
 					<Row className="justify-content-center pt-5">
 						<Col md={6} className="position-relative">
 							<div className="position-relative">
-								<StaticImage src="../images/bg/meditation/dhyana-1.jpeg" alt="Eshwari Kriya" className="eshwari-girl-image d-block m-auto" />
+								<StaticImage src="../images/workshops/eshwarikriyaphose.jpeg" alt="Eshwari Kriya" className="eshwari-girl-image d-block m-auto" />
 								<div className="bg-circle">
 									<StaticImage src="../images/bg/media.svg" className="rotate-360" alt="Eshwari Kriya" />
 								</div>
@@ -70,14 +70,13 @@ const EshwariKriya = () => {
 					</Button>
 				</div>
 				<div className="yoga-card yoga-card-left shadow-lg slideskew d-none d-md-block">
-					<StaticImage src="../images/workshops/dhyana.png" className="yoga-img" alt="Eshwari Kriya" />
+					<StaticImage src="../images/workshops/eshwari_dhyana.jpg" className="yoga-img" alt="Eshwari Kriya" />
 					<p className="my-3 fw-bold">
-						In simple statement we would say that <b>ESHWARI KRIYA</b> is a perfect tool for Happy ,Healthy, Prosperous and Successful life Celebrate life through Eshwari Kriya.
+						<b>ESHWARI KRIYA</b> is a time-tested practice that cultivates boundless levels of Emotional, Psychological and Physical fitness.
 					</p>
 				</div>
-
 				<div className="yoga-card-round yoga-card-round-left shadow-lg   d-none d-md-block">
-					<StaticImage src="../images/workshops/dhyana-2.jpeg" className="yoga-img" alt="Eshwari Kriya" />
+					<StaticImage src="../images/workshops/eshwari_kriya_new.jpeg" className="yoga-img" alt="Eshwari Kriya" />
 					<Button className="bg-white playBtn" onClick={() => setOpen(true)}>
 						<StaticImage alt="Play" src="../images/bg/meditation/play.svg" />
 					</Button>
