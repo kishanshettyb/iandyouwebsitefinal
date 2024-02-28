@@ -5,7 +5,7 @@ import { Nav, Form } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { StaticImage } from "gatsby-plugin-image";
-import SideBar from "../components/SideBar";
+import RegisterModal from "../components/RegisterModal";
 import Topbar from "./Topbar";
 
 const NavHeader = () => {
@@ -191,7 +191,7 @@ const NavHeader = () => {
 							</Link>
 						</Nav>
 						<Form className="position-absolute right-10 d-none d-xxl-block">
-							<SideBar btnTitle="Register" classes="px-xxl-4 d-flex align-items-center" iconColor="white" variant="primary" placement="end" btnSize="md" />
+							<RegisterModal btnTitle="Register" variant="primary" size="md" />
 						</Form>
 					</Navbar.Collapse>
 				</Container>

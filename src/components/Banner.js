@@ -4,7 +4,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
 const Banner = (props) => {
-	const guruji = "../images/banners/guruji-banner.png";
 	const wisdom = "../images/banners/wisdom.jpeg";
 	const stress = "../images/banners/stress.jpeg";
 	const depression = "../images/banners/depresion.jpeg";
