@@ -36,7 +36,7 @@ const stress = () => {
 					</div>
 				</Container>
 			</section>
-			<section className="bg-light">
+			<section className="bg-light d-none">
 				<Container>
 					<h2 className="fw-bold font-philosopher text-primary display-4 mb-5">Yoga Programs</h2>
 					<Row>

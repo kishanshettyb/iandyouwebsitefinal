@@ -22,24 +22,26 @@ const wisdom = ({ data }) => {
 	return (
 		<Layout>
 			<Banner title="Insight for Life" subTitle="Insights for Life: Unveiling the Essence of Wisdom" mainLink="wisdom" link="wisdom" />
-			<Container>
-				<h2 className="display-3 fw-bold font-philosopher text-primary  text-center">Wisdom</h2>
-				<p className="fw-bold opacity-80 text-center">Guiding Light: Navigating Life's Journey with Wisdom</p>
-				<div className="text-center  mb-5">
-					<StaticImage src="../images/others/line-2.png" alt="line" className="line" />
-				</div>
-				<Row>
-					{edges.map(({ node }) => (
-						<Col md={4} key={node.id}>
-							<LightGallery onInit={onInit} speed={500} plugins={[lgZoom]}>
-								<a href={node.image.url}>
-									<img src={node.image.url} alt="Wisdom" className="img-fluid br-20 mb-4" />
-								</a>
-							</LightGallery>
-						</Col>
-					))}
-				</Row>
-			</Container>
+			<section>
+				<Container>
+					<h2 className="display-3 fw-bold font-philosopher text-primary  text-center">Wisdom</h2>
+					<p className="fw-bold opacity-80 text-center">Guiding Light: Navigating Life's Journey with Wisdom</p>
+					<div className="text-center  mb-5">
+						<StaticImage src="../images/others/line-2.png" alt="line" className="line" />
+					</div>
+					<Row>
+						{edges.map(({ node }) => (
+							<Col md={4} key={node.id}>
+								<LightGallery onInit={onInit} speed={500} plugins={[lgZoom]}>
+									<a href={node.image.url}>
+										<img src={node.image.url} alt="Wisdom" className="img-fluid br-20 mb-4" />
+									</a>
+								</LightGallery>
+							</Col>
+						))}
+					</Row>
+				</Container>
+			</section>
 		</Layout>
 	);
 };

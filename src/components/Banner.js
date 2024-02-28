@@ -22,8 +22,12 @@ const Banner = (props) => {
 	const contact = "../images/banners/contact.jpeg";
 	const srinaada = "../images/banners/srinaada.png";
 	const srikrishi = "../images/banners/srikrishi.jpeg";
+	const eshwarikriya = "../images/banners/eshwari_kriya.jpg";
+	const physiology = "../images/banners/physiology.png";
+	const nervous = "../images/banners/nervous.jpeg";
+	const hormones = "../images/banners/harmones.jpeg";
 	return (
-		<section className="banner-section">
+		<section className="banner-section mt-2">
 			<Container fluid>
 				<div className="banner-image-outer position-relative">
 					{props.title === "Insight for Life" ? (
@@ -56,8 +60,16 @@ const Banner = (props) => {
 						<StaticImage className="banner-image" src={`${relationship}`} alt="Page Banner" />
 					) : props.title === "Sri Naada" ? (
 						<StaticImage className="banner-image" src={`${srinaada}`} alt="Page Banner" />
+					) : props.title === "Eshwari Kriya" ? (
+						<StaticImage className="banner-image" src={`${eshwarikriya}`} alt="Page Banner" />
 					) : props.title === "Sri Krishi" ? (
 						<StaticImage className="banner-image" src={`${srikrishi}`} alt="Page Banner" />
+					) : props.title === "Physiology" ? (
+						<StaticImage className="banner-image" src={`${physiology}`} alt="Page Banner" />
+					) : props.title === "On The Mind Level" ? (
+						<StaticImage className="banner-image" src={`${nervous}`} alt="Page Banner" />
+					) : props.title === "Hormones" ? (
+						<StaticImage className="banner-image" src={`${hormones}`} alt="Page Banner" />
 					) : (
 						<StaticImage className="banner-image" src={`${contact}`} alt={props.title} />
 					)}

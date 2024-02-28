@@ -985,9 +985,9 @@
 // Banner
 .banner-section {
 	text-align: left;
-	padding: 0 !important;
+	padding: 10px 0 0 0 !important;
 	position: relative;
-	margin-bottom: 60px !important;
+	margin-bottom: 0px !important;
 	.banner-image {
 		border-radius: 20px;
 		width: 100%;
@@ -1059,6 +1059,7 @@
 				width: 25%;
 				margin-right: auto;
 			}
+			margin-bottom: 60px !important;
 		}
 	}
 }

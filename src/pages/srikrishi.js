@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Banner from "../components/Banner";
 import { StaticImage } from "gatsby-plugin-image";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 const srikrishi = () => {
 	return (
@@ -45,6 +45,8 @@ const srikrishi = () => {
 			</section>
 			<section className="bg-light">
 				<Container>
+					<StaticImage src="../images/srikrishi/img-1.jpeg" alt="sri krishi" className="br-20 my-5" />
+
 					<p>
 						The seeds for the project were sown by Sri Prasad, founder of “I and You Being together foundation”, I and you green includes three separate projects they are namely{" "}
 					</p>
@@ -78,38 +80,61 @@ const srikrishi = () => {
 			</section>
 			<section className="bg-light">
 				<Container>
-					<h2 className="display-5 fw-bold font-philosopher text-primary mb-4">MINI FOREST FORMATIONS </h2>
-					<p>- To increase the farmer’s income through multiple fruit crops</p>
-					<p>- Trees to conserve water and reduce soil erosion</p>
-					<p>- To Increase ground water level</p>
-					<p>- To restore, preserve and maintain the diverse flora and fauna which will lead to ecological stability - Help lower temperatures during concrete heat</p>
-					<p>- Reduce air and noise pollution</p>
-					<p>- Attract local birds and insects</p>
-					<p>- To Create carbon sinks</p>
-					<p>
-						A multidisciplinary approach to support farmers finds financial stability through Agroforestry, an approach feasible for implementation and for environmental
-						conservation, Fruits bearing forests includes Bee attracting and Birds attracting trees.
-					</p>
-					<p>When the system becomes successful and gets adopted by a series of farmers, it will lead to</p>
-					<p>➢ Collective marketing to the distant metro cities </p>
-					<p>➢ Brand can be created to channelize the produce in 54 retail malls and stores </p>
-					<p>➢ Storage, processing, and value addition units viz. jams, jellies, dried powders, essential oils etc. can be set-up </p>
-					<p>➢ Harnessing the medicinal properties of the crops for generating higher income </p>
-					<p>➢ Export activities may be carried out</p>
-					<p className="fw-bold">Criteria for maintenance:</p>
-					<p>➢ Selection of planting material should be good </p>
-					<p>➢ Protection and proper care must be taken of seedlings during younger age </p>
-					<p>➢ Proper practice is necessary for harvesting and storage of the produce </p>
-					<p>➢ Marketing and realizing profits must be prioritized</p>
-					<p>
-						SRI KRISHI refers to the divine aspect of agriculture, a gift to farmers welfare, their economic stability and empowerment through project SRI KRISHI an organic
-						farming.{" "}
-					</p>
-					<p>
-						Unfortunately, ecosystems in much of rural India today are highly degraded. This is an outcome of the rapid climate change and human activities leading to a state of
-						massive ecological imbalance. This is one of the root causes of Rural Poverty{" "}
-					</p>
-					<p>The Sri Krishi in its approach to agroforestry and Organic farming has its motive mainly concerning</p>
+					<Row className="d-flex align-items-center">
+						<Col md={6}>
+							<h2 className="display-5 fw-bold font-philosopher text-primary mb-4">MINI FOREST FORMATIONS </h2>
+							<p>- To increase the farmer’s income through multiple fruit crops</p>
+							<p>- Trees to conserve water and reduce soil erosion</p>
+							<p>- To Increase ground water level</p>
+							<p>- To restore, preserve and maintain the diverse flora and fauna which will lead to ecological stability - Help lower temperatures during concrete heat</p>
+							<p>- Reduce air and noise pollution</p>
+							<p>- Attract local birds and insects</p>
+							<p>- To Create carbon sinks</p>
+						</Col>
+
+						<Col md={6}>
+							<StaticImage src="../images/srikrishi/img-3.jpeg" className="br-20 mt-5 mt-lg-0" alt="sri krishi" />
+						</Col>
+					</Row>
+				</Container>
+			</section>
+			<section>
+				<Container>
+					<Row className="d-flex align-items-center">
+						<Col md={6}>
+							<p>
+								A multidisciplinary approach to support farmers finds financial stability through Agroforestry, an approach feasible for implementation and for environmental
+								conservation, Fruits bearing forests includes Bee attracting and Birds attracting trees.
+							</p>
+							<p>When the system becomes successful and gets adopted by a series of farmers, it will lead to</p>
+							<p>➢ Collective marketing to the distant metro cities </p>
+							<p>➢ Brand can be created to channelize the produce in 54 retail malls and stores </p>
+							<p>➢ Storage, processing, and value addition units viz. jams, jellies, dried powders, essential oils etc. can be set-up </p>
+							<p>➢ Harnessing the medicinal properties of the crops for generating higher income </p>
+							<p>➢ Export activities may be carried out</p>
+							<p className="fw-bold">Criteria for maintenance:</p>
+							<p>➢ Selection of planting material should be good </p>
+							<p>➢ Protection and proper care must be taken of seedlings during younger age </p>
+							<p>➢ Proper practice is necessary for harvesting and storage of the produce </p>
+							<p>➢ Marketing and realizing profits must be prioritized</p>
+							<p>
+								SRI KRISHI refers to the divine aspect of agriculture, a gift to farmers welfare, their economic stability and empowerment through project SRI KRISHI an organic
+								farming.{" "}
+							</p>
+							<p>
+								Unfortunately, ecosystems in much of rural India today are highly degraded. This is an outcome of the rapid climate change and human activities leading to a state
+								of massive ecological imbalance. This is one of the root causes of Rural Poverty{" "}
+							</p>
+							<p>The Sri Krishi in its approach to agroforestry and Organic farming has its motive mainly concerning</p>
+						</Col>
+						<Col md={6}>
+							<StaticImage src="../images/srikrishi/img-2.jpeg" alt="sri krishi" className="img-fluid br-20 mt-5 mt-lg-0" />
+						</Col>
+					</Row>
+				</Container>
+			</section>
+			<section>
+				<Container>
 					<h2 className="display-5 fw-bold font-philosopher text-center text-primary mb-4">I AND YOU GREEN - I BREATH FOR YOU , YOU BREATH FOR ME , I AND YOU BEING TOGETHER.</h2>
 				</Container>
 			</section>

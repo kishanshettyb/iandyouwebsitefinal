@@ -186,6 +186,9 @@ const NavHeader = () => {
 									<span>Disaster relief - I and you Seva</span>
 								</Link>
 							</NavDropdown>
+							<Link className="nav-link home  d-flex align-items-center text-uppercase" to="#">
+								<span></span>
+							</Link>
 						</Nav>
 						<Form className="position-absolute right-10 d-none d-xxl-block">
 							<SideBar btnTitle="Register" classes="px-xxl-4 d-flex align-items-center" iconColor="white" variant="primary" placement="end" btnSize="md" />
@@ -198,7 +201,7 @@ const NavHeader = () => {
 			<Navbar expand="lg" className="bg-primarylight d-block d-lg-none mobile">
 				<Container>
 					<Navbar.Brand href="#">
-						<StaticImage src="../images/I & You logo.png" alt="I and You" className="logo-small" />
+						<StaticImage src="../images/I And You.png" alt="I and You" className="logo-small" />
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="navbarScroll" />
 					<Navbar.Collapse id="navbarScroll">
