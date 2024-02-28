@@ -262,10 +262,45 @@
 
 // Eshwarikriya Section
 .eshwari-section {
+	.eshwari-girl-image {
+		z-index: 111;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+		@media (min-width: 768px) {
+			width: 500px;
+			height: 500px;
+		}
+	}
+	.bg-circle {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		.rotate-360 {
+			width: 300px;
+			height: auto;
+			@media (min-width: 1200px) {
+				width: 700px;
+				height: 700px;
+			}
+
+			animation: rotate-360 30s infinite linear;
+		}
+		@keyframes rotate-360 {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(359deg);
+			}
+		}
+	}
 	position: relative;
 	overflow: hidden;
 	// background: radial-gradient(circle farthest-corner at center center, #f3f3f3 29%, #fcdeb3 100%);
-	background: radial-gradient(circle farthest-corner at center center, #ffa238a1 29%, #fcdeb300 100%);
+	background: radial-gradient(circle farthest-corner at center center, #ffa238 29%, #fcdeb300 100%);
 	.slideskew {
 		animation: 5s ease 0s normal none infinite running slideskew;
 		z-index: 111;
@@ -502,6 +537,11 @@
 			object-fit: cover;
 			border-radius: 20px;
 		}
+
+		&.yoga-card-left {
+			left: 5% !important;
+			top: 50% !important;
+		}
 	}
 	.yoga-card-round {
 		animation: 5s ease 0s normal none infinite running moveLeftRight;
@@ -518,6 +558,10 @@
 			border-radius: 60px;
 			height: 80px;
 			object-fit: cover;
+		}
+		&.yoga-card-round-left {
+			left: 5% !important;
+			bottom: 70% !important;
 		}
 	}
 

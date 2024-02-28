@@ -18,10 +18,14 @@ const EshwariKriya = () => {
 						<h2 className="display-3 fw-bold text-center text-primary font-philosopher text-uppercase">Eshwari Kriya</h2>
 						<p className="fw-bold text-center display-5 font-niconne opacity-75 mb-5">Cultivating Inner Peace</p>
 					</ScrollAnimation>
-					<Row className="justify-content-center">
-						<Col md={4} className="position-relative">
-							<StaticImage src="../images/bg/meditation/dhyana-1.jpeg" className="img-fluid rounded-circle" alt="Meditation" />
-
+					<Row className="justify-content-center pt-5">
+						<Col md={6} className="position-relative">
+							<div className="position-relative">
+								<StaticImage src="../images/bg/meditation/dhyana-1.jpeg" alt="Eshwari Kriya" className="eshwari-girl-image d-block m-auto" />
+								<div className="bg-circle">
+									<StaticImage src="../images/bg/media.svg" className="rotate-360" alt="Eshwari Kriya" />
+								</div>
+							</div>
 							{/* <div className="text-center">
 								<StaticImage src="../images/bg/meditation/dhyana-1.jpeg" className="mainimg rounded-circle" alt="Meditation" />
 							</div>
@@ -40,7 +44,7 @@ const EshwariKriya = () => {
 					</Row>
 				</Container>
 				<Snow />
-				<div className="yoga shadow-lg  d-none d-md-none">
+				{/* <div className="yoga shadow-lg  d-none d-md-none">
 					<div className="yoga-inner">
 						<StaticImage src="../images/bg/meditation/yoga-1.png" className="yoga-img" alt="Yoga" />
 					</div>
@@ -50,7 +54,7 @@ const EshwariKriya = () => {
 					<div className="yoga-inner">
 						<StaticImage src="../images/bg/meditation/img-11.png" className="yoga-img" alt="Yoga" />
 					</div>
-				</div>
+				</div> */}
 
 				<div className="yoga-card shadow-lg slideskew d-none d-md-block">
 					<StaticImage src="../images/workshops/dhyana.png" className="yoga-img" alt="Eshwari Kriya" />
@@ -65,10 +69,23 @@ const EshwariKriya = () => {
 						<StaticImage alt="Play" src="../images/bg/meditation/play.svg" />
 					</Button>
 				</div>
+				<div className="yoga-card yoga-card-left shadow-lg slideskew d-none d-md-block">
+					<StaticImage src="../images/workshops/dhyana.png" className="yoga-img" alt="Eshwari Kriya" />
+					<p className="my-3 fw-bold">
+						In simple statement we would say that <b>ESHWARI KRIYA</b> is a perfect tool for Happy ,Healthy, Prosperous and Successful life Celebrate life through Eshwari Kriya.
+					</p>
+				</div>
+
+				<div className="yoga-card-round yoga-card-round-left shadow-lg   d-none d-md-block">
+					<StaticImage src="../images/workshops/dhyana-2.jpeg" className="yoga-img" alt="Eshwari Kriya" />
+					<Button className="bg-white playBtn" onClick={() => setOpen(true)}>
+						<StaticImage alt="Play" src="../images/bg/meditation/play.svg" />
+					</Button>
+				</div>
 			</div>
 			<div className="pt-5">
-				<Container className="pt-5">
-					<Row>
+				<Container className="pt-5 pb-5">
+					<Row className="mb-5">
 						<Col xs={6} md={4} xl={2}>
 							<ScrollAnimation delay="200" animateIn="fadeInUp">
 								<div className="meditation-card">
