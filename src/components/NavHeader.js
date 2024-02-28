@@ -191,7 +191,7 @@ const NavHeader = () => {
 							</Link>
 						</Nav>
 						<Form className="position-absolute right-10 d-none d-xxl-block">
-							<RegisterModal btnTitle="Register" variant="primary" size="md" />
+							<RegisterModal btnTitle="Register" variant="primary" size="md" classes="d-flex align-items-center" />
 						</Form>
 					</Navbar.Collapse>
 				</Container>

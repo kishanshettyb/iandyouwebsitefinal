@@ -2,33 +2,59 @@ import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 const PopupModal = () => {
+	// ------ Modal ------ //
 	const [show, setShow] = useState(false);
-
 	const handleClose = () => setShow(false);
-	// const handleShow = () => setShow(true);
-
 	const handleOpen = () => {
 		const timer = setTimeout(() => {
 			setShow(true);
 		}, 20000);
 		return () => clearTimeout(timer);
 	};
-
+	// ------ Form Validation ------ //
 	const [validated, setValidated] = useState(false);
-
-	const handleSubmit = (event) => {
-		const form = event.currentTarget;
-		if (form.checkValidity() === false) {
-			event.preventDefault();
-			event.stopPropagation();
-		}
-
-		setValidated(true);
-	};
-
+	// ------ Use Effect ------ //
 	useEffect(() => {
 		handleOpen();
 	}, []);
+
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [whatsapp, setWhatsapp] = useState("");
+
+	const [submitted, setSubmitted] = useState(false);
+	const [error, setError] = useState("");
+
+	function submit(e) {
+		const form = e.currentTarget;
+		if (form.checkValidity() === false) {
+			e.preventDefault();
+		}
+		setValidated(true);
+
+		// replace this with your own unique endpoint URL
+		fetch("https://formcarry.com/s/8s-dt6C--60", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json"
+			},
+			body: JSON.stringify({ name: name, email: email, whatsapp: whatsapp })
+		})
+			.then((res) => res.json())
+			.then((res) => {
+				if (res.code === 200) {
+					setSubmitted(true);
+				} else {
+					setError(res.message);
+				}
+			})
+			.catch((error) => setError(error));
+	}
+
+	if (submitted) {
+		return <p>We've received your message, thank you for contacting us!</p>;
+	}
 
 	return (
 		<>
@@ -42,14 +68,14 @@ const PopupModal = () => {
 					<h5 className="text-center mt-3">Don't leave without a smile </h5>
 					<p className="text-center mb-3">Talk to our experts and learn more about Eshwari Kriya</p>
 					<div className="py-5 form-content">
-						<Form noValidate validated={validated} onSubmit={handleSubmit}>
+						<Form noValidate validated={validated} onSubmit={submit}>
 							<div className="px-5">
 								<Row className="mb-4">
 									<Form.Group as={Col} md="12" controlId="validationCustom011">
 										<Form.Label>
 											Full Name<span className="text-danger">*</span>
 										</Form.Label>
-										<Form.Control size="lg" required type="text" placeholder="Full name" />
+										<Form.Control name="name" value={name} onChange={(e) => setName(e.target.value)} size="lg" required type="text" placeholder="Full name" />
 										<Form.Control.Feedback type="invalid">Please enter your name!</Form.Control.Feedback>
 									</Form.Group>
 								</Row>
@@ -58,14 +84,14 @@ const PopupModal = () => {
 										<Form.Label>
 											Email<span className="text-danger">*</span>
 										</Form.Label>
-										<Form.Control size="lg" type="email" placeholder="Email" required />
+										<Form.Control name="email" value={email} onChange={(e) => setEmail(e.target.value)} size="lg" type="email" placeholder="Email" required />
 										<Form.Control.Feedback type="invalid">Please provide a valid email.</Form.Control.Feedback>
 									</Form.Group>
 									<Form.Group as={Col} md="6" controlId="validationCustom033">
 										<Form.Label>
 											Whatsapp No.<span className="text-danger">*</span>
 										</Form.Label>
-										<Form.Control size="lg" type="text" placeholder="Whatsapp No." required />
+										<Form.Control name="whatsapp" value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} size="lg" type="text" placeholder="Whatsapp No." required />
 										<Form.Control.Feedback type="invalid">Please provide a valid phone.</Form.Control.Feedback>
 									</Form.Group>
 								</Row>

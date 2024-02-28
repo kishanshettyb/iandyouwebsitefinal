@@ -13,6 +13,7 @@ import EshwariKriya from "../components/EshwariKriya";
 import Meditation from "../components/Meditation";
 import PopupModal from "../components/PopupModal";
 import { Seo } from "../components/Seo";
+import ContactForm from "../components/ContactForm";
 
 const IndexPage = () => {
 	return (
@@ -30,6 +31,7 @@ const IndexPage = () => {
 			<Wisdom />
 			<Footer />
 			<PopupModal />
+			<ContactForm />
 		</>
 	);
 };
