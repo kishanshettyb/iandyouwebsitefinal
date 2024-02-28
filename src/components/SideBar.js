@@ -15,7 +15,12 @@ const SideBar = ({ name, ...props }) => {
 	return (
 		<>
 			<Button variant={props.variant} onClick={handleShow} className={props.classes} size={props.btnSize}>
-				<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
+				{props.iconColor === "white" ? (
+					<StaticImage className="icon me-2" src="../images/icons/star-white.svg" alt="star" />
+				) : (
+					<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
+				)}
+
 				{props.btnTitle}
 			</Button>
 			<Offcanvas show={show} onHide={handleClose} placement={props.placement} backdrop="static">

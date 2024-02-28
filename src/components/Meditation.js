@@ -7,7 +7,7 @@ const Meditation = () => {
 	return (
 		<section className="meditaion-new-section">
 			<Container className="mb-5 pb-5">
-				<h2 className="fw-bold font-philosopher text-black   text-center display-2  text-uppercase">
+				<h2 className="fw-bold font-philosopher text-white    text-center display-2  text-uppercase">
 					Mastering the art of <br />
 					Meditation
 				</h2>
@@ -16,7 +16,7 @@ const Meditation = () => {
 				<Row className="pt-5 d-flex align-items-center justify-content-md-center  justify-content-xl-between">
 					<Col md={6} xl={5} className=" d-flex justify-content-center">
 						<div className="position-relative">
-							<StaticImage src="../images/bg/meditation/dhyana-2.jpeg" alt="Eshwari Kriya" className="  img-fluid eshwari-girl-image" />
+							<StaticImage src="../images/bg/meditation/dhyana-1.jpeg" alt="Eshwari Kriya" className="  img-fluid eshwari-girl-image" />
 							<div className="bg-circle">
 								<StaticImage src="../images/bg/media.svg" className="rotate-360" alt="Eshwari Kriya" />
 							</div>
@@ -87,7 +87,7 @@ const Meditation = () => {
 								</Col>
 							</Row>
 							<div className="text-center ">
-								<Button className="px-5" variant="dark d-inline-flex align-items-center mb-5" size="lg">
+								<Button className="px-5" variant="dark d-inline-flex align-items-center mt-5 mb-5" size="lg">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
 									Register Now
 								</Button>

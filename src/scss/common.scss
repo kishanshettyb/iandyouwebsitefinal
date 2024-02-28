@@ -23,6 +23,11 @@ a {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.line {
+	width: 250px;
+	height: auto;
+	opacity: 0.9;
+}
 .line-clamp {
 	display: -webkit-box;
 	-webkit-line-clamp: 5;
@@ -70,7 +75,7 @@ video {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
-		z-index: 111;
+		z-index: 11;
 		.hero-img {
 			width: 200px;
 			@media (min-width: 992px) {

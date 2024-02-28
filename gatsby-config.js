@@ -18,6 +18,13 @@ const strapiConfig = {
 			}
 		},
 		{
+			singularName: "course",
+			queryParams: {
+				publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
+				populate: "*"
+			}
+		},
+		{
 			singularName: "wisdom",
 			queryParams: {
 				publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",

@@ -13,7 +13,7 @@ const Footer = () => {
 				<Container className="z-index-high">
 					<Row>
 						<Col xs={12} lg={4}>
-							<StaticImage src="../images/I & You logo.png" className="logo mb-3" alt="I And You" />
+							<StaticImage src="../images/I And You.png" className="logo mb-3" alt="I And You" />
 							<p className=" about text-white me-0 me-md-5">
 								Sri Prasad has established an organization in 2012 and named it “I and You Being Together Foundation”, a non -profit making, non-religious and volunteer
 								organization that aims in bringing stress-free, disease-free, violence-free and self-realization in individuals to form a holistic society.

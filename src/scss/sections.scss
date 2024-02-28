@@ -109,6 +109,50 @@
 }
 
 // Meditation New section
+.meditation-page-section {
+	.bg-image {
+		width: 100%;
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		z-index: 11;
+	}
+	.eshwari-girl-image {
+		z-index: 111;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+		@media (min-width: 768px) {
+			width: 350px;
+			height: 350px;
+		}
+	}
+	.bg-circle {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		.rotate-360 {
+			width: 300px;
+			height: auto;
+			@media (min-width: 1200px) {
+				width: 550px;
+				height: 550px;
+			}
+
+			animation: rotate-360 30s infinite linear;
+		}
+		@keyframes rotate-360 {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(359deg);
+			}
+		}
+	}
+}
 .meditaion-new-section {
 	position: relative;
 	background: linear-gradient(180deg, rgb(147 109 65) 0%, #936d42e8 100%);
@@ -129,7 +173,7 @@
 		position: absolute;
 		bottom: -2px;
 		left: 0;
-		z-index: 1111;
+		z-index: 11;
 	}
 	.eshwari-girl-image {
 		z-index: 111;
@@ -218,10 +262,45 @@
 
 // Eshwarikriya Section
 .eshwari-section {
+	.eshwari-girl-image {
+		z-index: 111;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+		@media (min-width: 768px) {
+			width: 500px;
+			height: 500px;
+		}
+	}
+	.bg-circle {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		.rotate-360 {
+			width: 300px;
+			height: auto;
+			@media (min-width: 1200px) {
+				width: 700px;
+				height: 700px;
+			}
+
+			animation: rotate-360 30s infinite linear;
+		}
+		@keyframes rotate-360 {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(359deg);
+			}
+		}
+	}
 	position: relative;
 	overflow: hidden;
 	// background: radial-gradient(circle farthest-corner at center center, #f3f3f3 29%, #fcdeb3 100%);
-	background: radial-gradient(circle farthest-corner at center center, #ffa238a1 29%, #fcdeb300 100%);
+	background: radial-gradient(circle farthest-corner at center center, #ffa238 29%, #fcdeb300 100%);
 	.slideskew {
 		animation: 5s ease 0s normal none infinite running slideskew;
 		z-index: 111;
@@ -266,12 +345,12 @@
 			top: 50%;
 			left: 50%;
 			border-radius: 50%;
-			top: 60%;
+			top: 50%;
 		}
 		.bnr-circle1 {
 			border: 5px solid #936d425e;
-			height: 75%;
-			width: 75%;
+			height: 144%;
+			width: 88%;
 			animation: bnr-circle1 25s linear infinite;
 
 			&:after,
@@ -296,12 +375,12 @@
 		}
 		.bnr-circle2 {
 			background-image: url("../images/bg/meditation/circle.png");
-			height: 98%;
-			width: 98%;
+			height: 128%;
+			width: 128%;
 			animation: bnr-circle1 25s linear infinite;
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: 95%;
+			background-size: 60%;
 
 			&:after {
 				content: "";
@@ -312,18 +391,18 @@
 				border-radius: 12px;
 				border: 3px solid $warning;
 				filter: drop-shadow(0px 9px 10px rgba(24, 25, 25, 0.3));
-				right: 10%;
-				top: 20%;
+				right: 43%;
+				top: 0%;
 			}
 		}
 		.icon1 {
-			left: 15%;
+			left: 13%;
 			top: 18%;
 			animation: bnr-circle1-icon1 25s linear infinite;
 		}
 		.icon2 {
-			right: -5%;
-			top: 45%;
+			right: 3%;
+			top: 35%;
 			animation: bnr-circle1-icon1 25s linear infinite;
 		}
 	}
@@ -458,6 +537,11 @@
 			object-fit: cover;
 			border-radius: 20px;
 		}
+
+		&.yoga-card-left {
+			left: 5% !important;
+			top: 50% !important;
+		}
 	}
 	.yoga-card-round {
 		animation: 5s ease 0s normal none infinite running moveLeftRight;
@@ -467,13 +551,17 @@
 		height: auto;
 		background-color: #fff;
 		position: absolute;
-		left: 5%;
+		right: 5%;
 		bottom: 10%;
 		.yoga-img {
 			width: 100%;
 			border-radius: 60px;
 			height: 80px;
 			object-fit: cover;
+		}
+		&.yoga-card-round-left {
+			left: 5% !important;
+			bottom: 70% !important;
 		}
 	}
 
@@ -845,7 +933,7 @@
 		}
 	}
 	@media (min-width: 992px) {
-		background: url("../images/bg/guruji-banner.png");
+		background: url("../images/bg/guruji-banner-final.png");
 		padding: 80px 0 !important;
 		background-position: right !important;
 		background-repeat: no-repeat !important;
@@ -889,4 +977,344 @@
 }
 .modal-backdrop.show {
 	opacity: 0.9 !important;
+}
+.modal-backdrop {
+	z-index: 111;
+}
+
+// Banner
+.banner-section {
+	text-align: left;
+	padding: 10px 0 0 0 !important;
+	position: relative;
+	margin-bottom: 0px !important;
+	.banner-image {
+		border-radius: 20px;
+		width: 100%;
+		height: 50vh;
+		@media (min-width: 768px) {
+			height: 60vh;
+		}
+		@media (min-width: 992px) {
+			height: 70vh;
+		}
+		object-fit: cover;
+	}
+	.banner-overlay {
+		width: 100%;
+		height: 100%;
+		border-radius: 20px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: linear-gradient(#0000005c, #0000005c);
+	}
+	.banner-content {
+		position: absolute;
+		left: 50%;
+		bottom: 20px;
+		transform: translateX(-50%);
+		top: unset;
+		text-align: center;
+
+		.p {
+			.me-auto {
+				margin: auto !important;
+			}
+			&.desc {
+				width: 100%;
+			}
+		}
+		ul {
+			margin: 10px 0 0 0;
+			width: max-content;
+			background-color: #000;
+			padding: 10px 20px;
+			border-radius: 20px;
+			li {
+				list-style: none;
+				display: inline;
+				padding-right: 10px;
+				font-size: 0.8rem;
+			}
+		}
+		@media (min-width: 768px) {
+			position: absolute;
+			left: 10%;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 90%;
+			text-align: left;
+			height: max-content;
+			ul {
+				margin: 50px 0 0 0;
+			}
+			.desc {
+				width: 50%;
+				margin-right: auto;
+			}
+		}
+		@media (min-width: 992px) {
+			.desc {
+				width: 25%;
+				margin-right: auto;
+			}
+			margin-bottom: 60px !important;
+		}
+	}
+}
+
+// Courses card
+.course-card {
+	background-color: $white;
+	border: 1px solid #ddd;
+	border-radius: 15px;
+
+	.image {
+		border-radius: 15px;
+		height: 300px;
+		width: 100%;
+		object-fit: cover;
+	}
+	.content {
+		padding: 20px;
+		height: 200px;
+		font-size: 0.9rem;
+	}
+	.icon {
+		width: 18px;
+		height: 18px;
+		vertical-align: sub;
+	}
+	.timings-div {
+		padding: 10px;
+		background-color: rgba(221, 221, 221, 0.333);
+		border-radius: 10px;
+		margin-bottom: 10px;
+	}
+	.address-div {
+		@extend .timings-div;
+		background-color: #fff !important;
+	}
+
+	.footer {
+		padding: 20px 20px 0 20px;
+		border-top: 1px solid #ddd;
+		border-radius: 0 0 15px 15px;
+		.font-sm {
+			font-size: 0.7rem;
+			background-color: rgba(221, 221, 221, 0.333);
+			border-radius: 5px;
+			padding: 2px;
+		}
+	}
+}
+// Register-modal{
+.modal {
+	.accordion-item {
+		margin-bottom: 20px !important;
+		border-radius: 20px;
+	}
+	.accordion-item:first-of-type,
+	.accordion-item:last-of-type {
+		border-radius: 10px !important;
+	}
+	.accordion-button {
+		border-radius: 10px !important;
+		border: 1px solid $primary;
+		font-size: 1rem;
+	}
+}
+.program-info {
+	ul {
+		background-color: #be710047;
+		border-radius: 15px;
+		padding: 10px;
+		li {
+			padding: 10px;
+			list-style: none;
+			border-bottom: 1px solid #0000000d;
+			margin-bottom: 5px;
+			color: $black;
+			a {
+				color: $black;
+			}
+			&:last-child {
+				border-bottom: 0;
+			}
+			.icon {
+				vertical-align: sub;
+				margin-right: 10px;
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+}
+::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	opacity: 0.5 !important;
+}
+::-moz-placeholder {
+	/* Firefox 19+ */
+	opacity: 0.5 !important;
+}
+:-ms-input-placeholder {
+	/* IE 10+ */
+	opacity: 0.5 !important;
+}
+:-moz-placeholder {
+	/* Firefox 18- */
+	opacity: 0.5 !important;
+}
+input,
+textarea {
+	border: 1px solid #7f4c009a !important;
+}
+
+// Quote
+.quote {
+	position: relative;
+	padding: 50px;
+	border-radius: 10px;
+	background-color: #eed8cae3;
+	.left {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100px;
+		height: 100px;
+		opacity: 0.07;
+	}
+	.right {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		transform: rotate(180deg);
+		width: 100px;
+		height: 100px;
+		opacity: 0.07;
+	}
+	.desc {
+		font-weight: 600;
+		font-size: 1.1rem;
+		font-style: italic;
+	}
+	.font-niconne {
+		font-size: 1.8rem;
+		margin-bottom: 0;
+	}
+}
+
+// Contact Section
+// ----- Contact ----- //
+.contact-section {
+	iframe {
+		width: 100%;
+		height: 500px;
+		border-radius: 20px;
+	}
+	.contact-card {
+		background-color: $white;
+		height: auto;
+		width: 100%;
+		border-radius: 20px;
+		border: 1px solid #ddd;
+		padding: 20px 15px;
+		@media (min-width: 768px) {
+			padding: 30px;
+			&.responsive {
+				height: 520px;
+			}
+		}
+		@media (min-width: 992px) {
+			&.responsive {
+				height: 630px;
+			}
+		}
+		.social-media {
+			li {
+				display: inline-block;
+				padding: 0 20px 0 0;
+			}
+			.icon {
+				width: 24px;
+				height: 24px;
+				filter: grayscale(1);
+				&:hover {
+					filter: grayscale(0);
+				}
+			}
+		}
+		a {
+			color: $black;
+			opacity: 0.7;
+			font-family: "Poppins", sans-serif;
+
+			&:hover {
+				color: $primary;
+				opacity: 1;
+			}
+		}
+		ul {
+			padding: 0;
+			li {
+				padding-bottom: 30px;
+				list-style: none;
+			}
+		}
+		iframe {
+			width: 100%;
+			height: 700px !important;
+			@media (min-width: 768px) {
+				height: 420px !important;
+			}
+			@media (min-width: 992px) {
+				height: 520px !important;
+			}
+			border-radius: 20px;
+		}
+		.contact-frame-footer {
+			width: calc(100% - 30px);
+			border-radius: 0 0 20px 20px;
+			background-color: #fff;
+			position: absolute;
+			bottom: 1px;
+			height: 130px;
+			@media (min-width: 768px) {
+				margin-left: -10px !important;
+			}
+			@media (min-width: 992px) {
+				height: 120px !important;
+			}
+		}
+	}
+}
+.regular-ul-list-none {
+	li {
+		list-style: none;
+	}
+}
+
+.social-media {
+	margin: 0px 0 0 0;
+	padding-left: 0 !important;
+	li {
+		display: inline-block;
+		padding: 0 20px 0 0;
+	}
+	.icon {
+		width: 24px;
+		height: 24px;
+		filter: grayscale(1);
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+}
+
+.mainimg {
+	width: 400px;
+	height: 400px;
+	margin: auto;
 }
