@@ -23,7 +23,7 @@ function RegisterModal(props) {
 	return (
 		<>
 			<div className="">
-				<Button variant="primary" className={props.classes} onClick={handleShow}>
+				<Button variant="primary" size={props.size} className={props.classes} onClick={handleShow}>
 					<StaticImage src="../images/icons/star-white.svg" className="me-2" alt="register" />
 					{props.btnTitle}
 				</Button>

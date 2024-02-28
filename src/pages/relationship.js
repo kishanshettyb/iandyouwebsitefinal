@@ -20,13 +20,17 @@ const relationship = () => {
 					other mood disorders as it has been shown to create a greater sense of well-being, increase feelings of relaxation, improved self-confidence and body image, improve
 					efficiency, better interpersonal relationships, increase attentiveness, lower irritability, and encourage an optimistic outlook on life.
 				</p>
-
-				<p>Most important in the relationship is understanding our own emotions, our ability to forgive, accept the person and having patience</p>
-				<p>
-					Handling emotions is more than just management, its an ability to understand, accept with right amount of patience, finding someone who loves you, the best thing is you
-					love them in a better way, in a relationship forgiving and continued loving is the solution. Dhyana and Eshwari Kriya will unfold these abilities within you{" "}
-				</p>
-				<p className="fw-bold fs-3 font-niconne">- Sri Prasad</p>
+				<p>Most important in the relationship is understanding our own emotions, our ability to forgive, accept the person and having patience.</p>
+				<div className="quote">
+					<StaticImage className="left" src="../images/icons/quote.png" alt="quote" />
+					<StaticImage className="right" src="../images/icons/quote.png" alt="quote" />
+					<p className="desc font-philosopher">
+						Handling emotions is more than just management, its an ability to understand, accept with right amount of patience, finding someone who loves you, the best thing is you
+						love them in a better way, in a relationship forgiving and continued loving is the solution.
+					</p>
+					<p className="desc font-philosopher">Dhyana and Eshwari Kriya will unfold these abilities within you </p>
+					<p className="fw-bold fs-3 font-niconne">- Sri Prasad</p>
+				</div>
 			</Container>
 		</Layout>
 	);

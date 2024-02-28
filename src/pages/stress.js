@@ -32,7 +32,7 @@ const stress = () => {
 							“Stress is not a problem, it is a mental discipline, one who fails to have that will end up in stress, what you need to do is, don’t hurry up in doing things or
 							handling problems in a short time with less energy”
 						</p>
-						<p className="fw-bold   font-niconne">- Sri Prasad</p>
+						<p className="fw-bold font-niconne">- Sri Prasad</p>
 					</div>
 				</Container>
 			</section>

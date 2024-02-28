@@ -16,12 +16,14 @@ const EshwariKriya = () => {
 				<Container>
 					<ScrollAnimation animateIn="fadeInUp">
 						<h2 className="display-3 fw-bold text-center text-primary font-philosopher text-uppercase">Eshwari Kriya</h2>
-						<p className="fw-bold text-center display-5 font-niconne opacity-75">Cultivating Inner Peace</p>
+						<p className="fw-bold text-center display-5 font-niconne opacity-75 mb-5">Cultivating Inner Peace</p>
 					</ScrollAnimation>
 					<Row className="justify-content-center">
-						<Col md={6} className="position-relative">
-							<div className="text-center">
-								<StaticImage src="../images/bg/meditation/img-22.png" className="slideskew" alt="Meditation" />
+						<Col md={4} className="position-relative">
+							<StaticImage src="../images/bg/meditation/dhyana-1.jpeg" className="img-fluid rounded-circle" alt="Meditation" />
+
+							{/* <div className="text-center">
+								<StaticImage src="../images/bg/meditation/dhyana-1.jpeg" className="mainimg rounded-circle" alt="Meditation" />
 							</div>
 							<div class="banner-media-bg">
 								<div class="bnr-circle1"></div>
@@ -33,18 +35,18 @@ const EshwariKriya = () => {
 										<StaticImage src="../images/bg/meditation/logo2.png" alt="Image" />
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</Col>
 					</Row>
 				</Container>
 				<Snow />
-				<div className="yoga shadow-lg  d-none d-md-block">
+				<div className="yoga shadow-lg  d-none d-md-none">
 					<div className="yoga-inner">
 						<StaticImage src="../images/bg/meditation/yoga-1.png" className="yoga-img" alt="Yoga" />
 					</div>
 				</div>
 
-				<div className="yoga-1  d-none d-md-block">
+				<div className="yoga-1  d-none d-md-none">
 					<div className="yoga-inner">
 						<StaticImage src="../images/bg/meditation/img-11.png" className="yoga-img" alt="Yoga" />
 					</div>
@@ -58,7 +60,7 @@ const EshwariKriya = () => {
 				</div>
 
 				<div className="yoga-card-round shadow-lg   d-none d-md-block">
-					<StaticImage src="../images/workshops/dhyana.png" className="yoga-img" alt="Eshwari Kriya" />
+					<StaticImage src="../images/workshops/dhyana-2.jpeg" className="yoga-img" alt="Eshwari Kriya" />
 					<Button className="bg-white playBtn" onClick={() => setOpen(true)}>
 						<StaticImage alt="Play" src="../images/bg/meditation/play.svg" />
 					</Button>

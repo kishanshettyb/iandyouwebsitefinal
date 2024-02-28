@@ -19,17 +19,21 @@ const immunity = () => {
 					A 5000-year-old subtle science, it focuses on bringing harmony in the mind and the body. It is a combination of physical exercise, diet control, breathing techniques and
 					concentration, which strengthens the body and relaxes the mind. This, in turn, improves immunity.
 				</p>
-				<p>
+				<p className="fw-bold mb-4">
 					New research published in the Journal of Behavioural Medicine suggests that yoga can be a helpful way to boost your immune system and decrease inflammation in the body.
 				</p>
-				<p>Ref: yoga and its health benefits in our book The Harvard Medical School Guide to Yoga.</p>
-				<p>
-					Ayurveda and yogic science always goes hand in hand, it's learned that saying Ojas has connection with Vyadhikshamatva (Immunity), Ojas is the essence of the Spatha Datu
-					which is formed through our Food, if your food is too hygienic and by drinking bottled water your body will not adjust to other forms of food, body should have developed
-					the nature to adjust with all types of food and water, then the inner warrior will become stronger, such adjustments to the mind with regards to the food and water is
-					possible with the Eshwari Kriya and the Dhyana
-				</p>
-				<p className="fw-bold fs-3 font-niconne">- Sri Prasad</p>
+				<p>Ref: <a href="https://www.amazon.com/Harvard-Medical-School-Guide-Yoga/dp/0738219363" target="_blank" rel="noreferrer"> Yoga and its health benefits in our book The Harvard Medical School Guide to Yoga.</a></p>
+				<div className="quote">
+					<StaticImage className="left" src="../images/icons/quote.png" alt="quote" />
+					<StaticImage className="right" src="../images/icons/quote.png" alt="quote" />
+					<p className="desc font-philosopher">
+						Ayurveda and yogic science always goes hand in hand, it's learned that saying Ojas has connection with Vyadhikshamatva (Immunity), Ojas is the essence of the Spatha
+						Datu which is formed through our Food, if your food is too hygienic and by drinking bottled water your body will not adjust to other forms of food, body should have
+						developed the nature to adjust with all types of food and water, then the inner warrior will become stronger, such adjustments to the mind with regards to the food and
+						water is possible with the Eshwari Kriya and the Dhyana
+					</p>
+					<p className="fw-bold font-niconne">- Sri Prasad</p>
+				</div>
 			</Container>
 		</Layout>
 	);

@@ -109,6 +109,50 @@
 }
 
 // Meditation New section
+.meditation-page-section {
+	.bg-image {
+		width: 100%;
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		z-index: 11;
+	}
+	.eshwari-girl-image {
+		z-index: 111;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+		@media (min-width: 768px) {
+			width: 350px;
+			height: 350px;
+		}
+	}
+	.bg-circle {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		.rotate-360 {
+			width: 300px;
+			height: auto;
+			@media (min-width: 1200px) {
+				width: 550px;
+				height: 550px;
+			}
+
+			animation: rotate-360 30s infinite linear;
+		}
+		@keyframes rotate-360 {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(359deg);
+			}
+		}
+	}
+}
 .meditaion-new-section {
 	position: relative;
 	background: linear-gradient(180deg, rgb(147 109 65) 0%, #936d42e8 100%);
@@ -266,12 +310,12 @@
 			top: 50%;
 			left: 50%;
 			border-radius: 50%;
-			top: 60%;
+			top: 50%;
 		}
 		.bnr-circle1 {
 			border: 5px solid #936d425e;
-			height: 75%;
-			width: 75%;
+			height: 144%;
+			width: 88%;
 			animation: bnr-circle1 25s linear infinite;
 
 			&:after,
@@ -296,12 +340,12 @@
 		}
 		.bnr-circle2 {
 			background-image: url("../images/bg/meditation/circle.png");
-			height: 98%;
-			width: 98%;
+			height: 128%;
+			width: 128%;
 			animation: bnr-circle1 25s linear infinite;
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: 95%;
+			background-size: 60%;
 
 			&:after {
 				content: "";
@@ -312,18 +356,18 @@
 				border-radius: 12px;
 				border: 3px solid $warning;
 				filter: drop-shadow(0px 9px 10px rgba(24, 25, 25, 0.3));
-				right: 10%;
-				top: 20%;
+				right: 43%;
+				top: 0%;
 			}
 		}
 		.icon1 {
-			left: 15%;
+			left: 13%;
 			top: 18%;
 			animation: bnr-circle1-icon1 25s linear infinite;
 		}
 		.icon2 {
-			right: -5%;
-			top: 45%;
+			right: 3%;
+			top: 35%;
 			animation: bnr-circle1-icon1 25s linear infinite;
 		}
 	}
@@ -467,7 +511,7 @@
 		height: auto;
 		background-color: #fff;
 		position: absolute;
-		left: 5%;
+		right: 5%;
 		bottom: 10%;
 		.yoga-img {
 			width: 100%;
@@ -1078,7 +1122,8 @@
 	/* Firefox 18- */
 	opacity: 0.5 !important;
 }
-input {
+input,
+textarea {
 	border: 1px solid #7f4c009a !important;
 }
 
@@ -1114,4 +1159,117 @@ input {
 		font-size: 1.8rem;
 		margin-bottom: 0;
 	}
+}
+
+// Contact Section
+// ----- Contact ----- //
+.contact-section {
+	iframe {
+		width: 100%;
+		height: 500px;
+		border-radius: 20px;
+	}
+	.contact-card {
+		background-color: $white;
+		height: auto;
+		width: 100%;
+		border-radius: 20px;
+		border: 1px solid #ddd;
+		padding: 20px 15px;
+		@media (min-width: 768px) {
+			padding: 30px;
+			&.responsive {
+				height: 520px;
+			}
+		}
+		@media (min-width: 992px) {
+			&.responsive {
+				height: 630px;
+			}
+		}
+		.social-media {
+			li {
+				display: inline-block;
+				padding: 0 20px 0 0;
+			}
+			.icon {
+				width: 24px;
+				height: 24px;
+				filter: grayscale(1);
+				&:hover {
+					filter: grayscale(0);
+				}
+			}
+		}
+		a {
+			color: $black;
+			opacity: 0.7;
+			font-family: "Poppins", sans-serif;
+
+			&:hover {
+				color: $primary;
+				opacity: 1;
+			}
+		}
+		ul {
+			padding: 0;
+			li {
+				padding-bottom: 30px;
+				list-style: none;
+			}
+		}
+		iframe {
+			width: 100%;
+			height: 700px !important;
+			@media (min-width: 768px) {
+				height: 420px !important;
+			}
+			@media (min-width: 992px) {
+				height: 520px !important;
+			}
+			border-radius: 20px;
+		}
+		.contact-frame-footer {
+			width: calc(100% - 30px);
+			border-radius: 0 0 20px 20px;
+			background-color: #fff;
+			position: absolute;
+			bottom: 1px;
+			height: 130px;
+			@media (min-width: 768px) {
+				margin-left: -10px !important;
+			}
+			@media (min-width: 992px) {
+				height: 120px !important;
+			}
+		}
+	}
+}
+.regular-ul-list-none {
+	li {
+		list-style: none;
+	}
+}
+
+.social-media {
+	margin: 0px 0 0 0;
+	padding-left: 0 !important;
+	li {
+		display: inline-block;
+		padding: 0 20px 0 0;
+	}
+	.icon {
+		width: 24px;
+		height: 24px;
+		filter: grayscale(1);
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+}
+
+.mainimg {
+	width: 400px;
+	height: 400px;
+	margin: auto;
 }

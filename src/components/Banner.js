@@ -14,6 +14,14 @@ const Banner = (props) => {
 	const wellness = "../images/banners/wellness.jpeg";
 	const immunity = "../images/banners/immunity.jpg";
 	const relationship = "../images/banners/relationship.jpeg";
+	const sanskar = "../images/banners/sanskar.jpeg";
+	const beginer = "../images/banners/beginer.jpeg";
+	const advance = "../images/banners/advance.jpeg";
+	const children = "../images/banners/children.jpeg";
+	const meditation = "../images/banners/meditation.jpeg";
+	const contact = "../images/banners/contact.jpeg";
+	const srinaada = "../images/banners/srinaada.png";
+	const srikrishi = "../images/banners/srikrishi.jpeg";
 	return (
 		<section className="banner-section">
 			<Container fluid>
@@ -34,10 +42,24 @@ const Banner = (props) => {
 						<StaticImage className="banner-image" src={`${wellness}`} alt="Page Banner" />
 					) : props.title === "Immunity" ? (
 						<StaticImage className="banner-image" src={`${immunity}`} alt="Page Banner" />
+					) : props.title === "Childrens" ? (
+						<StaticImage className="banner-image" src={`${children}`} alt="Page Banner" />
+					) : props.title === "Beginners" ? (
+						<StaticImage className="banner-image" src={`${beginer}`} alt="Page Banner" />
+					) : props.title === "Advance" ? (
+						<StaticImage className="banner-image" src={`${advance}`} alt="Page Banner" />
+					) : props.title === "Sanskar" ? (
+						<StaticImage className="banner-image" src={`${sanskar}`} alt="Page Banner" />
+					) : props.title === "Meditation" ? (
+						<StaticImage className="banner-image" src={`${meditation}`} alt="Page Banner" />
 					) : props.title === "Relationship" ? (
 						<StaticImage className="banner-image" src={`${relationship}`} alt="Page Banner" />
+					) : props.title === "Sri Naada" ? (
+						<StaticImage className="banner-image" src={`${srinaada}`} alt="Page Banner" />
+					) : props.title === "Sri Krishi" ? (
+						<StaticImage className="banner-image" src={`${srikrishi}`} alt="Page Banner" />
 					) : (
-						<StaticImage className="banner-image" src={`${guruji}`} alt={props.title} />
+						<StaticImage className="banner-image" src={`${contact}`} alt={props.title} />
 					)}
 					<div className="banner-overlay"></div>
 				</div>

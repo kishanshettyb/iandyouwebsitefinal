@@ -20,23 +20,29 @@ const pain = () => {
 					Researchers who measured pain, pain tolerance and body flexibility have found that yoga leads to pain relief, increases tolerance of pain and improves flexibility in
 					patients of chronic low back pain.
 				</p>
-				<p>
+				<p className="fw-bold">
 					Dr Renu Bhatia, Additional Professor, Department of Physiology, AIIMS, New Delhi conducted research to measure the impact of yoga on Chronic Low Back Pain (CLBP) along
 					with Dr Raj Kumar Yadav (Professor, Department of Physiology, AIIMS, New Delhi), Dr Sri Kumar V (Associate Professor, Department of Physical Medicine & Rehabilitation,
 					AIIMS, New Delhi).
 				</p>
-				<p>
+				<p className="fw-bold mb-4">
 					The study conducted on 100 Chronic Low Back Pain (CLBP) patients of 50 years with 3 years of history of the disease. After systematic Yogic intervention of 4 weeks,
 					Quantitative sensory testing (QST) showed increase in thresholds for cold pain and cold pain tolerance. Corticomotor excitability and flexibility improved significantly
 					in the patients
 				</p>
-				<p>The physical body always needs Exercise, if lack of mobility, stability and stretching is not given then it will start showing pain.</p>
-				<p>
-					More over one should take care of intake meaning food, if the food produces more acid then the muscles, joints and back will start paining, giving exercise to the body
-					and proper diet along with Eshwari Kriya and Dhyana will help you manage Pain
-				</p>
+				<div className="quote">
+					<StaticImage className="left" src="../images/icons/quote.png" alt="quote" />
+					<StaticImage className="right" src="../images/icons/quote.png" alt="quote" />
+					<p className="desc font-philosopher">
+						The physical body always needs Exercise, if lack of mobility, stability and stretching is not given then it will start showing pain.
+					</p>
+					<p className="desc font-philosopher">
+						More over one should take care of intake meaning food, if the food produces more acid then the muscles, joints and back will start paining, giving exercise to the body
+						and proper diet along with Eshwari Kriya and Dhyana will help you manage Pain
+					</p>
 
-				<p className="fw-bold fs-3 font-niconne">- Sri Prasad</p>
+					<p className="fw-bold fs-3 font-niconne">- Sri Prasad</p>
+				</div>
 			</Container>
 		</Layout>
 	);
