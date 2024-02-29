@@ -9,7 +9,7 @@ import swal from "sweetalert";
 import "react-datepicker/dist/react-datepicker.css";
 const RegisterModal = (props) => {
 	const [show, setShow] = useState(false);
-	const courseId = props.courseId;
+	// const courseId = props.courseId;
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
