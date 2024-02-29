@@ -8,7 +8,7 @@ const PopupModal = () => {
 	const handleOpen = () => {
 		const timer = setTimeout(() => {
 			setShow(true);
-		}, 20000);
+		}, 40000);
 		return () => clearTimeout(timer);
 	};
 	// ------ Form Validation ------ //

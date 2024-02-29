@@ -1,7 +1,8 @@
 import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import { StaticImage } from "gatsby-plugin-image";
+import RegisterModal from "../components/RegisterModal";
 
 const Join = () => {
 	return (
@@ -128,9 +129,7 @@ const Join = () => {
 								</Col>
 							</Row>
 							<div className="text-center">
-								<Button variant="dark" size="lg" className="px-5 mt-4">
-									Register Now
-								</Button>
+								<RegisterModal btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center mt-4 mb-4 px-5" />
 							</div>
 						</div>
 					</Col>

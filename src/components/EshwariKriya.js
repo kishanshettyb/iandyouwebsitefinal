@@ -5,6 +5,7 @@ import Snow from "./Snow";
 import ScrollAnimation from "react-animate-on-scroll";
 import ModalVideo from "react-modal-video";
 import { useState } from "react";
+import RegisterModal from "../components/RegisterModal";
 
 const EshwariKriya = () => {
 	const [isOpen, setOpen] = useState(false);
@@ -162,9 +163,7 @@ const EshwariKriya = () => {
 						</Col>
 					</Row>
 					<div className="text-center">
-						<Button className="px-5" variant="dark d-inline-flex align-items-center" size="lg">
-							Register Now
-						</Button>
+						<RegisterModal btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center px-5" />
 					</div>
 				</Container>
 			</div>

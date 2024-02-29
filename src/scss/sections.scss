@@ -154,6 +154,9 @@
 	}
 }
 .meditaion-new-section {
+	a {
+		color: unset;
+	}
 	position: relative;
 	background: linear-gradient(180deg, rgb(147 109 65) 0%, #936d42e8 100%);
 	ul {

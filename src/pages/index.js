@@ -32,7 +32,6 @@ const IndexPage = () => {
 			<Wisdom />
 			<Footer />
 			<PopupModal />
-			<Test fw="fw-bold" />
 		</>
 	);
 };
