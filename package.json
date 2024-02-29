@@ -43,6 +43,7 @@
     "react-modal-video": "^2.0.1",
     "react-particles": "^2.12.2",
     "react-slick": "^0.30.2",
-    "sass": "^1.71.0"
+    "sass": "^1.71.0",
+    "sweetalert": "^2.1.2"
   }
 }

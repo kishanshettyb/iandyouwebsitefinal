@@ -4,10 +4,12 @@ import { Button, Row, Col, Modal, Form } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import { StaticQuery, graphql } from "gatsby";
 import DatePicker from "react-datepicker";
+import swal from "sweetalert";
 
 import "react-datepicker/dist/react-datepicker.css";
 const RegisterModal = (props) => {
 	const [show, setShow] = useState(false);
+	const courseId = props.courseId;
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
@@ -33,14 +35,6 @@ const RegisterModal = (props) => {
 	const [submitted, setSubmitted] = useState(false);
 	const [error, setError] = useState("");
 
-	// const formatDateFn = (date) => {
-	// 	$(".date").datepicker({
-	// 		format: "yyyy-mm-dd"
-	// 	});
-	// 	const selectedDate = new Date(date);
-	// 	setDob(selectedDate.getFullYear() + "-" + parseInt(selectedDate.getMonth() + 1) + "-" + selectedDate.getDate());
-	// };
-
 	const handleSubmit = (event) => {
 		const form = event.currentTarget;
 		const postdata = JSON.stringify({
@@ -60,42 +54,40 @@ const RegisterModal = (props) => {
 				terms: terms
 			}
 		});
-		console.log(postdata);
 		if (form.checkValidity() === false) {
 			event.preventDefault();
 			event.stopPropagation();
 		}
-		if (fullname !== "" && email !== "" && phone !== "" && dob !== "" && age !== "" && occupation !== "" && gender !== "" && terms !== "");
-		{
-			console.log(null);
-			setValidated(true);
-			// fetch("https://iandyouwebsitebackend.onrender.com/api/registrations", {
-			// 	method: "POST",
-			// 	headers: {
-			// 		"Content-Type": "application/json",
-			// 		Accept: "application/json"
-			// 	},
-			// 	body: postdata
-			// })
-			// 	.then((res) => res.json())
-			// 	.then((res) => {
-			// 		if (res.code === 200) {
-			// 			setSubmitted(true);
-			// 		} else {
-			// 			setError(res.message);
-			// 		}
-			// 	})
-			// 	.catch((error) => setError(error));
-		}
-		console.log("notnull");
-	};
-	if (error) {
-		alert({ error });
-	}
 
-	if (submitted) {
-		return <p>We've received your message, thank you for contacting us!</p>;
-	}
+		setValidated(true);
+		fetch("https://iandyouwebsitebackend.onrender.com/api/registrations", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json"
+			},
+			body: postdata
+		})
+			.then((res) => res.json())
+			.then((res) => {
+				if (res.data == null) {
+					swal({
+						title: "Error",
+						text: "Error",
+						icon: "error"
+					});
+				} else {
+					setSubmitted(true);
+					setShow(false);
+					swal({
+						title: "Success",
+						text: "Registraion Successfull",
+						icon: "success"
+					});
+				}
+			})
+			.catch((error) => setError(error));
+	};
 
 	return (
 		<>

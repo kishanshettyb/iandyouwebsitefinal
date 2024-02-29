@@ -192,7 +192,7 @@ const NavHeader = () => {
 							</Link>
 						</Nav>
 						<Form className="position-absolute right-10 d-none d-xxl-block">
-							<RegisterModal btnTitle="Register" variant="primary" size="md" classes="d-flex align-items-center" />
+							<RegisterModal btnTitle="Register" variant="primary" size="md" classes="d-flex align-items-center" courseId="8ab1f383-b2eb-5fe0-a266-f3e56fab1429" />
 						</Form>
 					</Navbar.Collapse>
 				</Container>

@@ -1,9 +1,12 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
+import swal from "sweetalert";
+
 const PopupModal = () => {
 	// ------ Modal ------ //
 	const [show, setShow] = useState(false);
+
 	const handleClose = () => setShow(false);
 	const handleOpen = () => {
 		const timer = setTimeout(() => {
@@ -30,8 +33,6 @@ const PopupModal = () => {
 			e.preventDefault();
 		}
 		setValidated(true);
-
-		// replace this with your own unique endpoint URL
 		fetch("https://formcarry.com/s/8s-dt6C--60", {
 			method: "POST",
 			headers: {
@@ -44,19 +45,28 @@ const PopupModal = () => {
 			.then((res) => {
 				if (res.code === 200) {
 					setSubmitted(true);
+					handleClose();
+					swal({
+						title: "Success",
+						icon: "success"
+					});
 				} else {
 					setError(res.message);
+					setShow(false);
 				}
 			})
 			.catch((error) => setError(error));
 	}
 	if (error) {
-		alert({ error });
+		swal({
+			icon: "error",
+			title: "Something went wrong! Try after sometime"
+		});
 	}
 
-	if (submitted) {
-		return <p>We've received your message, thank you for contacting us!</p>;
-	}
+	// if (submitted) {
+	// 	return <SweetAlert show={showAlert} title="Success" text="Your request submited successfully" onConfirm={() => setShowAlert(false)} />;
+	// }
 
 	return (
 		<>
@@ -70,7 +80,7 @@ const PopupModal = () => {
 					<h5 className="text-center mt-3">Don't leave without a smile </h5>
 					<p className="text-center mb-3">Talk to our experts and learn more about Eshwari Kriya</p>
 					<div className="py-5 form-content">
-						<Form noValidate validated={validated} onSubmit={submit}>
+						<Form noValidate validated={validated}>
 							<div className="px-5">
 								<Row className="mb-4">
 									<Form.Group as={Col} md="12" controlId="validationCustom011">
@@ -99,7 +109,7 @@ const PopupModal = () => {
 								</Row>
 							</div>
 							<div className="text-center">
-								<Button variant="dark" size="lg" className="px-5 mt-3 d-inline-flex align-items-center" type="submit">
+								<Button variant="dark" size="lg" className="px-5 mt-3 d-inline-flex align-items-center" onClick={submit} type="submit">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
 									Submit form
 								</Button>
