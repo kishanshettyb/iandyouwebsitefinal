@@ -9,13 +9,11 @@ import swal from "sweetalert";
 import "react-datepicker/dist/react-datepicker.css";
 const RegisterModal = (props) => {
 	const [show, setShow] = useState(false);
-	// const courseId = props.courseId;
-
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
-
 	const [validated, setValidated] = useState(false);
-
+	// Submit
+	const [error, setError] = useState("");
 	// Form start
 	const [fullname, setFullname] = useState("");
 	const [email, setEmail] = useState("");
@@ -30,13 +28,11 @@ const RegisterModal = (props) => {
 	const [state, setState] = useState("");
 	const [pincode, setPincode] = useState("");
 	const [terms, setTerms] = useState("");
-	// const [phone, setPhone] = useState("");
-
-	const [submitted, setSubmitted] = useState(false);
-	const [error, setError] = useState("");
 
 	const handleSubmit = (event) => {
 		const form = event.currentTarget;
+		const value = event.target.value;
+
 		const postdata = JSON.stringify({
 			data: {
 				fullname: fullname,
@@ -54,39 +50,48 @@ const RegisterModal = (props) => {
 				terms: terms
 			}
 		});
+
 		if (form.checkValidity() === false) {
 			event.preventDefault();
 			event.stopPropagation();
 		}
 
+		// Check if the input value is not null or empty
+		if (!fullname || !email) {
+			console.log("Input cannot be empty");
+			console.log(postdata);
+		} else {
+			console.log("Good");
+			console.log(postdata);
+		}
+
 		setValidated(true);
-		fetch("https://iandyouwebsitebackend.onrender.com/api/registrations", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json"
-			},
-			body: postdata
-		})
-			.then((res) => res.json())
-			.then((res) => {
-				if (res.data == null) {
-					swal({
-						title: "Error",
-						text: "Error",
-						icon: "error"
-					});
-				} else {
-					setSubmitted(true);
-					setShow(false);
-					swal({
-						title: "Success",
-						text: "Registraion Successfull",
-						icon: "success"
-					});
-				}
-			})
-			.catch((error) => setError(error));
+		// fetch("https://iandyouwebsitebackend.onrender.com/api/registrations", {
+		// 	method: "POST",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 		Accept: "application/json"
+		// 	},
+		// 	body: postdata
+		// })
+		// 	.then((res) => res.json())
+		// 	.then((res) => {
+		// 		if (res.data == null) {
+		// 			swal({
+		// 				title: "Error",
+		// 				text: "Error",
+		// 				icon: "error"
+		// 			});
+		// 		} else {
+		// 			setShow(false);
+		// 			swal({
+		// 				title: "Success",
+		// 				text: "Registraion Successfull",
+		// 				icon: "success"
+		// 			});
+		// 		}
+		// 	})
+		// 	.catch((error) => console.error(error));
 	};
 
 	return (
@@ -108,7 +113,7 @@ const RegisterModal = (props) => {
 							<div className="program-info mt-5 mt-xl-0">
 								<StaticQuery
 									query={graphql`
-										query {
+										query{
 											allStrapiCourse(filter: { id: { eq: "8ab1f383-b2eb-5fe0-a266-f3e56fab1429" } }) {
 												edges {
 													node {

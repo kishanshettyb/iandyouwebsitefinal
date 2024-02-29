@@ -45,7 +45,7 @@ const PopupModal = () => {
 			.then((res) => {
 				if (res.code === 200) {
 					setSubmitted(true);
-					handleClose();
+					setShow(false);
 					swal({
 						title: "Success",
 						icon: "success"
@@ -53,20 +53,14 @@ const PopupModal = () => {
 				} else {
 					setError(res.message);
 					setShow(false);
+					swal({
+						icon: "error",
+						title: "Something went wrong! Try after sometime"
+					});
 				}
 			})
 			.catch((error) => setError(error));
 	}
-	if (error) {
-		swal({
-			icon: "error",
-			title: "Something went wrong! Try after sometime"
-		});
-	}
-
-	// if (submitted) {
-	// 	return <SweetAlert show={showAlert} title="Success" text="Your request submited successfully" onConfirm={() => setShowAlert(false)} />;
-	// }
 
 	return (
 		<>

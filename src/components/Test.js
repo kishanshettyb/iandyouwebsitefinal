@@ -1,39 +1,33 @@
 import * as React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
-const Test = (props) => {
+const Page = ({ data }) => {
+	const jsonData = data;
+	console.log(jsonData);
 	return (
 		<>
-			<p>djshdj</p>
-			<StaticQuery
-				query={graphql`
-					query {
-						allStrapiCourse(filter: { id: { eq: "268ef47a-dc17-517d-a365-7f9119e4c636" } }) {
-							edges {
-								node {
-									title
-									desc
-									id
-									image {
-										url
-									}
-								}
-							}
-						}
-					}
-				`}
-				render={(data) => (
-					<>
-						{data.allStrapiCourse.edges.map(({ node }) => (
-							<p className={props.fw} md={4} key={node.id}>
-								{node.title}
-							</p>
-						))}
-					</>
-				)}
-			/>
+			<p>{JSON.stringify(jsonData)}</p>
 		</>
 	);
 };
-
-export default Test;
+export const query = graphql`
+	query {
+		allStrapiCourse {
+			edges {
+				node {
+					title
+					desc
+					id
+					price
+					time
+					address
+					mode
+					image {
+						url
+					}
+				}
+			}
+		}
+	}
+`;
+export default Page;
