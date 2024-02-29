@@ -31,7 +31,6 @@ const IndexPage = () => {
 			<Wisdom />
 			<Footer />
 			<PopupModal />
-			<Test courseId="Advanced" />
 		</>
 	);
 };
