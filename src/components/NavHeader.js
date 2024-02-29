@@ -7,6 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { StaticImage } from "gatsby-plugin-image";
 import RegisterModal from "../components/RegisterModal";
 import Topbar from "./Topbar";
+import Test from "./Test";
 
 const NavHeader = () => {
 	return (

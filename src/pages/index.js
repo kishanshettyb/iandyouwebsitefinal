@@ -14,6 +14,7 @@ import Meditation from "../components/Meditation";
 import PopupModal from "../components/PopupModal";
 import { Seo } from "../components/Seo";
 import ContactForm from "../components/ContactForm";
+import Test from "../components/Test";
 
 const IndexPage = () => {
 	return (
@@ -31,7 +32,7 @@ const IndexPage = () => {
 			<Wisdom />
 			<Footer />
 			<PopupModal />
-			<ContactForm />
+			<Test fw="fw-bold" />
 		</>
 	);
 };

@@ -21,7 +21,6 @@ const PopupModal = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [whatsapp, setWhatsapp] = useState("");
-
 	const [submitted, setSubmitted] = useState(false);
 	const [error, setError] = useState("");
 
@@ -50,6 +49,9 @@ const PopupModal = () => {
 				}
 			})
 			.catch((error) => setError(error));
+	}
+	if (error) {
+		alert({ error });
 	}
 
 	if (submitted) {
