@@ -13,7 +13,6 @@ import EshwariKriya from "../components/EshwariKriya";
 import Meditation from "../components/Meditation";
 import PopupModal from "../components/PopupModal";
 import { Seo } from "../components/Seo";
-import Test from "../components/Test";
 
 const IndexPage = () => {
 	return (
