@@ -2,12 +2,10 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import Cursor from "./Cursor";
 
 const Footer = () => {
 	return (
 		<>
-			<Cursor classNmae="d-none d-md-block" />
 			<StaticImage src="../images/bg/footer.svg" className="mb--1" alt="footer" />
 			<section className="footer-section position-relative z-index-low">
 				<Container className="z-index-high">
