@@ -9,8 +9,6 @@ const PopupModal = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [whatsapp, setWhatsapp] = useState("");
-	const value = JSON.parse(localStorage.getItem("modalopened"));
-	const localstoragevalue = value;
 	const [ip, setIp] = useState("");
 
 	const getData = async () => {
@@ -25,8 +23,7 @@ const PopupModal = () => {
 
 	const handleOpen = () => {
 		const timer = setTimeout(() => {
-			console.log(ip, localstoragevalue);
-			if (localstoragevalue == null) {
+			if (JSON.parse(localStorage.getItem("modalopened")) == null) {
 				setShow(true);
 			}
 		}, 1000);
@@ -69,8 +66,7 @@ const PopupModal = () => {
 
 	// ------ Use Effect ------ //
 	useEffect(() => {
-		console.log(ip, localstoragevalue);
-		if (localstoragevalue == null) {
+		if (localStorage.getItem("modalopened") == null) {
 			handleOpen();
 		}
 	}, []);
