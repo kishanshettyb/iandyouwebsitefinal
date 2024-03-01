@@ -27,7 +27,7 @@ const Solutions = () => {
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 3,
+					slidesToShow: 5,
 					slidesToScroll: 1,
 					dots: false,
 					arrows: false
