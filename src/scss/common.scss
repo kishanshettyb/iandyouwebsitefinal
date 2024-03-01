@@ -59,18 +59,30 @@ video {
 	@media (min-width: 992px) {
 		height: 88vh;
 	}
-
+	background: rgb(255, 255, 255);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26%, rgba(0, 0, 0, 0.788953081232493) 61%);
 	position: absolute;
 	top: 0;
 	left: 0;
-	// background: rgba(0, 0, 0, 0.3);
 	z-index: 1;
 	background-repeat: no-repeat;
+}
+.banner-2 {
+	.overlay {
+		background: rgb(255, 255, 255);
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26%, rgba(0, 0, 0, 0.788953081232493) 61%);
+	}
 }
 
 .hero {
 	position: relative;
 	overflow: hidden;
+
+	&.banner-2 {
+		.content {
+			top: 50%;
+		}
+	}
 	.content {
 		position: absolute;
 		width: 100%;
@@ -104,6 +116,27 @@ video {
 	}
 }
 
+.hero-section {
+	position: relative;
+	.slick-next {
+		position: absolute !important;
+		z-index: 1111111 !important;
+		display: block !important;
+		right: 10% !important;
+		&::before {
+			content: url("../images/icons/arrow-right-white.svg") !important;
+		}
+	}
+	.slick-prev {
+		position: absolute !important;
+		z-index: 1111111 !important;
+		display: block !important;
+		left: 10% !important;
+		&::before {
+			content: url("../images/icons/arrow-left-white.svg") !important;
+		}
+	}
+}
 // Cursor
 .cursor {
 	display: flex;

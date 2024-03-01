@@ -118,6 +118,7 @@
 		z-index: 11;
 	}
 	.eshwari-girl-image {
+		border: 2px solid #fff;
 		z-index: 111;
 		border-radius: 50%;
 		width: 200px;
@@ -125,6 +126,7 @@
 		@media (min-width: 768px) {
 			width: 350px;
 			height: 350px;
+			border: 2px solid #fff;
 		}
 	}
 	.bg-circle {
@@ -181,6 +183,7 @@
 	.eshwari-girl-image {
 		z-index: 111;
 		border-radius: 50%;
+		border: 2px solid $white;
 		width: 200px;
 		height: 200px;
 		@media (min-width: 768px) {
@@ -267,6 +270,7 @@
 .eshwari-section {
 	.eshwari-girl-image {
 		z-index: 111;
+		border: 2px solid $white;
 		border-radius: 50%;
 		width: 200px;
 		height: 200px;
