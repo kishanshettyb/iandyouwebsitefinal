@@ -2,6 +2,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import swal from "sweetalert";
+import axios from "axios";
 
 const PopupModal = () => {
 	// ------ Modal ------ //
@@ -11,21 +12,25 @@ const PopupModal = () => {
 	const handleOpen = () => {
 		const timer = setTimeout(() => {
 			setShow(true);
-		}, 40000);
+		}, 1000);
 		return () => clearTimeout(timer);
 	};
 	// ------ Form Validation ------ //
 	const [validated, setValidated] = useState(false);
-	// ------ Use Effect ------ //
-	useEffect(() => {
-		handleOpen();
-	}, []);
 
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [whatsapp, setWhatsapp] = useState("");
 	const [submitted, setSubmitted] = useState(false);
 	const [error, setError] = useState("");
+
+	const [ip, setIP] = useState("");
+	const getData = async () => {
+		const res = await axios.get("https://api.ipify.org/?format=json");
+		console.log(res.data);
+		setIP(res.data.ip);
+		localStorage.setItem("modalopened", JSON.stringify(res.data.ip));
+	};
 
 	function submit(e) {
 		const form = e.currentTarget;
@@ -50,6 +55,7 @@ const PopupModal = () => {
 						title: "Success",
 						icon: "success"
 					});
+					getData();
 				} else {
 					setError(res.message);
 					setShow(false);
@@ -62,6 +68,14 @@ const PopupModal = () => {
 			.catch((error) => setError(error));
 	}
 
+	// ------ Use Effect ------ //
+	useEffect(() => {
+		const setIp = JSON.parse(localStorage.getItem("modalopened"));
+		console.log(setIp);
+		if (setIp == null) {
+			handleOpen();
+		}
+	}, []);
 	return (
 		<>
 			<Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} animation={true} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
@@ -103,7 +117,7 @@ const PopupModal = () => {
 								</Row>
 							</div>
 							<div className="text-center">
-								<Button variant="dark" size="lg" className="px-5 mt-3 d-inline-flex align-items-center" onClick={submit} type="submit">
+								<Button variant="dark" size="lg" className="px-5 mt-3 d-inline-flex align-items-center" onClick={submit}>
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
 									Submit form
 								</Button>
