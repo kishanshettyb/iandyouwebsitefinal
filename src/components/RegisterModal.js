@@ -13,13 +13,12 @@ const RegisterModal = (props) => {
 	const handleShow = () => setShow(true);
 	const [validated, setValidated] = useState(false);
 	// Submit
-	const [error, setError] = useState("");
 	// Form start
 	const [fullname, setFullname] = useState("");
 	const [email, setEmail] = useState("");
 	const [phone, setPhone] = useState("");
 	const [age, setAge] = useState("");
-	const [dob, setDob] = useState(new Date());
+	const [dob, setDob] = useState("");
 	const [occupation, setOccupation] = useState("");
 	const [gender, setGender] = useState("");
 	const [other, setOther] = useState("");
@@ -31,7 +30,6 @@ const RegisterModal = (props) => {
 
 	const handleSubmit = (event) => {
 		const form = event.currentTarget;
-		const value = event.target.value;
 
 		const postdata = JSON.stringify({
 			data: {
@@ -66,32 +64,30 @@ const RegisterModal = (props) => {
 		}
 
 		setValidated(true);
-		// fetch("https://iandyouwebsitebackend.onrender.com/api/registrations", {
-		// 	method: "POST",
-		// 	headers: {
-		// 		"Content-Type": "application/json",
-		// 		Accept: "application/json"
-		// 	},
-		// 	body: postdata
-		// })
-		// 	.then((res) => res.json())
-		// 	.then((res) => {
-		// 		if (res.data == null) {
-		// 			swal({
-		// 				title: "Error",
-		// 				text: "Error",
-		// 				icon: "error"
-		// 			});
-		// 		} else {
-		// 			setShow(false);
-		// 			swal({
-		// 				title: "Success",
-		// 				text: "Registraion Successfull",
-		// 				icon: "success"
-		// 			});
-		// 		}
-		// 	})
-		// 	.catch((error) => console.error(error));
+		fetch("https://iandyouwebsitebackend.onrender.com/api/registrations", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json"
+			},
+			body: postdata
+		})
+			.then((res) => res.json())
+			.then((res) => {
+				if (res.data == null) {
+					console.log("error");
+				} else {
+					setShow(false);
+					swal({
+						title: "Thank you!",
+						text: "Thank you for Registering with us. We will contact you as soon as possible.",
+						icon: "success",
+						timer: 3000,
+						buttons: false
+					});
+				}
+			})
+			.catch((error) => console.error(error));
 	};
 
 	return (
@@ -113,7 +109,7 @@ const RegisterModal = (props) => {
 							<div className="program-info mt-5 mt-xl-0">
 								<StaticQuery
 									query={graphql`
-										query{
+										query {
 											allStrapiCourse(filter: { id: { eq: "8ab1f383-b2eb-5fe0-a266-f3e56fab1429" } }) {
 												edges {
 													node {
@@ -232,7 +228,7 @@ const RegisterModal = (props) => {
 															DOB<span className="text-danger">*</span>
 														</Form.Label>
 
-														<DatePicker required className="form-control" selected={dob} onChange={(e) => setDob(e)} dateFormat="yyyy-mm-dd" />
+														<DatePicker required className="form-control" selected={dob} onChange={(e) => setDob(e)} dateFormat="yyyy-mm-dd" placeholder="dob" />
 
 														<Form.Control.Feedback>Looks good!</Form.Control.Feedback>
 													</Form.Group>

@@ -5,33 +5,34 @@ import swal from "sweetalert";
 import axios from "axios";
 
 const PopupModal = () => {
+	const [validated, setValidated] = useState(false);
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [whatsapp, setWhatsapp] = useState("");
+	const value = JSON.parse(localStorage.getItem("modalopened"));
+	const localstoragevalue = value;
+	const [ip, setIp] = useState("");
+
+	const getData = async () => {
+		const res = await axios.get("https://api.ipify.org/?format=json");
+		localStorage.setItem("modalopened", JSON.stringify(res.data.ip));
+		setIp(res.data.ip);
+	};
+
 	// ------ Modal ------ //
 	const [show, setShow] = useState(false);
-
 	const handleClose = () => setShow(false);
+
 	const handleOpen = () => {
 		const timer = setTimeout(() => {
-			setShow(true);
+			console.log(ip, localstoragevalue);
+			if (localstoragevalue == null) {
+				setShow(true);
+			}
 		}, 1000);
 		return () => clearTimeout(timer);
 	};
 	// ------ Form Validation ------ //
-	const [validated, setValidated] = useState(false);
-
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [whatsapp, setWhatsapp] = useState("");
-	const [submitted, setSubmitted] = useState(false);
-	const [error, setError] = useState("");
-
-	const [ip, setIP] = useState("");
-	const getData = async () => {
-		const res = await axios.get("https://api.ipify.org/?format=json");
-		console.log(res.data);
-		setIP(res.data.ip);
-		localStorage.setItem("modalopened", JSON.stringify(res.data.ip));
-	};
-
 	function submit(e) {
 		const form = e.currentTarget;
 		if (form.checkValidity() === false) {
@@ -49,30 +50,27 @@ const PopupModal = () => {
 			.then((res) => res.json())
 			.then((res) => {
 				if (res.code === 200) {
-					setSubmitted(true);
 					setShow(false);
 					swal({
-						title: "Success",
-						icon: "success"
+						title: "Thank you!",
+						text: "Thank you for expressing interest in Eshwari Kriya! We will contact you as soon as possible.",
+						icon: "success",
+						timer: 3000,
+						buttons: false
 					});
 					getData();
 				} else {
-					setError(res.message);
 					setShow(false);
-					swal({
-						icon: "error",
-						title: "Something went wrong! Try after sometime"
-					});
+					console.log(res.message);
 				}
 			})
-			.catch((error) => setError(error));
+			.catch((error) => console.error(error));
 	}
 
 	// ------ Use Effect ------ //
 	useEffect(() => {
-		const setIp = JSON.parse(localStorage.getItem("modalopened"));
-		console.log(setIp);
-		if (setIp == null) {
+		console.log(ip, localstoragevalue);
+		if (localstoragevalue == null) {
 			handleOpen();
 		}
 	}, []);
