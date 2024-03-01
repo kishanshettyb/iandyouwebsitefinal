@@ -26,7 +26,7 @@ const PopupModal = () => {
 			if (JSON.parse(localStorage.getItem("modalopened")) == null) {
 				setShow(true);
 			}
-		}, 1000);
+		}, 40000);
 		return () => clearTimeout(timer);
 	};
 	// ------ Form Validation ------ //
