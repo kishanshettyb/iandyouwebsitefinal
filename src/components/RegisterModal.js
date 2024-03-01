@@ -55,39 +55,35 @@ const RegisterModal = (props) => {
 		}
 
 		// Check if the input value is not null or empty
-		if (!fullname || !email) {
+		if (!fullname || !email || !phone || !age || !dob || !occupation || !gender || !terms) {
 			console.log("Input cannot be empty");
-			console.log(postdata);
 		} else {
-			console.log("Good");
-			console.log(postdata);
-		}
-
-		setValidated(true);
-		fetch("https://iandyouwebsitebackend.onrender.com/api/registrations", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json"
-			},
-			body: postdata
-		})
-			.then((res) => res.json())
-			.then((res) => {
-				if (res.data == null) {
-					console.log("error");
-				} else {
-					setShow(false);
-					swal({
-						title: "Thank you!",
-						text: "Thank you for Registering with us. We will contact you as soon as possible.",
-						icon: "success",
-						timer: 3000,
-						buttons: false
-					});
-				}
+			setValidated(true);
+			fetch("https://iandyouwebsitebackend.onrender.com/api/registrations", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json"
+				},
+				body: postdata
 			})
-			.catch((error) => console.error(error));
+				.then((res) => res.json())
+				.then((res) => {
+					if (res.data == null) {
+						console.log("error");
+					} else {
+						setShow(false);
+						swal({
+							title: "Thank you!",
+							text: "Thank you for Registering with us. We will contact you as soon as possible.",
+							icon: "success",
+							timer: 3000,
+							buttons: false
+						});
+					}
+				})
+				.catch((error) => console.error(error));
+		}
 	};
 
 	return (

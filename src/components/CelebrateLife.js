@@ -31,7 +31,7 @@ const CelebrateLife = () => {
 							<div className="text-center">
 								<Link to="/eshwarikriya/">
 									<Button variant="primary" size="lg" className="px-5 d-inline-flex justify-content-center align-items-center">
-										<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
+										<StaticImage className="icon me-2" src="../images/icons/star-white.svg" alt="star" />
 										Learn More
 									</Button>
 								</Link>
