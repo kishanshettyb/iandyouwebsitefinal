@@ -91,12 +91,12 @@ const Footer = () => {
 									<p className="fw-bold mb-1">Social Links</p>
 									<ul className="social-ul">
 										<li>
-											<a href="mailto:info@iandyou.org">
+											<a target="_blank" rel="noreferrer" href="https://www.facebook.com/iandyou.org">
 												<StaticImage className="icon" src="../images/social/facebook.svg" alt="I and You facebook" />
 											</a>
 										</li>
 										<li>
-											<a href="mailto:info@iandyou.org">
+											<a target="_blank" rel="noreferrer" href="https://www.instagram.com/iandyoubeingtogether">
 												<StaticImage className="icon" src="../images/social/instagram.svg" alt="I and You instagram" />
 											</a>
 										</li>
