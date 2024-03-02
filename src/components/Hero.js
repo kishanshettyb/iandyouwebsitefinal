@@ -1,7 +1,5 @@
 import React from "react";
-import bannervideo from "../images/videos/video.mp4";
 import bannervideo2 from "../images/videos/video-3.mp4";
-import bannerimage from "../images/banners/sanskar.jpeg";
 import Slider from "react-slick";
 import ScrollAnimation from "react-animate-on-scroll";
 import { StaticImage } from "gatsby-plugin-image";
