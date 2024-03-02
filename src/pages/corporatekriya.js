@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Banner from "../components/Banner";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
@@ -31,28 +31,37 @@ const eshwarikriya = () => {
 			</section>
 			<section>
 				<Container>
-					<h2 className="display-5 fw-bold font-philosopher text-primary  text-start">
-						Corporate ESHWARI KRIYA Programs Have Many Benefits, 20 minutes regular practice of Eshwari kriya will create
-					</h2>
-					<ul className="mb-4">
-						<li>Employees that are happy and full of energy, and as a result, more productive</li>
-						<li>Decline in stress-related sick occurrences</li>
-						<li>Improved concentration, decision-making skills and ability to multi-task</li>
-						<li>Improves employee alertness and ability to react more calmly in demanding situations</li>
-						<li>Relief of head, neck and back strain, carpal tunnel syndrome, insomnia, high blood pressure and work-related injuries from repetitive motion</li>
-						<li>Better customer service</li>
-						<li>one can maintain 16 hours of optimum energy level to perform well</li>
-						<li>Enhanced employee attitude and outlook</li>
-						<li>General well-being in the workplace which reduces employee turnover</li>
-						<li>The Body, Mind and Emotional management is a part of Kriya</li>
-					</ul>
-					<p className="fw-bold mb-5">
-						In simple statement we would say that ESHWARI KRIYA is a perfect tool for Happy, Healthy, Prosperous and Successful life Celebrate life through Eshwari Kriya. To
-						celebrate life and to lead holistic life style Eshwari Kriya is a boon to the mankind.
-					</p>
-					<div className="text-center">
-						<RegisterModal btnTitle="Register" size="lg" classes="d-inline-flex px-5 align-items-center" />
-					</div>
+					<Row className="d-flex align-items-center justify-content-center">
+						<Col md={6}>
+							<StaticImage src="../images/corporate/corporate-7.jpeg" className="br-20 img-fluid mb-5 mb-lg-0" alt="" />
+						</Col>
+						<Col md={6}>
+							<div className="ms-0 ms-lg-5">
+								<h2 className="display-6 fw-bold font-philosopher text-primary mb-5  text-start">
+									Corporate ESHWARI KRIYA Programs Have Many Benefits, 20 minutes regular practice of Eshwari kriya will create
+								</h2>
+								<ul className="mb-4 ">
+									<li>Employees that are happy and full of energy, and as a result, more productive</li>
+									<li>Decline in stress-related sick occurrences</li>
+									<li>Improved concentration, decision-making skills and ability to multi-task</li>
+									<li>Improves employee alertness and ability to react more calmly in demanding situations</li>
+									<li>Relief of head, neck and back strain, carpal tunnel syndrome, insomnia, high blood pressure and work-related injuries from repetitive motion</li>
+									<li>Better customer service</li>
+									<li>one can maintain 16 hours of optimum energy level to perform well</li>
+									<li>Enhanced employee attitude and outlook</li>
+									<li>General well-being in the workplace which reduces employee turnover</li>
+									<li>The Body, Mind and Emotional management is a part of Kriya</li>
+								</ul>
+								<p className="fw-bold mb-5">
+									In simple statement we would say that ESHWARI KRIYA is a perfect tool for Happy, Healthy, Prosperous and Successful life Celebrate life through Eshwari Kriya. To
+									celebrate life and to lead holistic life style Eshwari Kriya is a boon to the mankind.
+								</p>
+								<div className="text-start">
+									<RegisterModal btnTitle="Register" size="lg" classes="d-inline-flex px-5 align-items-center" />
+								</div>
+							</div>
+						</Col>
+					</Row>
 				</Container>
 			</section>
 		</Layout>

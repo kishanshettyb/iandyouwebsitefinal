@@ -25,6 +25,7 @@ const Banner = (props) => {
 	const nervous = "../images/banners/nervous.jpeg";
 	const hormones = "../images/banners/harmones.jpeg";
 	const contact = "../images/banners/contact.png";
+	const corporates = "../images/banners/corporate-4.jpeg";
 	return (
 		<section className="banner-section mt-2">
 			<Container fluid>
@@ -71,6 +72,8 @@ const Banner = (props) => {
 						<StaticImage className="banner-image" src={`${hormones}`} alt="Page Banner" />
 					) : props.title === "Contact" ? (
 						<StaticImage className="banner-image" src={`${contact}`} alt="Page Banner" />
+					) : props.title === "Corporate Eshwari Kriya" ? (
+						<StaticImage className="banner-image" src={`${corporates}`} alt="Page Banner" />
 					) : (
 						<StaticImage className="banner-image" src={`${contact}`} alt={props.title} />
 					)}
