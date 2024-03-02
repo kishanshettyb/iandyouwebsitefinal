@@ -187,6 +187,10 @@
 		width: 200px;
 		height: 200px;
 		@media (min-width: 768px) {
+			width: 300px;
+			height: 300px;
+		}
+		@media (min-width: 1400px) {
 			width: 500px;
 			height: 500px;
 		}
@@ -200,7 +204,11 @@
 		.rotate-360 {
 			width: 300px;
 			height: auto;
-			@media (min-width: 1200px) {
+			@media (min-width: 768px) {
+				width: 500px;
+				height: 500px;
+			}
+			@media (min-width: 1400px) {
 				width: 700px;
 				height: 700px;
 			}
@@ -275,8 +283,12 @@
 		width: 200px;
 		height: 200px;
 		@media (min-width: 768px) {
-			width: 500px;
-			height: 500px;
+			width: 300px;
+			height: 300px;
+		}
+		@media (min-width: 1400px) {
+			width: 450px;
+			height: 450px;
 		}
 	}
 	.bg-circle {
@@ -288,7 +300,12 @@
 		.rotate-360 {
 			width: 300px;
 			height: auto;
-			@media (min-width: 1200px) {
+			@media (min-width: 768px) {
+				width: 500px;
+				height: 500px;
+			}
+
+			@media (min-width: 1400px) {
 				width: 700px;
 				height: 700px;
 			}
@@ -528,38 +545,38 @@
 	}
 	.yoga-card {
 		border-radius: 20px;
-		padding: 20px;
+		padding: 15px;
 		width: 290px;
-		height: 300px;
+		height: 250px;
 		background-color: $white;
 		position: absolute;
 		top: 10%;
-		right: 5%;
+		right: 3%;
 		p {
-			font-size: 0.8rem;
+			font-size: 0.7rem;
 		}
 		.yoga-img {
 			width: 100%;
-			height: 150px;
+			height: 130px;
 			object-fit: cover;
 			border-radius: 20px;
 		}
 
 		&.yoga-card-left {
-			left: 5% !important;
-			top: 50% !important;
+			left: 3% !important;
+			top: 75% !important;
 		}
 	}
 	.yoga-card-round {
 		animation: 5s ease 0s normal none infinite running moveLeftRight;
-		padding: 20px;
+		padding: 15px;
 		border-radius: 60px;
 		width: 300px;
 		height: auto;
 		background-color: #fff;
 		position: absolute;
-		right: 5%;
-		bottom: 10%;
+		right: 3%;
+		bottom: 3%;
 		.yoga-img {
 			width: 100%;
 			border-radius: 60px;
@@ -567,8 +584,8 @@
 			object-fit: cover;
 		}
 		&.yoga-card-round-left {
-			left: 5% !important;
-			bottom: 70% !important;
+			left: 3% !important;
+			bottom: 60% !important;
 		}
 	}
 

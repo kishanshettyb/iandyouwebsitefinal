@@ -11,23 +11,32 @@ const Solutions = () => {
 		arrows: true,
 		infinite: true,
 		speed: 1000,
-		slidesToShow: 6,
+		slidesToShow: 5,
 		slidesToScroll: 1,
 		autoplaySpeed: 3000,
 		autoplay: true,
 		responsive: [
 			{
+				breakpoint: 1300,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					dots: true,
+					arrows: true
+				}
+			},
+			{
 				breakpoint: 1024,
 				settings: {
 					slidesToShow: 3,
-					slidesToScroll: 3,
+					slidesToScroll: 1,
 					dots: false
 				}
 			},
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 5,
+					slidesToShow: 4,
 					slidesToScroll: 1,
 					dots: false,
 					arrows: false

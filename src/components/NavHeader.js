@@ -12,7 +12,7 @@ const NavHeader = () => {
 	return (
 		<>
 			<Topbar />
-			<Navbar expand="lg" className="bg-primarylight d-none d-lg-block">
+			<Navbar expand="xxl" className="bg-primarylight d-none d-xxl-block ">
 				<Container>
 					<Navbar.Toggle aria-controls="navbarScroll" />
 					<Navbar.Collapse id="navbarScroll">
@@ -154,10 +154,14 @@ const NavHeader = () => {
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Organization" />
 									<span>Organization</span>
 								</Link>
+								<NavDropdown.Divider />
+								<Link className="nav-link" to="/contact/">
+									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Contact" />
+									<span>Contact</span>
+								</Link>
 							</NavDropdown>
-							<Link className="nav-link home  d-flex align-items-center text-uppercase" to="/contact/">
-								<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Home" />
-								<span>Contact</span>
+							<Link className="nav-link" to="/">
+								<span></span>
 							</Link>
 						</Nav>
 						<Form className="position-absolute right-10 d-none d-xxl-block">

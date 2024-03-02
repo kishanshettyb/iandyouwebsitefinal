@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import organization from "../pages/organization";
 
 const Banner = (props) => {
 	const wisdom = "../images/banners/wisdom-new.jpeg";
@@ -25,7 +26,8 @@ const Banner = (props) => {
 	const nervous = "../images/banners/nervous.jpeg";
 	const hormones = "../images/banners/harmones.jpeg";
 	const contact = "../images/banners/contact.png";
-	const corporates = "../images/banners/corporate-4.jpeg";
+	const corporates = "../images/banners/corporate-1.jpeg";
+	const organization = "../images/banners/organizations.jpeg";
 	return (
 		<section className="banner-section mt-2">
 			<Container fluid>
@@ -74,6 +76,8 @@ const Banner = (props) => {
 						<StaticImage className="banner-image" src={`${contact}`} alt="Page Banner" />
 					) : props.title === "Corporate Eshwari Kriya" ? (
 						<StaticImage className="banner-image" src={`${corporates}`} alt="Page Banner" />
+					) : props.title === "Organization" ? (
+						<StaticImage className="banner-image" src={`${organization}`} alt="Page Banner" />
 					) : (
 						<StaticImage className="banner-image" src={`${contact}`} alt={props.title} />
 					)}

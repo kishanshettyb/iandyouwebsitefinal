@@ -21,6 +21,15 @@ const Testimonial = () => {
 		arrows: true,
 		responsive: [
 			{
+				breakpoint: 1400,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: true,
+					arrows: false
+				}
+			},
+			{
 				breakpoint: 1024,
 				settings: {
 					slidesToShow: 1,
