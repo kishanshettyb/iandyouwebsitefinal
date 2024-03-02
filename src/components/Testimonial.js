@@ -107,8 +107,7 @@ const Testimonial = () => {
 											extremely thorough in his descriptions of the techniques and the importance of the sequencing / purpose behind them; he continually asked for participant
 											questions and clarified so much through his answers that I have finally been able to resolve obstacles I have been encountering in my personal practice for
 											years. I could feel the power and the love behind the energetic initiation Guruji gave us on the final day, so much so that I felt I instantly went into deep
-											meditation just by being present (which is something I have only experienced a couple other times in my life). Kavya was also wonderful in organizing things
-											leading up to the training and in following up afterwards with written instructions for what was covered.
+											meditation just by being present (which is something I have only experienced a couple other times in my life).
 											<br /> <br />
 											Since attending the program three months ago and practicing the kriya daily, I feel enormous changes in my energy levels, mood and general wellness. I feel
 											more attuned with my own rhythms and able to carry out my daily tasks with ease and clarity. As a survivor of a violent abusive relationship, I have suffered

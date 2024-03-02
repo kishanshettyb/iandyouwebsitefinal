@@ -28,6 +28,8 @@ const Banner = (props) => {
 	const contact = "../images/banners/contact.png";
 	const corporates = "../images/banners/corporate-1.jpeg";
 	const organization = "../images/banners/organizations.jpeg";
+	const immortal = "../images/banners/immortal-process.png";
+	const eshwaridhyana = "../images/banners/srividya.jpeg";
 	return (
 		<section className="banner-section mt-2">
 			<Container fluid>
@@ -76,6 +78,10 @@ const Banner = (props) => {
 						<StaticImage className="banner-image" src={`${contact}`} alt="Page Banner" />
 					) : props.title === "Corporate Eshwari Kriya" ? (
 						<StaticImage className="banner-image" src={`${corporates}`} alt="Page Banner" />
+					) : props.title === "Immortal Process" ? (
+						<StaticImage className="banner-image" src={`${immortal}`} alt="Page Banner" />
+					) : props.title === "Sri Vidhya Eshwari Sadhana" ? (
+						<StaticImage className="banner-image" src={`${eshwaridhyana}`} alt="Page Banner" />
 					) : props.title === "Organization" ? (
 						<StaticImage className="banner-image" src={`${organization}`} alt="Page Banner" />
 					) : (

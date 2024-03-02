@@ -44,7 +44,8 @@ const depression = () => {
 export default depression;
 export const Head = () => (
 	<Seo
-		title="Depression"
-		description="Within one month of beginning Eshwari Kriya practice, participants sleep quality has significantly improved, tranquillity and positivity has increased while physical exhaustion, and symptoms of anxiety and depression has drastically decreased."
+		title="Immortal Process"
+		description="The theory of  karma and rebirth raises numerous questions such as how, when, and why did the cycle start in the first place, what is
+						the relative Karmic merit of one karma versus another and why, and what evidence is there that rebirth actually happens, among others."
 	/>
 );
