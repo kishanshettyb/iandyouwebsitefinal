@@ -1,10 +1,11 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Button, Row, Col, Modal, Form } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import { StaticQuery, graphql } from "gatsby";
 import DatePicker from "react-datepicker";
 import swal from "sweetalert";
+import emailjs from "@emailjs/browser";
 
 import "react-datepicker/dist/react-datepicker.css";
 const RegisterModal = (props) => {
@@ -27,6 +28,7 @@ const RegisterModal = (props) => {
 	const [state, setState] = useState("");
 	const [pincode, setPincode] = useState("");
 	const [terms, setTerms] = useState("");
+	const forms = useRef();
 
 	const handleSubmit = (event) => {
 		const form = event.currentTarget;
@@ -48,6 +50,21 @@ const RegisterModal = (props) => {
 				terms: terms
 			}
 		});
+
+		// Send Email
+		emailjs
+			.sendForm("service_ciwemra", "template_7uiswwd", forms.current, {
+				publicKey: "D--qqFa-LCO7RvmzS"
+			})
+			.then(
+				() => {
+					console.log("SUCCESS!");
+				},
+				(error) => {
+					console.log("FAILED...", error.text);
+				}
+			);
+		// End Email
 
 		if (form.checkValidity() === false) {
 			event.preventDefault();
@@ -181,7 +198,7 @@ const RegisterModal = (props) => {
 						</Col>
 						<Col xl={8} md={12} className="order-1 order-xl-2">
 							<div className="payment-info ">
-								<Form noValidate validated={validated} className="position-relative">
+								<Form ref={forms} noValidate validated={validated} className="position-relative">
 									<Accordion defaultActiveKey="0">
 										<Accordion.Item eventKey="0">
 											<Accordion.Header>
@@ -296,7 +313,7 @@ const RegisterModal = (props) => {
 																		onChange={(e) => setConditions(e.target.value)}
 																		label="High B.P."
 																		type={type}
-																		id={`inline-${type}-1`}
+																		id={`inline-${type}-11`}
 																	/>
 																	<Form.Check
 																		inline
@@ -305,16 +322,16 @@ const RegisterModal = (props) => {
 																		onChange={(e) => setConditions(e.target.value)}
 																		label="Pregnancy"
 																		type={type}
-																		id={`inline-${type}-2`}
+																		id={`inline-${type}-22`}
 																	/>
 																	<Form.Check
 																		inline
 																		name="conditions"
-																		value={conditions}
+																		value="Heart Problems"
 																		onChange={(e) => setConditions(e.target.value)}
 																		label="Heart Problems"
 																		type={type}
-																		id={`inline-${type}-3`}
+																		id={`inline-${type}-33`}
 																	/>
 																	<Form.Check
 																		inline
@@ -323,7 +340,7 @@ const RegisterModal = (props) => {
 																		onChange={(e) => setConditions(e.target.value)}
 																		label="Epilepsy/Bipolar/Schizophrenia"
 																		type={type}
-																		id={`inline-${type}-4`}
+																		id={`inline-${type}-44`}
 																	/>
 																</div>
 															))}

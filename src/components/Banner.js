@@ -18,13 +18,13 @@ const Banner = (props) => {
 	const advance = "../images/banners/advance.jpeg";
 	const children = "../images/banners/children.jpeg";
 	const meditation = "../images/banners/meditation.jpeg";
-	const contact = "../images/banners/contact.jpeg";
 	const srinaada = "../images/banners/srinaada.png";
 	const srikrishi = "../images/banners/srikrishi.jpeg";
 	const eshwarikriya = "../images/banners/eshwari_kriya.jpg";
 	const physiology = "../images/banners/physiology.png";
 	const nervous = "../images/banners/nervous.jpeg";
 	const hormones = "../images/banners/harmones.jpeg";
+	const contact = "../images/banners/contact.png";
 	return (
 		<section className="banner-section mt-2">
 			<Container fluid>
@@ -69,6 +69,8 @@ const Banner = (props) => {
 						<StaticImage className="banner-image" src={`${nervous}`} alt="Page Banner" />
 					) : props.title === "Hormones" ? (
 						<StaticImage className="banner-image" src={`${hormones}`} alt="Page Banner" />
+					) : props.title === "Contact" ? (
+						<StaticImage className="banner-image" src={`${contact}`} alt="Page Banner" />
 					) : (
 						<StaticImage className="banner-image" src={`${contact}`} alt={props.title} />
 					)}

@@ -87,6 +87,36 @@ const Footer = () => {
 										+91 9900022506
 									</a>
 								</li>
+								<li>
+									<p className="fw-bold mb-1">Social Links</p>
+									<ul className="social-ul">
+										<li>
+											<a href="mailto:info@iandyou.org">
+												<StaticImage className="icon" src="../images/social/facebook.svg" alt="I and You facebook" />
+											</a>
+										</li>
+										<li>
+											<a href="mailto:info@iandyou.org">
+												<StaticImage className="icon" src="../images/social/instagram.svg" alt="I and You instagram" />
+											</a>
+										</li>
+										<li>
+											<a href="tel:+91 9900022506">
+												<StaticImage className="icon" src="../images/social/linkedin.svg" alt="I and You linkedin" />
+											</a>
+										</li>
+										<li>
+											<a href="tel:+91 9900022506">
+												<StaticImage className="icon" src="../images/social/twitter.svg" alt="I and You twitter" />
+											</a>
+										</li>
+										<li>
+											<a href="tel:+91 9900022506">
+												<StaticImage className="icon" src="../images/social/youtube.svg" alt="I and You youtube" />
+											</a>
+										</li>
+									</ul>
+								</li>
 							</ul>
 						</Col>
 					</Row>

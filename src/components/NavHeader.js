@@ -150,44 +150,14 @@ const NavHeader = () => {
 									<span>Guruji</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/organization/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Organization" />
 									<span>Organization</span>
 								</Link>
-								<NavDropdown.Divider />
-								<Link className="nav-link" to="/contact/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Contact" />
-									<span>Contact</span>
-								</Link>
 							</NavDropdown>
-							<NavDropdown title="Social impact" id="navbarScrollingDropdown55" className="dropmenu d-none">
-								<Link className="nav-link d-flex align-items-center text-uppercase" to="/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Educations" />
-									<span>Educations</span>
-								</Link>
-								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Peace" />
-									<span>Peace</span>
-								</Link>
-								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Environmental" />
-									<span>Environmental</span>
-								</Link>
-								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Organic farming" />
-									<span>Organic farming</span>
-								</Link>
-								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Disaster relief - I and you Seva" />
-									<span>Disaster relief - I and you Seva</span>
-								</Link>
-							</NavDropdown>
-							<Link className="nav-link home  d-flex align-items-center text-uppercase" to="#">
-								<span></span>
+							<Link className="nav-link home  d-flex align-items-center text-uppercase" to="/contact/">
+								<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Home" />
+								<span>Contact</span>
 							</Link>
 						</Nav>
 						<Form className="position-absolute right-10 d-none d-xxl-block">
@@ -336,42 +306,15 @@ const NavHeader = () => {
 									<span>Guruji</span>
 								</Link>
 								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/organization/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Organization" />
 									<span>Organization</span>
 								</Link>
-								<NavDropdown.Divider />
-								<Link className="nav-link" to="/contact/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Contact" />
-									<span>Contact</span>
-								</Link>
 							</NavDropdown>
-							<NavDropdown title="Social impact" id="navbarScrollingDropdown6" className="dropmenu d-none">
-								<Link className="nav-link d-flex align-items-center text-uppercase" to="/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Educations" />
-									<span>Educations</span>
-								</Link>
-								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Peace" />
-									<span>Peace</span>
-								</Link>
-								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Environmental" />
-									<span>Environmental</span>
-								</Link>
-								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Organic farming" />
-									<span>Organic farming</span>
-								</Link>
-								<NavDropdown.Divider />
-								<Link className="nav-link" to="/">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Disaster relief - I and you Seva" />
-									<span>Disaster relief - I and you Seva</span>
-								</Link>
-							</NavDropdown>
+							<Link className="nav-link home  d-flex align-items-center text-uppercase" to="/contact/">
+								<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="Home" />
+								<span>Contact</span>
+							</Link>
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
