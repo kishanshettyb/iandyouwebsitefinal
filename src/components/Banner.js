@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import organization from "../pages/organization";
 
 const Banner = (props) => {
 	const wisdom = "../images/banners/wisdom-new.jpeg";

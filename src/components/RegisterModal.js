@@ -2,18 +2,18 @@ import { StaticImage } from "gatsby-plugin-image";
 import React, { useState, useRef } from "react";
 import { Button, Row, Col, Modal, Form } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
-import { StaticQuery, graphql } from "gatsby";
 import DatePicker from "react-datepicker";
 import swal from "sweetalert";
 import emailjs from "@emailjs/browser";
-
 import "react-datepicker/dist/react-datepicker.css";
+import BeginnerMeditationCourse from "./query/BeginnerMeditationCourse";
+import AdvanceMeditationCourse from "./query/AdvanceMeditationCourse";
+
 const RegisterModal = (props) => {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 	const [validated, setValidated] = useState(false);
-	// Submit
 	// Form start
 	const [fullname, setFullname] = useState("");
 	const [email, setEmail] = useState("");
@@ -32,7 +32,6 @@ const RegisterModal = (props) => {
 
 	const handleSubmit = (event) => {
 		const form = event.currentTarget;
-
 		const postdata = JSON.stringify({
 			data: {
 				fullname: fullname,
@@ -50,27 +49,25 @@ const RegisterModal = (props) => {
 				terms: terms
 			}
 		});
-
 		// Send Email
-		emailjs
-			.sendForm("service_ciwemra", "template_7uiswwd", forms.current, {
-				publicKey: "D--qqFa-LCO7RvmzS"
-			})
-			.then(
-				() => {
-					console.log("SUCCESS!");
-				},
-				(error) => {
-					console.log("FAILED...", error.text);
-				}
-			);
-		// End Email
-
+		const sendToCustomer = () => {
+			emailjs
+				.sendForm("service_p2dae6a", "template_gxkz4ff", forms.current, {
+					publicKey: "1BF5Wbj46kYxPmUPe"
+				})
+				.then(
+					() => {
+						console.log("SUCCESS!");
+					},
+					(error) => {
+						console.log("FAILED...", error.text);
+					}
+				);
+		};
 		if (form.checkValidity() === false) {
 			event.preventDefault();
 			event.stopPropagation();
 		}
-
 		// Check if the input value is not null or empty
 		if (!fullname || !email || !phone || !age || !dob || !occupation || !gender || !terms) {
 			console.log("Input cannot be empty");
@@ -90,6 +87,7 @@ const RegisterModal = (props) => {
 						console.log("error");
 					} else {
 						setShow(false);
+						sendToCustomer();
 						swal({
 							title: "Thank you!",
 							text: "Thank you for Registering with us. We will contact you as soon as possible.",
@@ -120,80 +118,8 @@ const RegisterModal = (props) => {
 					<Row>
 						<Col xl={4} md={12} className="order-2 order-xl-1">
 							<div className="program-info mt-5 mt-xl-0">
-								<StaticQuery
-									query={graphql`
-										query {
-											allStrapiCourse(filter: { id: { eq: "8ab1f383-b2eb-5fe0-a266-f3e56fab1429" } }) {
-												edges {
-													node {
-														title
-														desc
-														time
-														price
-														mode
-														address
-														date
-														id
-														image {
-															url
-														}
-													}
-												}
-											}
-										}
-									`}
-									render={(data) => (
-										<>
-											{data.allStrapiCourse.edges.map(({ node }) => (
-												<ul>
-													<li>
-														{node.image.map(({ url }) => (
-															<img src={url} alt="program" className="reg-modal-image" />
-														))}
-													</li>
-													<li>
-														<StaticImage className="icon" src="../images/icons/sunset.svg" alt="" />
-														{node.title}
-													</li>
-													<li>
-														<StaticImage className="icon" src="../images/icons/calendar.svg" alt="" />
-														{node.date}
-													</li>
-													<li>
-														<StaticImage className="icon" src="../images/icons/clock.svg" alt="" />
-														{node.time}
-													</li>
-
-													<li>
-														<StaticImage className="icon" src="../images/icons/video.svg" alt="" />
-														{node.mode}
-													</li>
-													<li>
-														<StaticImage className="icon" src="../images/icons/map-pin.svg" alt="" />
-														{node.address}
-													</li>
-													<li>
-														<StaticImage className="icon" src="../images/icons/rupee.svg" alt="" />
-														{node.price}
-													</li>
-													<li>
-														<StaticImage className="icon" src="../images/icons/mail.svg" alt="" />
-
-														<a rel="noreferrer" target="_blank" href="mailto:info@iandyou.org">
-															info@iandyou.org
-														</a>
-													</li>
-													<li>
-														<StaticImage className="icon" src="../images/icons/phone.svg" alt="" />
-														<a rel="noreferrer" target="_blank" href="tel:+91 9900022506">
-															+91 9900022506
-														</a>
-													</li>
-												</ul>
-											))}
-										</>
-									)}
-								/>
+								<AdvanceMeditationCourse />
+								<BeginnerMeditationCourse />
 							</div>
 						</Col>
 						<Col xl={8} md={12} className="order-1 order-xl-2">
