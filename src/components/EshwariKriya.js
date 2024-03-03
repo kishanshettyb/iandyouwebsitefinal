@@ -5,6 +5,7 @@ import Snow from "./Snow";
 import ScrollAnimation from "react-animate-on-scroll";
 import ModalVideo from "react-modal-video";
 import { useState } from "react";
+import RegisterModal from "../components/RegisterModal";
 
 const EshwariKriya = () => {
 	const [isOpen, setOpen] = useState(false);
@@ -56,33 +57,33 @@ const EshwariKriya = () => {
 					</div>
 				</div> */}
 
-				<div className="yoga-card shadow-lg slideskew d-none d-md-block">
+				<div className="yoga-card shadow-lg slideskew d-none d-xl-block">
 					<StaticImage src="../images/workshops/dhyana.png" className="yoga-img" alt="Eshwari Kriya" />
 					<p className="my-3 fw-bold">
 						In simple statement we would say that <b>ESHWARI KRIYA</b> is a perfect tool for Happy ,Healthy, Prosperous and Successful life Celebrate life through Eshwari Kriya.
 					</p>
 				</div>
 
-				<div className="yoga-card-round shadow-lg   d-none d-md-block">
+				<div className="yoga-card-round shadow-lg   d-none d-xl-block">
 					<StaticImage src="../images/workshops/dhyana-2.jpeg" className="yoga-img" alt="Eshwari Kriya" />
 					<Button className="bg-white playBtn" onClick={() => setOpen(true)}>
 						<StaticImage alt="Play" src="../images/bg/meditation/play.svg" />
 					</Button>
 				</div>
-				<div className="yoga-card yoga-card-left shadow-lg slideskew d-none d-md-block">
+				<div className="yoga-card yoga-card-left shadow-lg slideskew d-none d-xl-block">
 					<StaticImage src="../images/workshops/eshwari_dhyana.jpg" className="yoga-img" alt="Eshwari Kriya" />
 					<p className="my-3 fw-bold">
 						<b>ESHWARI KRIYA</b> is a time-tested practice that cultivates boundless levels of Emotional, Psychological and Physical fitness.
 					</p>
 				</div>
-				<div className="yoga-card-round yoga-card-round-left shadow-lg   d-none d-md-block">
+				<div className="yoga-card-round yoga-card-round-left shadow-lg   d-none d-xl-block">
 					<StaticImage src="../images/workshops/eshwari_kriya_new.jpeg" className="yoga-img" alt="Eshwari Kriya" />
 					<Button className="bg-white playBtn" onClick={() => setOpen(true)}>
 						<StaticImage alt="Play" src="../images/bg/meditation/play.svg" />
 					</Button>
 				</div>
 			</div>
-			<div className="pt-5">
+			<div className="mt-100">
 				<Container className="pt-5 pb-5">
 					<Row className="mb-5">
 						<Col xs={6} md={4} xl={2}>
@@ -162,9 +163,7 @@ const EshwariKriya = () => {
 						</Col>
 					</Row>
 					<div className="text-center">
-						<Button className="px-5" variant="dark d-inline-flex align-items-center" size="lg">
-							Register Now
-						</Button>
+						<RegisterModal courseName="Eshwari Kriya Course" btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center px-5" />
 					</div>
 				</Container>
 			</div>

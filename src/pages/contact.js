@@ -1,8 +1,9 @@
 import React from "react";
-import { Col, Container, Row, Form, Button } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Layout from "../components/Layout";
 import Banner from "../components/Banner";
 import { StaticImage } from "gatsby-plugin-image";
+import Contact from "../components/Contact";
 
 const contact = () => {
 	return (
@@ -74,41 +75,7 @@ const contact = () => {
 							<div className="contact-card mb-5">
 								<h2 className="fw-bold">Contact Us</h2>
 								<hr />
-								<Form noValidate className="pt-3">
-									<div>
-										<Row className="mb-4">
-											<Form.Group as={Col} md="12" controlId="validationCustom01">
-												<Form.Label>Full Name</Form.Label>
-												<Form.Control size="lg" required type="text" placeholder="Full name" />
-												<Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-											</Form.Group>
-										</Row>
-										<Row className="mb-4">
-											<Form.Group as={Col} md="6" controlId="validationCustom03">
-												<Form.Label>Email</Form.Label>
-												<Form.Control size="lg" type="email" placeholder="Email" required />
-												<Form.Control.Feedback type="invalid">Please provide a valid email.</Form.Control.Feedback>
-											</Form.Group>
-											<Form.Group as={Col} md="6" controlId="validationCustom04">
-												<Form.Label>Whatsapp No.</Form.Label>
-												<Form.Control size="lg" type="text" placeholder="Whatsapp No." required />
-												<Form.Control.Feedback type="invalid">Please provide a valid phone.</Form.Control.Feedback>
-											</Form.Group>
-										</Row>
-										<Row className="mb-4">
-											<Form.Group as={Col} md="12" controlId="validationCustom04">
-												<Form.Label>Message</Form.Label>
-												<Form.Control as="textarea" placeholder="Message" style={{ height: "130px" }} />
-											</Form.Group>
-										</Row>
-									</div>
-									<div className="text-center">
-										<Button variant="dark" size="lg" className="px-5 mt-3 d-inline-flex align-items-center" type="submit">
-											<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
-											Submit form
-										</Button>
-									</div>
-								</Form>
+								<Contact />
 							</div>
 						</Col>
 						<Col md={12}>

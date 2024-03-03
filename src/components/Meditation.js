@@ -1,7 +1,9 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Link } from "gatsby";
+import SelectMeditation from "./SelectMeditation";
 
 const Meditation = () => {
 	return (
@@ -30,67 +32,73 @@ const Meditation = () => {
 								</Col>
 								<Col xs={6} md={6}>
 									<ScrollAnimation delay="200" animateIn="fadeInUp">
-										<div className="meditation-card d-flex ">
-											<div className="image">
-												<StaticImage className="icon" src="../images/bg/meditation/beginer.svg" alt="Beginer" />
+										<Link to="/beginners/">
+											<div className="meditation-card d-flex ">
+												<div className="image">
+													<StaticImage className="icon" src="../images/bg/meditation/beginer.svg" alt="Beginer" />
+												</div>
+												<div className="content">
+													<h4 className="fw-bold">Beginer</h4>
+													<p>
+														Embark on Your <br />
+														Meditation Journey
+													</p>
+												</div>
 											</div>
-											<div className="content">
-												<h4 className="fw-bold">Beginer</h4>
-												<p>
-													Embark on Your <br />
-													Meditation Journey
-												</p>
-											</div>
-										</div>
+										</Link>
 									</ScrollAnimation>
 								</Col>
 								<Col xs={6} md={6}>
 									<ScrollAnimation delay="400" animateIn="fadeInUp">
-										<div className="meditation-card">
-											<div className="image">
-												<StaticImage className="icon" src="../images/bg/meditation/advanced.jpeg" alt="Beginer" />
+										<Link to="/advance/">
+											<div className="meditation-card">
+												<div className="image">
+													<StaticImage className="icon" src="../images/bg/meditation/advanced.jpeg" alt="Beginer" />
+												</div>
+												<div className="content">
+													<h4 className="fw-bold">Advanced</h4>
+													<p>
+														Embark on Your Meditation <br /> Journey
+													</p>
+												</div>
 											</div>
-											<div className="content">
-												<h4 className="fw-bold">Advanced</h4>
-												<p>
-													Embark on Your Meditation <br /> Journey
-												</p>
-											</div>
-										</div>
+										</Link>
 									</ScrollAnimation>
 								</Col>
 								<Col xs={6} md={6}>
 									<ScrollAnimation delay="600" animateIn="fadeInUp">
-										<div className="meditation-card">
-											<div className="image">
-												<StaticImage className="icon" src="../images/bg/meditation/relax.jpeg" alt="Beginer" />
+										<Link to="/relaxation/">
+											<div className="meditation-card">
+												<div className="image">
+													<StaticImage className="icon" src="../images/bg/meditation/relax.jpeg" alt="Beginer" />
+												</div>
+												<div className="content">
+													<h4 className="fw-bold">Relaxations</h4>
+													<p>Unwind and De-stress: Relaxation through Meditation</p>
+												</div>
 											</div>
-											<div className="content">
-												<h4 className="fw-bold">Relaxations</h4>
-												<p>Unwind and De-stress: Relaxation through Meditation</p>
-											</div>
-										</div>
+										</Link>
 									</ScrollAnimation>
 								</Col>
 								<Col xs={6} md={6}>
 									<ScrollAnimation delay="800" animateIn="fadeInUp">
-										<div className="meditation-card">
-											<div className="image">
-												<StaticImage className="icon" src="../images/bg/meditation/children.jpg" alt="Beginer" />
+										<Link to="/childrens/">
+											<div className="meditation-card">
+												<div className="image">
+													<StaticImage className="icon" src="../images/bg/meditation/children.jpg" alt="Beginer" />
+												</div>
+												<div className="content">
+													<h4 className="fw-bold">Childrens</h4>
+													<p>Mindfulness for Young Minds: Fun Meditation Practices</p>
+												</div>
 											</div>
-											<div className="content">
-												<h4 className="fw-bold">Childrens</h4>
-												<p>Mindfulness for Young Minds: Fun Meditation Practices</p>
-											</div>
-										</div>
+										</Link>
 									</ScrollAnimation>
 								</Col>
 							</Row>
-							<div className="text-center ">
-								<Button className="px-5" variant="dark d-inline-flex align-items-center mt-5 mb-5" size="lg">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
-									Register Now
-								</Button>
+							<div className="text-center">
+								{/* <RegisterModal btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center mt-5 px-5" /> */}
+								<SelectMeditation btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center mt-5 px-5" />
 							</div>
 						</div>
 					</Col>

@@ -2,6 +2,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Link } from "gatsby";
 
 const CelebrateLife = () => {
 	return (
@@ -28,10 +29,12 @@ const CelebrateLife = () => {
 						</ScrollAnimation>
 						<ScrollAnimation animateIn="fadeInUp">
 							<div className="text-center">
-								<Button variant="primary" size="lg" className="px-5 d-inline-flex justify-content-center align-items-center">
-									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
-									Learn More
-								</Button>
+								<Link to="/eshwarikriya/">
+									<Button variant="primary" size="lg" className="px-5 d-inline-flex justify-content-center align-items-center">
+										<StaticImage className="icon me-2" src="../images/icons/star-white.svg" alt="star" />
+										Learn More
+									</Button>
+								</Link>
 							</div>
 						</ScrollAnimation>
 					</Col>

@@ -118,6 +118,7 @@
 		z-index: 11;
 	}
 	.eshwari-girl-image {
+		border: 2px solid #fff;
 		z-index: 111;
 		border-radius: 50%;
 		width: 200px;
@@ -125,6 +126,7 @@
 		@media (min-width: 768px) {
 			width: 350px;
 			height: 350px;
+			border: 2px solid #fff;
 		}
 	}
 	.bg-circle {
@@ -153,7 +155,61 @@
 		}
 	}
 }
+
+//meditation card
+.meditation-card {
+	border-radius: 10px;
+	width: 100%;
+	border: 1px solid $primary;
+	background-color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	margin-bottom: 30px;
+	flex-direction: column;
+	@media (max-width: 575.98px) {
+		h4 {
+			font-size: 1rem;
+		}
+		p {
+			font-size: 0.8rem;
+		}
+		text-align: center;
+	}
+	@media (min-width: 768px) {
+		flex-direction: row;
+	}
+	text-align: start;
+	font-weight: 600;
+	.content {
+		padding: 10px;
+		height: auto;
+	}
+	&:hover {
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+		transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+		border: 1px solid $primary;
+	}
+
+	.icon {
+		width: 100%;
+		height: 100px;
+		margin: 5px 0;
+
+		@media (min-width: 768px) {
+			height: 150px;
+			width: 150px;
+		}
+		border-radius: 10px;
+	}
+}
+
 .meditaion-new-section {
+	a {
+		color: unset;
+	}
 	position: relative;
 	background: linear-gradient(180deg, rgb(147 109 65) 0%, #936d42e8 100%);
 	ul {
@@ -178,9 +234,14 @@
 	.eshwari-girl-image {
 		z-index: 111;
 		border-radius: 50%;
+		border: 2px solid $white;
 		width: 200px;
 		height: 200px;
 		@media (min-width: 768px) {
+			width: 300px;
+			height: 300px;
+		}
+		@media (min-width: 1400px) {
 			width: 500px;
 			height: 500px;
 		}
@@ -194,7 +255,11 @@
 		.rotate-360 {
 			width: 300px;
 			height: auto;
-			@media (min-width: 1200px) {
+			@media (min-width: 768px) {
+				width: 500px;
+				height: 500px;
+			}
+			@media (min-width: 1400px) {
 				width: 700px;
 				height: 700px;
 			}
@@ -210,16 +275,21 @@
 			}
 		}
 	}
+	@extend .meditation-card;
+}
+
+.select-meditation-programs {
 	.meditation-card {
 		border-radius: 10px;
 		width: 100%;
 		border: 1px solid $primary;
 		background-color: $white;
 		display: flex;
-		align-items: center;
-		justify-content: start;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
 		margin-bottom: 30px;
-		flex-direction: column;
+		text-align: center !important;
 		@media (max-width: 575.98px) {
 			h4 {
 				font-size: 1rem;
@@ -264,12 +334,17 @@
 .eshwari-section {
 	.eshwari-girl-image {
 		z-index: 111;
+		border: 2px solid $white;
 		border-radius: 50%;
 		width: 200px;
 		height: 200px;
 		@media (min-width: 768px) {
-			width: 500px;
-			height: 500px;
+			width: 300px;
+			height: 300px;
+		}
+		@media (min-width: 1400px) {
+			width: 450px;
+			height: 450px;
 		}
 	}
 	.bg-circle {
@@ -281,7 +356,12 @@
 		.rotate-360 {
 			width: 300px;
 			height: auto;
-			@media (min-width: 1200px) {
+			@media (min-width: 768px) {
+				width: 500px;
+				height: 500px;
+			}
+
+			@media (min-width: 1400px) {
 				width: 700px;
 				height: 700px;
 			}
@@ -521,38 +601,38 @@
 	}
 	.yoga-card {
 		border-radius: 20px;
-		padding: 20px;
+		padding: 15px;
 		width: 290px;
-		height: 300px;
+		height: 250px;
 		background-color: $white;
 		position: absolute;
 		top: 10%;
-		right: 5%;
+		right: 3%;
 		p {
-			font-size: 0.8rem;
+			font-size: 0.7rem;
 		}
 		.yoga-img {
 			width: 100%;
-			height: 150px;
+			height: 130px;
 			object-fit: cover;
 			border-radius: 20px;
 		}
 
 		&.yoga-card-left {
-			left: 5% !important;
-			top: 50% !important;
+			left: 3% !important;
+			top: 75% !important;
 		}
 	}
 	.yoga-card-round {
 		animation: 5s ease 0s normal none infinite running moveLeftRight;
-		padding: 20px;
+		padding: 15px;
 		border-radius: 60px;
 		width: 300px;
 		height: auto;
 		background-color: #fff;
 		position: absolute;
-		right: 5%;
-		bottom: 10%;
+		right: 3%;
+		bottom: 3%;
 		.yoga-img {
 			width: 100%;
 			border-radius: 60px;
@@ -560,8 +640,8 @@
 			object-fit: cover;
 		}
 		&.yoga-card-round-left {
-			left: 5% !important;
-			bottom: 70% !important;
+			left: 3% !important;
+			bottom: 60% !important;
 		}
 	}
 
@@ -705,10 +785,18 @@
 		}
 		a {
 			color: $white;
+			opacity: 0.8;
 			font-size: 0.9rem;
 			&:hover {
 				color: $primary;
 			}
+		}
+	}
+	.social-ul {
+		margin-top: 10px;
+		li {
+			display: inline;
+			padding-right: 20px;
 		}
 	}
 }
@@ -1111,6 +1199,12 @@
 }
 // Register-modal{
 .modal {
+	.reg-modal-image {
+		width: 100%;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 15px;
+	}
 	.accordion-item {
 		margin-bottom: 20px !important;
 		border-radius: 20px;
@@ -1132,6 +1226,7 @@
 		padding: 10px;
 		li {
 			padding: 10px;
+
 			list-style: none;
 			border-bottom: 1px solid #0000000d;
 			margin-bottom: 5px;
@@ -1140,6 +1235,9 @@
 				color: $black;
 			}
 			&:last-child {
+				border-bottom: 0;
+			}
+			&:first-child {
 				border-bottom: 0;
 			}
 			.icon {

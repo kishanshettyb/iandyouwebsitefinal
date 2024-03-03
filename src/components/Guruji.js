@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 const Guruji = () => {
 	return (
@@ -15,10 +16,12 @@ const Guruji = () => {
 								Sri Prasad, one of the eminent new age master of Spiritual Yogic Science, imparting knowledge through Yogic Science in the name of Eshwari sadhana. His vision to
 								create a disease-free, stress-free and as a whole a holistic society, has brought millions together in India and overseas.
 							</p>
-							<Button variant="light" className="  d-flex justify-content-center align-items-center">
-								<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
-								Learn More
-							</Button>
+							<Link to="/guruji/">
+								<Button variant="light" className="  d-flex justify-content-center align-items-center">
+									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
+									Read More
+								</Button>
+							</Link>
 						</div>
 					</Col>
 					<Col md={6}></Col>

@@ -21,6 +21,15 @@ const Testimonial = () => {
 		arrows: true,
 		responsive: [
 			{
+				breakpoint: 1400,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: true,
+					arrows: false
+				}
+			},
+			{
 				breakpoint: 1024,
 				settings: {
 					slidesToShow: 1,
@@ -70,6 +79,66 @@ const Testimonial = () => {
 									</Button>
 									<StaticImage src="../images/icons/quote.png" class="left" alt="left" />
 									<StaticImage src="../images/icons/quote.png" class="right" alt="left" />
+									<StaticImage src="../images/testimonials/megan.jpeg" className="avatar" alt="testimonial" />
+									<h2 className="fw-bold fs-3">Megan</h2>
+									<h6 className="text-primary">English professor , writing professor & poet in New York City</h6>
+									<ul className="rating">
+										<li>
+											<StaticImage src="../images/icons/star-1.svg" className="icons" alt="Ratings" />
+										</li>
+										<li>
+											<StaticImage src="../images/icons/star-1.svg" className="icons" alt="Ratings" />
+										</li>
+										<li>
+											<StaticImage src="../images/icons/star-1.svg" className="icons" alt="Ratings" />
+										</li>
+										<li>
+											<StaticImage src="../images/icons/star-1.svg" className="icons" alt="Ratings" />
+										</li>
+										<li>
+											<StaticImage src="../images/icons/star-1.svg" className="icons" alt="Ratings" />
+										</li>
+									</ul>
+									<div className="content">
+										<p className={isActive ? " pt-2 desc line-clamp" : "pt-2 desc"}>
+											This is Megan from NY. I am passing along the testimonial I wrote about my experience with Eshwari Kriya below: <br />
+											Words cannot fully capture the gratitude I feel for Prasad Guruji and the Eshwari Kriya program. It has been a truly life-changing experience for me in many
+											ways! During the training itself, I could feel the care and warmth radiating from Prasad Guruji’s presence, even though it took place over Zoom. Guruji was
+											extremely thorough in his descriptions of the techniques and the importance of the sequencing / purpose behind them; he continually asked for participant
+											questions and clarified so much through his answers that I have finally been able to resolve obstacles I have been encountering in my personal practice for
+											years. I could feel the power and the love behind the energetic initiation Guruji gave us on the final day, so much so that I felt I instantly went into deep
+											meditation just by being present (which is something I have only experienced a couple other times in my life). Kavya was also wonderful in organizing things
+											leading up to the training and in following up afterwards with written instructions for what was covered.
+											<br /> <br />
+											Since attending the program three months ago and practicing the kriya daily, I feel enormous changes in my energy levels, mood and general wellness. I feel
+											more attuned with my own rhythms and able to carry out my daily tasks with ease and clarity. As a survivor of a violent abusive relationship, I have suffered
+											with symptoms of severe PTSD for years and thought I would never be free of certain experiences (nightmares, extreme nervous system dysregulation in unsafe
+											environments) despite being in therapy and trying all other conventionally recommended methods. Eshwari Kriya has shifted all of this for me in a way I never
+											imagined possible – I feel changed on a subtle cellular level, so that now when triggering moments arise I am able to witness them with some distance and not
+											become immobilized by the intensity of the sensations. Even for people without this history, I would highly recommend Eshwari Kriya to anyone seeking more
+											balance, health, joy and peace in their daily life. All this for a 20 minute commitment a day! Thank you so much, Prasad Guruji, for the blessing you have
+											brought into my life through this practice and for the ultimate compassion you have shown in sharing this divine wisdom to help heal and uplift so many.
+											<br /> <br />
+											Jai Gurudev!!
+										</p>
+									</div>
+								</div>
+							</Col>
+							<Col xs={12} lg={4}>
+								<div className="testimonial-card position-relative  br-20">
+									<Button variant="link" className="btn-link" onClick={handleClick}>
+										{isActive ? (
+											<span>
+												More <StaticImage src="../images/icons/arrow-right-1.svg" alt="Arrow Right" />
+											</span>
+										) : (
+											<span>
+												Less <StaticImage src="../images/icons/arrow-right-1.svg" alt="Arrow Right" />
+											</span>
+										)}
+									</Button>
+									<StaticImage src="../images/icons/quote.png" class="left" alt="left" />
+									<StaticImage src="../images/icons/quote.png" class="right" alt="left" />
 									<StaticImage src="../images/testimonials/indra.jpg" className="avatar" alt="testimonial" />
 									<h2 className="fw-bold fs-3">S.Indra</h2>
 									<h6 className="text-primary">CEO - eDatalabs</h6>
@@ -99,7 +168,7 @@ const Testimonial = () => {
 									</div>
 								</div>
 							</Col>
-							<Col md={4}>
+							<Col xs={12} lg={4}>
 								<div className="testimonial-card position-relative  br-20">
 									<Button variant="link" className="btn-link" onClick={handleClick}>
 										{isActive ? (

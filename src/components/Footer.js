@@ -2,12 +2,10 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import Cursor from "./Cursor";
 
 const Footer = () => {
 	return (
 		<>
-			<Cursor classNmae="d-none d-md-block" />
 			<StaticImage src="../images/bg/footer.svg" className="mb--1" alt="footer" />
 			<section className="footer-section position-relative z-index-low">
 				<Container className="z-index-high">
@@ -88,6 +86,36 @@ const Footer = () => {
 									<a rel="noreferrer" target="_blank" href="tel:+91 9900022506">
 										+91 9900022506
 									</a>
+								</li>
+								<li>
+									<p className="fw-bold mb-1">Social Links</p>
+									<ul className="social-ul">
+										<li>
+											<a target="_blank" rel="noreferrer" href="https://www.facebook.com/iandyou.org">
+												<StaticImage className="icon" src="../images/social/facebook.svg" alt="I and You facebook" />
+											</a>
+										</li>
+										<li>
+											<a target="_blank" rel="noreferrer" href="https://www.instagram.com/iandyoubeingtogether">
+												<StaticImage className="icon" src="../images/social/instagram.svg" alt="I and You instagram" />
+											</a>
+										</li>
+										<li>
+											<a href="tel:+91 9900022506">
+												<StaticImage className="icon" src="../images/social/linkedin.svg" alt="I and You linkedin" />
+											</a>
+										</li>
+										<li>
+											<a href="tel:+91 9900022506">
+												<StaticImage className="icon" src="../images/social/twitter.svg" alt="I and You twitter" />
+											</a>
+										</li>
+										<li>
+											<a href="tel:+91 9900022506">
+												<StaticImage className="icon" src="../images/social/youtube.svg" alt="I and You youtube" />
+											</a>
+										</li>
+									</ul>
 								</li>
 							</ul>
 						</Col>
