@@ -2,10 +2,10 @@ import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
-const BeginnerMeditationCourse = () => {
+const EshwariKriyaCourse = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			allStrapiCourse(filter: { id: { eq: "23ae51b0-ad48-5f71-b472-3b8859cc2802" } }) {
+			allStrapiCourse(filter: { id: { eq: "6a440d48-989c-53e7-b08a-34f719b58266" } }) {
 				nodes {
 					title
 					time
@@ -34,6 +34,7 @@ const BeginnerMeditationCourse = () => {
 					<li>
 						<StaticImage className="icon" src="../../images/icons/sunset.svg" alt="" />
 						{node.title}
+						<p>{node.id}</p>
 					</li>
 					{node.date ? (
 						<li>
@@ -93,4 +94,4 @@ const BeginnerMeditationCourse = () => {
 	);
 };
 
-export default BeginnerMeditationCourse;
+export default EshwariKriyaCourse;

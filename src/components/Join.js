@@ -129,7 +129,7 @@ const Join = () => {
 								</Col>
 							</Row>
 							<div className="text-center">
-								<RegisterModal btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center mt-4 mb-4 px-5" />
+								<RegisterModal btnTitle="Register" courseName="Advanced Mediation Course" variant="dark" size="lg" classes="d-inline-flex align-items-center mt-4 mb-4 px-5" />
 							</div>
 						</div>
 					</Col>

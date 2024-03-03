@@ -163,7 +163,7 @@ const EshwariKriya = () => {
 						</Col>
 					</Row>
 					<div className="text-center">
-						<RegisterModal btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center px-5" />
+						<RegisterModal courseName="Eshwari Kriya Course" btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center px-5" />
 					</div>
 				</Container>
 			</div>

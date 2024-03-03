@@ -6,15 +6,19 @@ import DatePicker from "react-datepicker";
 import swal from "sweetalert";
 import emailjs from "@emailjs/browser";
 import "react-datepicker/dist/react-datepicker.css";
+import ChildrensMeditationCourse from "./query/ChildrensMeditationCourse";
 import BeginnerMeditationCourse from "./query/BeginnerMeditationCourse";
 import AdvanceMeditationCourse from "./query/AdvanceMeditationCourse";
+import EshwariKriyaCourse from "./query/EshwariKriyaCourse";
 
 const RegisterModal = (props) => {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 	const [validated, setValidated] = useState(false);
-	// Form start
+	const course =
+		props.courseName === "Beginner Meditation Course" ? 1 : props.courseName === "Advanced Meditation Course" ? 2 : props.courseName === "Children Meditation Course" ? 3 : 4;
+
 	const [fullname, setFullname] = useState("");
 	const [email, setEmail] = useState("");
 	const [phone, setPhone] = useState("");
@@ -30,10 +34,11 @@ const RegisterModal = (props) => {
 	const [terms, setTerms] = useState("");
 	const forms = useRef();
 
-	const handleSubmit = (event) => {
+	const handleSubmit = (event, props) => {
 		const form = event.currentTarget;
 		const postdata = JSON.stringify({
 			data: {
+				course: course,
 				fullname: fullname,
 				email: email,
 				phone: phone,
@@ -118,8 +123,17 @@ const RegisterModal = (props) => {
 					<Row>
 						<Col xl={4} md={12} className="order-2 order-xl-1">
 							<div className="program-info mt-5 mt-xl-0">
-								<AdvanceMeditationCourse />
-								<BeginnerMeditationCourse />
+								{props.courseName === "Advanced Meditation Course" ? (
+									<AdvanceMeditationCourse />
+								) : props.courseName === "Beginner Meditation Course" ? (
+									<BeginnerMeditationCourse />
+								) : props.courseName === "Eshwari Kriya Course" ? (
+									<EshwariKriyaCourse />
+								) : props.courseName === "Childrens Meditation Course" ? (
+									<ChildrensMeditationCourse />
+								) : (
+									<EshwariKriyaCourse />
+								)}
 							</div>
 						</Col>
 						<Col xl={8} md={12} className="order-1 order-xl-2">
@@ -318,7 +332,7 @@ const RegisterModal = (props) => {
 									</Form.Group>
 									<div className="modal-fixed-footer my-4">
 										<Button variant="primary" className="px-5 d-flex align-items-center" size="lg" onClick={handleSubmit}>
-											<StaticImage src="../images/icons/star-white.svg" className="me-2" alt="register" />
+											<StaticImage src="../../images/icons/star-white.svg" className="me-2" alt="register" />
 											Register
 										</Button>
 									</div>

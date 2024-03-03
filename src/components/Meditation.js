@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Link } from "gatsby";
-import RegisterModal from "../components/RegisterModal";
+import SelectMeditation from "./SelectMeditation";
 
 const Meditation = () => {
 	return (
@@ -97,7 +97,8 @@ const Meditation = () => {
 								</Col>
 							</Row>
 							<div className="text-center">
-								<RegisterModal btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center mt-5 px-5" />
+								{/* <RegisterModal btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center mt-5 px-5" /> */}
+								<SelectMeditation btnTitle="Register" variant="dark" size="lg" classes="d-inline-flex align-items-center mt-5 px-5" />
 							</div>
 						</div>
 					</Col>
