@@ -128,15 +128,15 @@ const PopupModal = () => {
 										<Form.Control.Feedback type="invalid">Please enter your name!</Form.Control.Feedback>
 									</Form.Group>
 								</Row>
-								<Row className="mb-4">
-									<Form.Group as={Col} md="6" controlId="validationCustom022">
+								<Row>
+									<Form.Group as={Col} md="6" className="mb-4" controlId="validationCustom022">
 										<Form.Label>
 											Email<span className="text-danger">*</span>
 										</Form.Label>
 										<Form.Control name="email" value={email} onChange={(e) => setEmail(e.target.value)} size="lg" type="email" placeholder="Email" required />
 										<Form.Control.Feedback type="invalid">Please provide a valid email.</Form.Control.Feedback>
 									</Form.Group>
-									<Form.Group as={Col} md="6" controlId="validationCustom033">
+									<Form.Group as={Col} md="6" className="mb-4" controlId="validationCustom033">
 										<Form.Label>
 											Whatsapp No.<span className="text-danger">*</span>
 										</Form.Label>
