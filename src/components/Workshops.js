@@ -69,7 +69,7 @@ const Workshops = () => {
 									</Link>
 								</Col>
 								<Col md={3}>
-									<Link to="/srividhyaeshwarisadhana/">
+									<Link to="/eshwaridhyana/">
 										<div className="basic-card">
 											<StaticImage className="card-image" src="../images/workshops/dhyana.png" alt="Eshwari Dhyana" />
 											<div className="content">
