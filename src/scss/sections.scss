@@ -1463,3 +1463,40 @@ textarea {
 	height: 400px;
 	margin: auto;
 }
+
+.slash-left {
+	position: relative;
+	&::before {
+		content: "// ";
+		position: absolute;
+		left: -25px;
+	}
+	&.new {
+		&::before {
+			left: -25px;
+		}
+	}
+}
+
+.slash-right {
+	position: relative;
+	&::before {
+		content: " //";
+		position: absolute;
+		right: -25px;
+	}
+	&.new {
+		&::before {
+			right: -25px;
+		}
+	}
+}
+.slash-content {
+	p {
+		position: relative;
+	}
+}
+
+.special-title-new {
+	font-size: 1.3rem;
+}
