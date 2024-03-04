@@ -102,7 +102,7 @@ const Workshops = () => {
 				</Container>
 			</section>
 			<section className="workshop-section-bottom">
-				<StaticImage src="../images/bg/workshop.svg" className="bg-image" alt="" />
+				<StaticImage src="../images/bg/workshop.svg" className="bg-image mb--1" alt="" />
 			</section>
 		</div>
 	);

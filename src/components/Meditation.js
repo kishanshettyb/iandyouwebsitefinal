@@ -104,7 +104,7 @@ const Meditation = () => {
 					</Col>
 				</Row>
 			</Container>
-			<StaticImage src="../images/bg/pattern3.svg" className="bg-image" alt="" />
+			<StaticImage src="../images/bg/pattern3.svg" className="bg-image mb--1" alt="" />
 		</section>
 	);
 };
