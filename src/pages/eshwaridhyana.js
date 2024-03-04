@@ -17,10 +17,10 @@ const eshwaridhyana = () => {
 						<StaticImage src="../images/others/line-2.png" alt="line" className="line" />
 					</div>
 					<Row className="d-flex align-items-center justify-content-start">
-						<Col md={4}>
-							<StaticImage src="../images/banners/eshwari-dhyana.jpeg" alt="Eshwari Dhyana" className="br-20 img-fluid" />
+						<Col xs={12} lg={6} xl={4}>
+							<StaticImage src="../images/banners/eshwari-dhyana.jpeg" alt="Eshwari Dhyana" className="br-20 img-fluid mb-5 mb-lg-0" />
 						</Col>
-						<Col md={6}>
+						<Col xs={12} lg={6} xl={6}>
 							<div className="ms-0 ms-md-5">
 								<p>
 									Eshwari dhyana is come from a good old Shaktha tradition, Eshwari Dhyana is described as a simple, natural, effortless Dhyana technique that doesn't involve much
