@@ -105,7 +105,7 @@ const Solutions = () => {
 							</Link>
 						</div>
 						<div className="text-center d-flex flex-column align-items-center justify-content-center">
-							<Link to="/backpain/">
+							<Link to="/pain/">
 								<div className="icon-div">
 									<StaticImage className="icons" src="../images/solutions/back-pain.png" alt="solutions" />
 								</div>
@@ -170,7 +170,7 @@ const Solutions = () => {
 							</Link>
 						</div>
 						<div className="text-center d-flex flex-column align-items-center justify-content-center">
-							<Link to="/backpain/">
+							<Link to="/pain/">
 								<div className="icon-div">
 									<StaticImage className="icons" src="../images/solutions/back-pain.png" alt="solutions" />
 								</div>
