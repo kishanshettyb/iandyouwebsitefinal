@@ -29,7 +29,7 @@ const PopupModal = () => {
 			if (JSON.parse(localStorage.getItem("modalopened")) == null) {
 				setShow(true);
 			}
-		}, 100);
+		}, 40000);
 		return () => clearTimeout(timer);
 	};
 

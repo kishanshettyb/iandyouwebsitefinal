@@ -275,7 +275,54 @@
 			}
 		}
 	}
-	@extend .meditation-card;
+	.meditation-card {
+		border-radius: 10px;
+		width: 100%;
+		border: 1px solid $primary;
+		background-color: $white;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		margin-bottom: 30px;
+		flex-direction: column;
+		@media (max-width: 575.98px) {
+			h4 {
+				font-size: 1rem;
+			}
+			p {
+				font-size: 0.8rem;
+			}
+			text-align: center;
+		}
+		@media (min-width: 768px) {
+			flex-direction: row;
+		}
+		text-align: start;
+		font-weight: 600;
+		.content {
+			padding: 10px;
+			height: auto;
+		}
+		&:hover {
+			box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+			-webkit-transform: translateY(-5px);
+			transform: translateY(-5px);
+			transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+			border: 1px solid $primary;
+		}
+
+		.icon {
+			width: 100%;
+			height: 100px;
+			margin: 5px 0;
+
+			@media (min-width: 768px) {
+				height: 150px;
+				width: 150px;
+			}
+			border-radius: 10px;
+		}
+	}
 }
 
 .select-meditation-programs {
@@ -1415,4 +1462,41 @@ textarea {
 	width: 400px;
 	height: 400px;
 	margin: auto;
+}
+
+.slash-left {
+	position: relative;
+	&::before {
+		content: "// ";
+		position: absolute;
+		left: -25px;
+	}
+	&.new {
+		&::before {
+			left: -25px;
+		}
+	}
+}
+
+.slash-right {
+	position: relative;
+	&::before {
+		content: " //";
+		position: absolute;
+		right: -25px;
+	}
+	&.new {
+		&::before {
+			right: -25px;
+		}
+	}
+}
+.slash-content {
+	p {
+		position: relative;
+	}
+}
+
+.special-title-new {
+	font-size: 1.3rem;
 }

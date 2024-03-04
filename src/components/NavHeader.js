@@ -120,10 +120,10 @@ const NavHeader = () => {
 						</Navbar.Brand>
 						<Nav className="m-auto w-50 justify-content-start  my-2 my-lg-0 ms-4" style={{ maxHeight: "700px" }} navbarScroll>
 							<NavDropdown title="Projects" id="navbarScrollingDropdown33" className="dropmenu">
-								<a target="_blank" rel="noreferrer" className="nav-link d-flex align-items-center text-uppercase" href="https://iandyougreen.org/">
+								<Link className="nav-link d-flex align-items-center text-uppercase" to="/iandyougreen/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="star" />
 									<span>I and you green</span>
-								</a>
+								</Link>
 								<NavDropdown.Divider />
 								<a target="_blank" rel="noreferrer" className="nav-link" href="https://iandyouvidhya.org/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="I and you Vidhya" />
@@ -174,7 +174,7 @@ const NavHeader = () => {
 			{/* Mobile */}
 			<Navbar expand="lg" className="bg-primarylight d-block d-lg-none mobile">
 				<Container>
-					<Navbar.Brand href="#">
+					<Navbar.Brand href="/">
 						<StaticImage src="../images/I And You.png" alt="I and You" className="logo-small" />
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="navbarScroll" />
@@ -280,7 +280,7 @@ const NavHeader = () => {
 								</Link>
 							</NavDropdown>
 							<NavDropdown title="Projects" id="navbarScrollingDropdown3" className="dropmenu">
-								<Link className="nav-link d-flex align-items-center text-uppercase" to="/">
+								<Link className="nav-link d-flex align-items-center text-uppercase" to="/iandyougreen/">
 									<StaticImage className="icon me-2" src="../images/icons/star.svg" alt="I and you green" />
 									<span>I and you green</span>
 								</Link>

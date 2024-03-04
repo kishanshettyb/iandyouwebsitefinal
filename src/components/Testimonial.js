@@ -19,6 +19,7 @@ const Testimonial = () => {
 		speed: 1000,
 		autoplaySpeed: 4000,
 		arrows: true,
+		adaptiveHeight: true,
 		responsive: [
 			{
 				breakpoint: 1400,

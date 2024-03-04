@@ -67,6 +67,8 @@ const Banner = (props) => {
 						<StaticImage className="banner-image" src={`${eshwarikriya}`} alt="Page Banner" />
 					) : props.title === "Sri Krishi" ? (
 						<StaticImage className="banner-image" src={`${srikrishi}`} alt="Page Banner" />
+					) : props.title === "I And You Green" ? (
+						<StaticImage className="banner-image" src={`${srikrishi}`} alt="Page Banner" />
 					) : props.title === "Physiology" ? (
 						<StaticImage className="banner-image" src={`${physiology}`} alt="Page Banner" />
 					) : props.title === "On The Mind Level" ? (
