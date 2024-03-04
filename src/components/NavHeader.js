@@ -174,7 +174,7 @@ const NavHeader = () => {
 			{/* Mobile */}
 			<Navbar expand="lg" className="bg-primarylight d-block d-lg-none mobile">
 				<Container>
-					<Navbar.Brand href="#">
+					<Navbar.Brand href="/">
 						<StaticImage src="../images/I And You.png" alt="I and You" className="logo-small" />
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="navbarScroll" />
