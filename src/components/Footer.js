@@ -128,10 +128,10 @@ const Footer = () => {
 								</p>
 							</Col>
 							<Col md={12} lg={6} className="terms justify-content-center justify-content-md-end d-flex">
-								<a href="/" className="d-inline me-4">
+								<a href="/terms/" className="d-inline me-4">
 									Terms & Condition
 								</a>
-								<a href="/">Privacy Policy</a>
+								<a href="/privacy/">Privacy Policy</a>
 							</Col>
 						</Row>
 					</div>

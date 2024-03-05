@@ -69,7 +69,7 @@ const Workshops = () => {
 									</Link>
 								</Col>
 								<Col md={3}>
-									<Link to="/srividhyaeshwarisadhana/">
+									<Link to="/eshwaridhyana/">
 										<div className="basic-card">
 											<StaticImage className="card-image" src="../images/workshops/dhyana.png" alt="Eshwari Dhyana" />
 											<div className="content">
@@ -102,7 +102,7 @@ const Workshops = () => {
 				</Container>
 			</section>
 			<section className="workshop-section-bottom">
-				<StaticImage src="../images/bg/workshop.svg" className="bg-image" alt="" />
+				<StaticImage src="../images/bg/workshop.svg" className="bg-image mb--1" alt="" />
 			</section>
 		</div>
 	);
