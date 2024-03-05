@@ -16,28 +16,35 @@ const srikrishi = () => {
 					<div className="text-center  mb-5">
 						<StaticImage src="../images/others/line-2.png" alt="line" className="line" />
 					</div>
-					<p>
-						upcoming project with Lake rejuvenations, Farmers bore well recharging and mini forest formation, the organization functions under the thriving service of its
-						volunteers from various countries and has illumined the lives of several million people
-					</p>
-					<p>
-						SRI KRISHI is involved in the promotion of organic agriculture in rural development. 2 villages have been adopted, Training and support services are provided, the main
-						goal of the project is to reach the message of organic agriculture in rural areas and demonstrate the same for rural development, poverty reduction, ecological farming,
-						natural resource management, biodiversity conservation and protection of environment.
-					</p>
-					<ul className="regular-ul-list-none">
-						<li>a. village adaptation</li>
-						<li>b. Organic cultivation awareness</li>
-						<li>c. Organic multiple crop awareness</li>
-						<li>d. Lake rejuvenations</li>
-						<li>e. farmer's bore well recharge</li>
-						<li>f. Mini Forest formations</li>
-						<li>g. Rain water harvesting</li>
-					</ul>
-					<p>
-						The project Inaugurated by Padma bushan Kisan Baburao Hazare popularly known as Anna Hazare is an Indian social activist who led movements to promote rural development,
-						increase government transparency, and investigate and punish corruption in public life.
-					</p>
+					<Row className="d-flex align-items-center">
+						<Col md={6}>
+							<p>
+								Upcoming project with Lake rejuvenations, Farmers bore well recharging and mini forest formation, the organization functions under the thriving service of its
+								volunteers from various countries and has illumined the lives of several million people
+							</p>
+							<p>
+								SRI KRISHI is involved in the promotion of organic agriculture in rural development. 2 villages have been adopted, Training and support services are provided, the
+								main goal of the project is to reach the message of organic agriculture in rural areas and demonstrate the same for rural development, poverty reduction, ecological
+								farming, natural resource management, biodiversity conservation and protection of environment.
+							</p>
+							<ul className="regular-ul-list-none">
+								<li>a. village adaptation</li>
+								<li>b. Organic cultivation awareness</li>
+								<li>c. Organic multiple crop awareness</li>
+								<li>d. Lake rejuvenations</li>
+								<li>e. farmer's bore well recharge</li>
+								<li>f. Mini Forest formations</li>
+								<li>g. Rain water harvesting</li>
+							</ul>
+							<p>
+								The project Inaugurated by Padma bushan Kisan Baburao Hazare popularly known as Anna Hazare is an Indian social activist who led movements to promote rural
+								development, increase government transparency, and investigate and punish corruption in public life.
+							</p>
+						</Col>
+						<Col md={6}>
+							<StaticImage src="../images/srikrishi/img-1.jpeg" alt="sri krishi" className="br-20 my-5" />
+						</Col>
+					</Row>
 				</Container>
 			</section>
 		</Layout>
